@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     {{-- ==========================================
+         FAVICON (IKON TAB BROWSER)
+    =========================================== --}}
+    <!-- Pastikan Anda sudah menaruh file favicon.png di dalam folder 'public' -->
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}?v=1">
+    <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}?v=1">
+
+    {{-- ==========================================
          SEO & METADATA (DINAMIS UNTUK RANK #1)
     =========================================== --}}
     <title>@yield('title', 'Geely Indonesia | Innovation for Tomorrow')</title>

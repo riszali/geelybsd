@@ -63,7 +63,7 @@
             
             <div class="col-span-2 lg:col-span-4 flex flex-col lg:pr-12">
                 <h4 class="text-xs tracking-[0.3em] mb-8 uppercase text-cyan-400 font-bold glow-cyan-footer">
-                    Geely BSD <span class="text-white">/</span> Authorized Dealer
+                    Geely BSD <span class="text-white">/</span> Drive the Future.
                 </h4>
                 
                 <p class="text-gray-400 text-[11px] leading-relaxed uppercase tracking-[0.2em] font-light mb-8 max-w-xs">
