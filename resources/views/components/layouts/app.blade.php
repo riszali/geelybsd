@@ -7,9 +7,9 @@
     {{-- ==========================================
          FAVICON (IKON TAB BROWSER)
     =========================================== --}}
-    <!-- Pastikan Anda sudah menaruh file favicon.png di dalam folder 'public' -->
-    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}?v=1">
-    <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}?v=1">
+    <!-- Menggunakan time() untuk memaksa browser melewati cache (Bust Cache) -->
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}?v={{ time() }}">
+    <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}?v={{ time() }}">
 
     {{-- ==========================================
          SEO & METADATA (DINAMIS UNTUK RANK #1)
