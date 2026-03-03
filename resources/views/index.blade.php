@@ -483,8 +483,8 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECTION 4: READY TO EXPLORE
+<!-- ==========================================
+            SECTION 4: READY TO EXPLORE
         =========================================== -->
         <section class="section-stars py-16 md:py-24 lg:py-40 relative w-full overflow-hidden">
             
@@ -522,11 +522,16 @@
                         
                         <!-- Main Image/Video Showcase -->
                         <div class="glass-panel p-2 rounded-[24px] md:rounded-[40px] group hover:border-white/30 transition-all duration-500 shadow-2xl flex flex-col star-showcase z-10 relative">
-                            <div class="relative w-full h-full rounded-[18px] md:rounded-[32px] overflow-hidden">
+                            <!-- PERBAIKAN: Menambahkan 'aspect-video' dan 'min-h-[300px]' agar container memiliki tinggi -->
+                            <div class="relative w-full aspect-video min-h-[300px] md:min-h-[400px] rounded-[18px] md:rounded-[32px] overflow-hidden bg-gray-900">
+                                
+                                <!-- PERBAIKAN: Pastikan video mengambil seluruh ruang container parentnya -->
                                 <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover object-center transform transition-transform duration-[4s] ease-out opacity-90 group-hover:opacity-100 z-0 mirror-rhd">
                                     <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/video_atmosphere-WPk8K2f2d7da9R4C.mp4" type="video/mp4">
                                 </video>
+                                
                                 <div class="absolute inset-0 bg-gradient-to-t from-[#090A0F]/90 via-black/20 to-transparent opacity-100 pointer-events-none z-10"></div>
+                                
                                 <div class="absolute bottom-12 lg:bottom-10 left-6 md:left-10 z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none">
                                     <p class="text-glow-anim font-geely text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight mb-1 drop-shadow-lg">Immersive Atmosphere</p>
                                     <p class="text-gray-300 text-[9px] md:text-[10px] tracking-[0.2em] uppercase font-bold drop-shadow-md">Premium Cabin Experience</p>
