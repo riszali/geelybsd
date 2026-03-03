@@ -387,62 +387,50 @@
         </div>
     </section>
 
-        <!-- ==========================================
-             SECTION 5: FINANCIAL PLAN & PROMO
-        =========================================== -->
-        <section class="py-16 md:py-24 lg:py-32 relative w-full overflow-hidden bg-[#090A0F]">
-            
-            <!-- Massive Center Glow -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <!-- ==========================================
+         SECTION 4: FINANCIAL PLAN
+    =========================================== -->
+    <section class="py-24 lg:py-32 bg-[#0a0a0c] relative overflow-hidden">
+        
+        <!-- Massive Center Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/20 rounded-full blur-[150px] pointer-events-none"></div>
 
-            <div class="relative z-10 w-full max-w-[1400px] mx-auto px-6">
-                <!-- Glass Panel Wrapper -->
-                <div class="glass-panel rounded-[24px] md:rounded-[40px] overflow-hidden relative shadow-2xl group border border-white/10 hover:border-blue-500/30 transition-colors duration-500">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+            <!-- Glass Panel Wrapper -->
+            <div class="glass-panel mobile-bento-glass-dark rounded-[24px] md:rounded-[40px] overflow-hidden relative shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] group reveal-up premium-card-hover premium-card-dark">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
                     
-                    <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
-                        
-                        <!-- Content Area -->
-                        <div class="order-2 lg:order-1 lg:col-span-5 p-8 md:p-10 lg:p-12 flex flex-col justify-center relative z-10">
-                            <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 mb-6 w-max">
-                                <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
-                                <span class="text-blue-300 text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase">Promo & Pembiayaan</span>
-                            </div>
-                            
-                            <h2 class="font-geely text-4xl sm:text-5xl lg:text-5xl text-white uppercase tracking-tighter mb-6 leading-[1.1]">
-                                Miliki <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-white">Geely Impian</span>
-                            </h2>
-                            
-                            <p class="text-gray-300 text-sm md:text-base font-light leading-relaxed mb-8 max-w-[90vw] md:max-w-none">
-                                Dapatkan penawaran harga terbaik dan akses kebebasan finansial dengan program pembiayaan premium yang 100% transparan di wilayah Tangerang dan Jakarta.
-                            </p>
-
-                            <a href="/credit-simulation" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] w-full sm:w-max">
-                                <span>Mulai Simulasi Kredit</span>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                        </div>                    
-                        
-                        <!-- Image Bento Area (KEDUA FOTO DIGABUNG) -->
-                        <div class="order-1 lg:order-2 lg:col-span-7 flex flex-col gap-4 p-4 lg:p-6 bg-gray-900/40 relative z-10">
-                            
-                            <!-- Foto Lama (Suasana Premium) -->
-                            <div class="relative flex-1 min-h-[200px] lg:min-h-[300px] rounded-[16px] md:rounded-[28px] overflow-hidden group/img">
-                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Geely Premium Vibe" class="absolute inset-0 w-full h-full object-cover transform group-hover/img:scale-105 transition-transform duration-[4s] ease-out opacity-70 mix-blend-luminosity">
-                                <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#090A0F]/90 via-[#090A0F]/20 to-transparent"></div>
-                            </div>
-
-                            <!-- Foto Baru (Banner Promo) -->
-                            <div class="relative h-[120px] sm:h-[180px] lg:h-[220px] rounded-[16px] md:rounded-[28px] overflow-hidden group/promo border border-white/10 shadow-2xl">
-                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_home-promo-01-202507-YBgjeGg2pzIW7kpk.jpg" alt="Promo Geely BSD" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover/promo:scale-105 transition-transform duration-[4s] ease-out">
-                                <div class="absolute inset-0 bg-blue-500/10 mix-blend-overlay pointer-events-none transition-opacity duration-500 group-hover/promo:opacity-0"></div>
-                            </div>
-                            
+                    <!-- Content Area -->
+                    <div class="p-8 md:p-12 lg:p-24 relative z-10">
+                        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 mb-6 md:mb-8">
+                            <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
+                            <span class="text-blue-300 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase">Promo & Pembiayaan Geely BSD</span>
                         </div>
                         
+                        <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-tighter mb-4 md:mb-6 leading-[1.1]">
+                            Miliki <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-white">Geely Impian</span>
+                        </h2>
+                        
+                        <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-8 md:mb-12 max-w-md">
+                            Dapatkan penawaran harga terbaik dan akses kebebasan finansial dengan program pembiayaan premium yang 100% transparan di wilayah Tangerang dan Jakarta. Gunakan kalkulator pintar bertenaga AI kami.
+                        </p>
+
+                        <a href="/credit-simulation" title="Kalkulator Simulasi Kredit Mobil Geely" class="btn-shimmer inline-flex items-center justify-center gap-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase transition-all duration-500 hover:scale-105 shadow-[0_0_40px_rgba(59,130,246,0.4)] w-full sm:w-auto">
+                            <span>Mulai Simulasi Kredit</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>                    
+                    <div class="h-52 md:h-64 lg:h-full relative overflow-hidden block">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Simulasi Kredit dan Harga Pembiayaan Mobil Geely Tangerang Banten" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-70 mix-blend-luminosity">
+                        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20 pointer-events-none"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a0a0c] via-transparent to-transparent"></div>
                     </div>
+                    
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
             <!-- ==========================================
              SECTION 3: FEATURE OVERVIEW (VIDEO & TEXT)
@@ -464,7 +452,7 @@
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div class="absolute bottom-16 lg:bottom-12 left-6 md:left-12 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                                <span class="text-cyan-400 text-[9px] md:text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 drop-shadow-md">Drive the Future.</span>
+                                <span class="text-cyan-400 text-[9px] md:text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 drop-shadow-md">Flyme Auto</span>
                                 <h4 class="font-geely text-2xl md:text-4xl uppercase tracking-tight text-white drop-shadow-lg leading-none">Future in Motion.</h4>
                             </div>
                         </div>
