@@ -232,13 +232,15 @@
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 reveal-up delay-300">
-                <a href="/test-drive" title="Booking Test Drive Mobil Geely di BSD" class="btn-shimmer flex items-center justify-center gap-3 bg-white text-black px-10 md:px-12 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase transition-transform duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(255,255,255,0.4)] w-full sm:w-auto">
+                <!-- Glassmorphism Primary Button -->
+                <a href="/test-drive" title="Booking Test Drive Mobil Geely di BSD" class="btn-shimmer flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 md:px-12 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] w-full sm:w-auto">
                     <span>Book Test Drive</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
                 
-                <a href="#lineup" title="Eksplorasi Model Mobil Listrik Geely Terbaru" class="group flex items-center gap-4 text-white hover:text-cyan-400 transition-colors duration-300 mt-4 sm:mt-0">
-                    <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-cyan-400 transition-colors">
+                <!-- Glassmorphism Secondary Button -->
+                <a href="#lineup" title="Eksplorasi Model Mobil Listrik Geely Terbaru" class="group flex items-center gap-4 text-white hover:text-cyan-300 transition-colors duration-300 mt-4 sm:mt-0">
+                    <div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:bg-white/20 group-hover:border-cyan-400 transition-all duration-300">
                         <svg class="w-4 h-4 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                     </div>
                     <span class="text-[10px] font-bold tracking-[0.2em] uppercase">Explore Models</span>
@@ -246,7 +248,7 @@
             </div>
         </div>
     </header>
-    
+
     <!-- ==========================================
          SECTION 2: THE ECOSYSTEM (SEKARANG DISembunyikan VIA CSS 'hidden')
     =========================================== -->
