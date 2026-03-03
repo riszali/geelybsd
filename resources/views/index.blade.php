@@ -4,23 +4,23 @@
          (Pastikan komponen layout <head> Anda dapat merender slot/push ini)
     =========================================== -->
     @push('head')
-        <title>Showroom Geely BSD Tangerang | EX5, EX2 & Starray EM-i</title>
-        <meta name="description" content="Kunjungi Showroom Geely BSD City, Tangerang. Temukan informasi lengkap, daftar harga, promo, dan fasilitas test drive untuk Geely EX5, EX2, dan Starray EM-i.">
-        <meta name="keywords" content="Geely BSD, Showroom Geely Tangerang, Pusat Geely BSD City, Mobil Listrik Geely, Geely EX5, Geely EX2, Geely Starray EM-i, Harga Geely, Test Drive Geely">
+        <title>Dealer Resmi Geely BSD Tangerang | Test Drive Geely EX5 & EX2</title>
+        <meta name="description" content="Kunjungi Showroom Dealer Resmi Geely BSD City, Tangerang. Temukan era baru mobilitas, dapatkan promo terbaru, dan booking test drive Geely EX5 & EX2 hari ini!">
+        <meta name="keywords" content="Geely BSD, Dealer Geely Tangerang, Dealer Geely BSD City, Mobil Listrik Geely, Geely EX5, Geely EX2, Harga Geely, Test Drive Geely, Showroom Geely Banten">
         <link rel="canonical" href="https://geelybsd.id/">
         
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://geelybsd.id/">
-        <meta property="og:title" content="Showroom Geely BSD Tangerang | EX5, EX2 & Starray EM-i">
-        <meta property="og:description" content="Kunjungi Showroom Geely BSD City. Dapatkan promo terbaru dan rasakan pengalaman test drive langsung Geely EX5, EX2, dan Starray EM-i.">
+        <meta property="og:title" content="Dealer Resmi Geely BSD Tangerang | Kendaraan Listrik Premium">
+        <meta property="og:description" content="Kunjungi Showroom Dealer Resmi Geely BSD City. Dapatkan promo terbaru dan test drive Geely EX5 & EX2.">
         <meta property="og:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG">
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="https://geelybsd.id/">
-        <meta property="twitter:title" content="Showroom Geely BSD Tangerang | EX5, EX2 & Starray EM-i">
-        <meta property="twitter:description" content="Kunjungi Showroom Geely BSD City. Dapatkan promo terbaru dan rasakan pengalaman test drive langsung Geely EX5, EX2, dan Starray EM-i.">
+        <meta property="twitter:title" content="Dealer Resmi Geely BSD Tangerang | Kendaraan Listrik Premium">
+        <meta property="twitter:description" content="Kunjungi Showroom Dealer Resmi Geely BSD City. Dapatkan promo terbaru dan test drive Geely EX5 & EX2.">
         <meta property="twitter:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG">
     @endpush
 
@@ -225,23 +225,23 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                 </span>
-                <span class="text-gray-300 text-[9px] tracking-[0.4em] font-medium uppercase">Showroom Mobil Listrik Geely BSD</span>
+                <span class="text-gray-300 text-[9px] tracking-[0.4em] font-medium uppercase">Dealer Resmi Mobil Listrik Geely BSD</span>
             </div>
 
             <!-- SEO Opt: Ditambahkan keyword tersembunyi sr-only untuk ditangkap crawler Google -->
             <h1 class="font-geely text-5xl sm:text-6xl md:text-8xl lg:text-[130px] text-white uppercase leading-[0.9] md:leading-[0.8] tracking-tighter drop-shadow-2xl mb-8 reveal-up delay-100">
-                <span class="sr-only">Kunjungi Showroom Geely di BSD Tangerang - </span>
-                KENDARAAN <br>
-                <span class="text-liquid">MASA DEPAN</span>
+                <span class="sr-only">Selamat datang di Dealer Resmi Geely Tangerang - </span>
+                DRIVE THE <br>
+                <span class="text-liquid">FUTURE</span>
             </h1>
 
             <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-lg font-light tracking-wide leading-relaxed mb-12 reveal-up delay-200">
-                Selamat datang di <strong>Showroom Geely BSD</strong> Tangerang. Lihat langsung spesifikasi, daftar harga, dan jadwalkan test drive untuk unit Geely EX5, Geely EX2, dan Geely Starray EM-i.
+                Selamat datang di <strong>Geely BSD</strong>, dealer resmi kendaraan elektrik premium di Tangerang. Ekosistem mobilitas yang menggabungkan desain aerodinamis mutakhir dengan kecerdasan buatan tanpa batas.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 reveal-up delay-300">
                 <a href="/test-drive" title="Booking Test Drive Mobil Geely di BSD" class="btn-shimmer flex items-center justify-center gap-3 bg-white text-black px-10 md:px-12 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase transition-transform duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(255,255,255,0.4)] w-full sm:w-auto">
-                    <span>Jadwalkan Test Drive</span>
+                    <span>Book Test Drive</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
                 
@@ -249,7 +249,7 @@
                     <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-cyan-400 transition-colors">
                         <svg class="w-4 h-4 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                     </div>
-                    <span class="text-[10px] font-bold tracking-[0.2em] uppercase">Lihat Model Mobil</span>
+                    <span class="text-[10px] font-bold tracking-[0.2em] uppercase">Explore Models</span>
                 </a>
             </div>
         </div>
@@ -271,34 +271,34 @@
                 <div class="max-w-3xl">
                     <div class="inline-flex items-center gap-4 mb-4 md:mb-6">
                         <div class="w-10 h-[1px] bg-gradient-to-r from-blue-600 to-transparent"></div>
-                        <span class="text-blue-600 text-[10px] font-bold tracking-[0.4em] uppercase">Lokasi Strategis</span>
+                        <span class="text-blue-600 text-[10px] font-bold tracking-[0.4em] uppercase">Eksklusivitas Geely BSD</span>
                     </div>
                     <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-gray-900 leading-[0.9]">
-                        Fasilitas <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Showroom Kami</span>
+                        Beyond <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Expectations</span>
                     </h2>
                 </div>
                 <div class="md:text-right pb-2 max-w-sm ml-auto">
                     <p class="text-gray-500 text-sm md:text-base leading-relaxed font-light">
-                        Kunjungi lokasi kami untuk melihat langsung pameran unit mobil Geely. Kami menyediakan fasilitas nyaman agar Anda bisa berkonsultasi mengenai Geely EX5, EX2, dan Starray EM-i.
+                        Lebih dari sekadar kendaraan. Kami merancang ekosistem mobilitas premium di Tangerang yang memahami setiap kebutuhan Anda, menghadirkan standar pelayanan tanpa kompromi.
                     </p>
                 </div>
             </div>
 
             <!-- Main Image Card -->
             <div class="relative w-full rounded-[24px] md:rounded-3xl overflow-hidden group reveal-up bg-gray-900 shadow-xl mb-3 md:mb-6 md:border md:border-white/10 premium-card-hover premium-card-dark glare-effect">
-                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG" alt="Fasad Depan Showroom Geely BSD City Tangerang Banten" class="w-full h-auto block transform group-hover:scale-105 transition-transform duration-[2.5s] ease-out brightness-90 group-hover:brightness-100 object-cover object-[center_60%] md:object-center">
+                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG" alt="Fasad Depan Showroom Dealer Resmi Geely BSD City Tangerang Banten" class="w-full h-auto block transform group-hover:scale-105 transition-transform duration-[2.5s] ease-out brightness-90 group-hover:brightness-100 object-cover object-[center_60%] md:object-center">
                 <!-- Menyembunyikan gradasi pada versi HP agar gambar lebih clear -->
                 <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500 mobile-soft-gradient"></div>
 
                 <!-- Mengubah flex menjadi hidden md:flex untuk menyembunyikan card text pada versi HP -->
                 <div class="hidden md:flex absolute bottom-3 left-3 right-3 md:bottom-0 md:left-0 md:right-0 md:inset-x-0 z-10 p-4 md:p-12 w-auto md:w-full flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mobile-bento-pill md:bg-transparent md:border-none md:rounded-none">
                     <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out mobile-always-visible">
-                        <span class="text-cyan-300 text-[8px] md:text-[9px] tracking-[0.3em] uppercase font-bold mb-2 md:mb-3 block drop-shadow-md">Area Pameran & Test Drive</span>
-                        <h3 class="font-geely text-2xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight leading-none mb-1 md:mb-2 drop-shadow-lg">Showroom BSD City</h3>
+                        <span class="text-cyan-300 text-[8px] md:text-[9px] tracking-[0.3em] uppercase font-bold mb-2 md:mb-3 block drop-shadow-md">Flagship Location</span>
+                        <h3 class="font-geely text-2xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight leading-none mb-1 md:mb-2 drop-shadow-lg">Geely BSD City</h3>
                         <p class="text-gray-300 text-[10px] md:text-sm font-light drop-shadow-md">Tangerang Selatan, Banten</p>
                     </div>
-                    <a href="/location" title="Peta Lokasi Showroom Geely BSD" class="hidden md:flex w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 transform group-hover:scale-110 shrink-0 self-end">
+                    <a href="/location" title="Peta Lokasi Dealer Geely BSD" class="hidden md:flex w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 transform group-hover:scale-110 shrink-0 self-end">
                         <svg class="w-5 h-5 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
@@ -314,8 +314,8 @@
                     <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none mobile-soft-gradient"></div>
                     <!-- Menyembunyikan card text pada versi HP -->
                     <div class="hidden md:block absolute bottom-2 left-2 right-2 md:bottom-0 md:left-0 md:right-0 p-3 md:p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out opacity-0 group-hover:opacity-100 pointer-events-none mobile-always-visible mobile-bento-pill md:bg-transparent md:border-none md:rounded-none">
-                        <span class="text-[7px] md:text-[8px] tracking-[0.2em] font-bold uppercase mb-1 block text-cyan-300 md:text-white">Fasilitas Nyaman</span>
-                        <h4 class="font-geely text-base md:text-xl uppercase tracking-tight">Ruang Tunggu Konsultasi</h4>
+                        <span class="text-[7px] md:text-[8px] tracking-[0.2em] font-bold uppercase mb-1 block text-cyan-300 md:text-white">Atmosphere</span>
+                        <h4 class="font-geely text-base md:text-xl uppercase tracking-tight">Premium Lounge</h4>
                     </div>
                 </div>
                 
@@ -325,8 +325,8 @@
                     <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none mobile-soft-gradient"></div>
                     <!-- Menyembunyikan card text pada versi HP -->
                     <div class="hidden md:block absolute bottom-2 left-2 right-2 md:bottom-0 md:left-0 md:right-0 p-3 md:p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out opacity-0 group-hover:opacity-100 pointer-events-none mobile-always-visible mobile-bento-pill md:bg-transparent md:border-none md:rounded-none">
-                        <span class="text-[7px] md:text-[8px] tracking-[0.2em] font-bold uppercase mb-1 block text-cyan-300 md:text-white">Lihat Langsung</span>
-                        <h4 class="font-geely text-base md:text-xl uppercase tracking-tight leading-tight">Area Display Unit</h4>
+                        <span class="text-[7px] md:text-[8px] tracking-[0.2em] font-bold uppercase mb-1 block text-cyan-300 md:text-white">Experience</span>
+                        <h4 class="font-geely text-base md:text-xl uppercase tracking-tight leading-tight">Showroom Floor</h4>
                     </div>
                 </div>
 
@@ -336,8 +336,8 @@
                     <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none mobile-soft-gradient"></div>
                     <!-- Menyembunyikan card text pada versi HP -->
                     <div class="hidden md:block absolute bottom-2 left-2 right-2 md:bottom-0 md:left-0 md:right-0 p-3 md:p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out opacity-0 group-hover:opacity-100 pointer-events-none mobile-always-visible mobile-bento-pill md:bg-transparent md:border-none md:rounded-none">
-                        <span class="text-[7px] md:text-[8px] tracking-[0.2em] font-bold uppercase mb-1 block text-cyan-300 md:text-white">Interior Bangunan</span>
-                        <h4 class="font-geely text-base md:text-xl uppercase tracking-tight leading-tight">Desain Modern</h4>
+                        <span class="text-[7px] md:text-[8px] tracking-[0.2em] font-bold uppercase mb-1 block text-cyan-300 md:text-white">Design</span>
+                        <h4 class="font-geely text-base md:text-xl uppercase tracking-tight leading-tight">Modern Space</h4>
                     </div>
                 </div>
 
@@ -348,8 +348,8 @@
                         <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <div class="relative z-10 mt-auto">
-                        <h4 class="font-geely text-base md:text-2xl text-gray-900 uppercase tracking-tight mb-1 md:mb-2">Stasiun <br> Pengisian</h4>
-                        <p class="text-gray-500 text-[9px] md:text-sm font-light leading-relaxed hidden md:block">Tersedia alat pengisian daya baterai yang aman dan cepat untuk melayani mobil listrik Geely EX5 dan EX2 Anda.</p>
+                        <h4 class="font-geely text-base md:text-2xl text-gray-900 uppercase tracking-tight mb-1 md:mb-2">Fast <br> Charging</h4>
+                        <p class="text-gray-500 text-[9px] md:text-sm font-light leading-relaxed hidden md:block">Akses prioritas ke jaringan pengisian daya berkecepatan tinggi eksklusif untuk member setia dealer Geely BSD.</p>
                     </div>
                 </div>
 
@@ -360,8 +360,8 @@
                         <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                     </div>
                     <div class="relative z-10 mt-auto">
-                        <h4 class="font-geely text-base md:text-2xl text-gray-900 uppercase tracking-tight mb-1 md:mb-2">Servis <br> Berkala</h4>
-                        <p class="text-gray-500 text-[9px] md:text-sm font-light leading-relaxed hidden md:block">Layanan purna jual yang sigap merawat Geely EX5, EX2, dan Starray EM-i agar tetap dalam kondisi prima.</p>
+                        <h4 class="font-geely text-base md:text-2xl text-gray-900 uppercase tracking-tight mb-1 md:mb-2">VIP <br> Concierge</h4>
+                        <p class="text-gray-500 text-[9px] md:text-sm font-light leading-relaxed hidden md:block">Layanan asisten pribadi eksklusif untuk kemudahan servis dan jadwal perawatan mobil listrik Anda.</p>
                     </div>
                 </div>
 
@@ -387,14 +387,14 @@
             <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20 reveal-up">
                 <div class="inline-flex items-center gap-4 mb-6">
                     <div class="w-12 h-[1px] bg-gradient-to-r from-transparent to-cyan-500"></div>
-                    <span class="text-cyan-400 text-[10px] font-bold tracking-[0.4em] uppercase">Pilihan Mobil Geely</span>
+                    <span class="text-cyan-400 text-[10px] font-bold tracking-[0.4em] uppercase">Koleksi Mobil Listrik Geely</span>
                     <div class="w-12 h-[1px] bg-gradient-to-l from-transparent to-cyan-500"></div>
                 </div>
                 <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-white leading-none mb-6">
-                    TIGA MODEL <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600">UNGGULAN KAMI</span>
+                    MASTERPIECE <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600">IN MOTION</span>
                 </h2>
                 <p class="text-gray-400 text-sm md:text-base leading-relaxed font-light">
-                    Kenali lebih dalam lini produk terbaru dari Geely. Kami menawarkan SUV elektrik Geely EX5, Crossover kompak Geely EX2, hingga kenyamanan elegan dari sedan Geely Starray EM-i.
+                    Koleksi kendaraan EV unggulan yang dirancang tanpa kompromi. Memadukan estetika aerodinamis kelas dunia dengan arsitektur elektrik paling canggih di industri otomotif Indonesia.
                 </p>
             </div>
 
@@ -405,24 +405,24 @@
                     $showcase = [
                         [
                             'name' => 'Geely EX5',
-                            'type' => 'Medium SUV Listrik',
-                            'stats' => ['Jarak Tempuh Jauh', 'Kabin Lega'],
+                            'type' => 'Premium Smart SUV',
+                            'stats' => ['AWD Dual Motor', '600km Range'],
                             'img' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-16-YyvDPj63y9fNXbar.webp',
                             'link' => '/models/ex5',
                             'delay' => ''
                         ],
                         [
                             'name' => 'Geely EX2',
-                            'type' => 'Compact Crossover EV',
-                            'stats' => ['Lincah di Kota', 'Desain Modern'],
+                            'type' => 'Urban Electric Crossover',
+                            'stats' => ['Agile Dynamics', 'Ultra Fast Charge'],
                             'img' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/rdspace-6fdMIYg90CYd8lJd.webp',
                             'link' => '/models/ex2',
                             'delay' => 'delay-100'
                         ],
                         [
                             'name' => 'Starray EM-i',
-                            'type' => 'Sedan Premium',
-                            'stats' => ['Hybrid Efisien', 'Kenyamanan Mewah'],
+                            'type' => 'The Future Sedan',
+                            'stats' => ['Hybrid Gen-X', '0.22 Cd Aero'],
                             'img' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/02-exterior-geely-starray-em-i-geely-ambara-group-2-AVLxzgj4K6TXQRbW.webp',
                             'link' => '/models/starray-em-i',
                             'delay' => 'delay-200'
@@ -436,7 +436,7 @@
                     
                     <!-- Container Khusus Gambar (Terpisah dari teks di HP) -->
                     <div class="relative w-full h-[220px] sm:h-[280px] md:absolute md:inset-0 md:h-full shrink-0">
-                        <img src="{{ $car['img'] }}" alt="Mobil Listrik {{ $car['name'] }} - {{ $car['type'] }} tersedia di Showroom Geely BSD" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out brightness-90 md:brightness-75 group-hover:brightness-100">
+                        <img src="{{ $car['img'] }}" alt="Mobil Listrik {{ $car['name'] }} - {{ $car['type'] }} tersedia di Dealer Geely BSD" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out brightness-90 md:brightness-75 group-hover:brightness-100">
                         <!-- Overlay gradasi tipis -->
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-90 md:opacity-90 group-hover:opacity-80 transition-opacity duration-500"></div>
                     </div>
@@ -463,7 +463,7 @@
                             
                             <div class="pt-3 md:pt-6 border-t border-white/10 flex justify-between items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-200">
                                 <a href="{{ $car['link'] }}" title="Spesifikasi Detail {{ $car['name'] }}" class="text-white hover:text-cyan-400 text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase transition-colors flex items-center gap-2">
-                                    Lihat Spesifikasi <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                    Discover Detail <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                                 </a>
                             </div>
                         </div>
@@ -476,7 +476,7 @@
             
             <div class="mt-12 md:mt-20 text-center reveal-up delay-300">
                 <a href="/discover" title="Lihat Semua Varian Mobil Geely di Tangerang" class="btn-shimmer inline-flex items-center justify-center gap-3 bg-white text-black px-10 md:px-12 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase hover:scale-105 transition-transform duration-500">
-                    Bandingkan Semua Model
+                    View Full Lineup
                 </a>
             </div>
             
@@ -501,19 +501,19 @@
                     <div class="p-8 md:p-12 lg:p-24 relative z-10">
                         <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 mb-6 md:mb-8">
                             <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
-                            <span class="text-blue-300 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase">Harga & Promo Mobil Geely</span>
+                            <span class="text-blue-300 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase">Promo & Pembiayaan Geely BSD</span>
                         </div>
                         
                         <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-tighter mb-4 md:mb-6 leading-[1.1]">
-                            PENAWARAN <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-white">SPESIAL KAMI</span>
+                            Miliki <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-white">Geely Impian</span>
                         </h2>
                         
                         <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-8 md:mb-12 max-w-md">
-                            Dapatkan penawaran harga terbaru dan promo DP ringan untuk pembelian Geely EX5, Geely EX2, dan Geely Starray EM-i. Kami siap membantu Anda menemukan skema kredit yang paling sesuai.
+                            Dapatkan penawaran harga terbaik dan akses kebebasan finansial dengan program pembiayaan premium yang 100% transparan di wilayah Tangerang dan Jakarta. Gunakan kalkulator pintar bertenaga AI kami.
                         </p>
                         
                         <a href="/credit-simulation" title="Kalkulator Simulasi Kredit Mobil Geely" class="btn-shimmer inline-flex items-center justify-center gap-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase transition-all duration-500 hover:scale-105 shadow-[0_0_40px_rgba(59,130,246,0.4)] w-full sm:w-auto">
-                            <span>Hitung Simulasi Cicilan</span>
+                            <span>Mulai Simulasi Kredit</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         </a>
                     </div>
@@ -547,15 +547,15 @@
                 <div class="max-w-2xl">
                     <div class="flex items-center gap-4 mb-4 md:mb-6">
                         <div class="w-10 h-[2px] bg-black"></div>
-                        <span class="text-black text-[9px] md:text-[10px] font-bold tracking-[0.4em] uppercase">Desain Fungsional</span>
+                        <span class="text-black text-[9px] md:text-[10px] font-bold tracking-[0.4em] uppercase">Spotlight Geely EX2</span>
                     </div>
                     <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-gray-900 leading-[0.9]">
-                        TAMPILAN <span class="text-gray-300">MODERN</span> <br> GEELY EX2
+                        EX2 <span class="text-gray-300">URBAN</span> <br> BLUEPRINT
                     </h2>
                 </div>
                 <div class="md:text-right pb-2">
                     <p class="text-gray-500 text-sm md:text-base font-light max-w-sm ml-auto">
-                        Geely EX2 menawarkan desain kompak namun ruang kabin yang memadai. Dirancang khusus agar lincah melibas kemacetan lalu lintas perkotaan.
+                        Manifestasi arsitektural antara dinamika perkotaan dan tata ruang kabin futuristik pada lini mobil listrik Geely terbaru.
                     </p>
                 </div>
             </div>
@@ -566,13 +566,13 @@
                 
                 <!-- Main Focus (Large) -->
                 <div class="col-span-2 md:col-span-2 md:row-span-2 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-100 cursor-pointer h-[200px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect">
-                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" alt="Eksterior Depan Geely EX2 EV dengan Desain Modern" class="w-full h-full object-cover object-center md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
+                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" alt="Eksterior Depan Geely EX2 EV dengan Desain Aerodinamis Tercanggih" class="w-full h-full object-cover object-center md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500 mobile-soft-gradient"></div>
                     
                     <div class="absolute bottom-2 left-2 right-2 md:bottom-10 md:left-10 md:right-10 flex justify-between items-center md:items-end mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none p-3 md:p-0 z-10">
                         <div>
-                            <span class="text-cyan-300 md:text-white/80 text-[7px] md:text-[10px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-3 drop-shadow-md">01 // Eksterior</span>
-                            <h3 class="font-geely text-xl md:text-4xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Desain Aerodinamis</h3>
+                            <span class="text-cyan-300 md:text-white/80 text-[7px] md:text-[10px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-3 drop-shadow-md">01 // Exterior</span>
+                            <h3 class="font-geely text-xl md:text-4xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Aero Stance</h3>
                         </div>
                         <div class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 mobile-always-visible">
                             <svg class="w-3 h-3 md:w-5 md:h-5 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -585,16 +585,16 @@
                     <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" alt="Gaya Hidup Berkendara EV di Perkotaan dengan Mobil Geely EX2" class="w-full h-full object-cover object-[center_60%] md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500 mobile-soft-gradient"></div>
                     <div class="absolute bottom-2 left-2 right-2 md:bottom-10 md:left-8 mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none p-3 md:p-0 z-10">
-                        <span class="text-cyan-300 md:text-white/80 text-[7px] md:text-[10px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-3 drop-shadow-md">02 // Kelincahan</span>
-                        <h3 class="font-geely text-base md:text-3xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Praktis di Kota</h3>
+                        <span class="text-cyan-300 md:text-white/80 text-[7px] md:text-[10px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-3 drop-shadow-md">02 // Lifestyle</span>
+                        <h3 class="font-geely text-base md:text-3xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Agility</h3>
                     </div>
                 </div>
 
                 <!-- Detail 1 (Square - Light Card) -->
                 <div class="col-span-1 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-transparent md:bg-[#f8fafc] md:border md:border-gray-200 cursor-pointer flex flex-col justify-between hover:bg-gray-100 transition-colors duration-500 h-[160px] md:h-auto mobile-bento-glass-light p-4 md:p-8 premium-card-hover">
                     <div class="z-10">
-                        <span class="text-blue-500 md:text-gray-400 text-[7px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-2">03 // Penyimpanan</span>
-                        <h3 class="font-geely text-base md:text-2xl text-gray-900 uppercase tracking-tight">Kapasitas Bagasi</h3>
+                        <span class="text-blue-500 md:text-gray-400 text-[7px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-2">03 // Utility</span>
+                        <h3 class="font-geely text-base md:text-2xl text-gray-900 uppercase tracking-tight">Max Cargo</h3>
                     </div>
                     <div class="w-full h-[60%] relative mt-auto">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png" alt="Kapasitas Bagasi Luas Mobil Listrik Keluarga Geely EX2" class="absolute inset-0 w-full h-full object-contain transform group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-[1.5s] ease-out mix-blend-darken">
@@ -603,11 +603,11 @@
 
                 <!-- Detail 2 (Square) -->
                 <div class="col-span-2 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-900 cursor-pointer h-[140px] md:h-auto premium-card-hover premium-card-dark glare-effect">
-                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Desain Interior Kabin Premium Geely EX2 Indonesia" class="w-full h-full object-cover object-[center_60%] md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-80 group-hover:opacity-100">
+                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Desain Interior Kabin Premium Futuristik Geely EX2 Indonesia" class="w-full h-full object-cover object-[center_60%] md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-80 group-hover:opacity-100">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500 mobile-soft-gradient"></div>
                     <div class="absolute bottom-2 left-2 right-2 md:bottom-8 md:left-8 mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none p-3 md:p-0 z-10">
-                        <span class="text-cyan-300 md:text-gray-400 text-[7px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-2 drop-shadow-md">04 // Kabin</span>
-                        <h3 class="font-geely text-base md:text-2xl text-white uppercase tracking-tight leading-tight drop-shadow-lg">Interior Nyaman</h3>
+                        <span class="text-cyan-300 md:text-gray-400 text-[7px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-2 drop-shadow-md">04 // Cockpit</span>
+                        <h3 class="font-geely text-base md:text-2xl text-white uppercase tracking-tight leading-tight drop-shadow-lg">Digital Oasis</h3>
                     </div>
                 </div>
 
@@ -625,13 +625,13 @@
             <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20 reveal-up">
                 <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 mb-6">
                     <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-                    <span class="text-cyan-400 text-[8px] md:text-[9px] font-bold tracking-[0.4em] uppercase">Spesifikasi Teknologi Geely</span>
+                    <span class="text-cyan-400 text-[8px] md:text-[9px] font-bold tracking-[0.4em] uppercase">Teknologi Baterai Mobil Listrik</span>
                 </div>
                 <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-white leading-[1] md:leading-[0.9] mb-6">
-                    ARSITEKTUR <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-700">PLATFORM GEA</span>
+                    GEA PLATFORM <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-700">NEURAL CORE</span>
                 </h2>
                 <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed">
-                    Platform GEA (Geely Electric Architecture) merancang posisi baterai secara optimal pada mobil Geely EX5 dan Geely EX2 untuk memberikan keamanan tingkat tinggi serta pengalaman berkendara yang stabil dan efisien.
+                    Arsitektur elektrik cerdas global (GEA) mengintegrasikan superkomputer on-board dengan sasis baja boron untuk menghadirkan tingkat keselamatan dan efisiensi mobilitas EV tertinggi di kelasnya.
                 </p>
             </div>
 
@@ -660,9 +660,9 @@
                             <svg class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                         </div>
                         <div class="z-10">
-                            <h3 class="font-geely text-sm md:text-3xl text-white uppercase mb-1 md:mb-3 tracking-tight">Perlindungan Rangka</h3>
+                            <h3 class="font-geely text-sm md:text-3xl text-white uppercase mb-1 md:mb-3 tracking-tight">AI Integration</h3>
                             <p class="text-gray-400 text-[8px] md:text-sm font-light leading-relaxed hidden md:block">
-                                Menggunakan perlindungan baja yang terintegrasi pada struktur utama mobil untuk menjaga penumpang tetap aman di jalan.
+                                Penyelarasan millidetik antara sensor Lidar, Radar, dan otak komputasi pusat mobil Geely Anda.
                             </p>
                         </div>
                     </div>
@@ -674,9 +674,9 @@
                             <svg class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
                         <div class="z-10">
-                            <h3 class="font-geely text-sm md:text-3xl text-white uppercase mb-1 md:mb-3 tracking-tight leading-tight">Daya Jelajah Baterai</h3>
+                            <h3 class="font-geely text-sm md:text-3xl text-white uppercase mb-1 md:mb-3 tracking-tight leading-tight">Hyper Efficiency</h3>
                             <p class="text-gray-400 text-[8px] md:text-sm font-light leading-relaxed hidden md:block">
-                                Kemampuan mengelola suhu baterai dengan baik sehingga mampu menjangkau rute tempuh harian Anda tanpa rasa khawatir.
+                                Manajemen termal pintar yang melindungi baterai mobil listrik dan memaksimalkan jangkauan tempuh hingga 600km.
                             </p>
                         </div>
                     </div>
@@ -718,18 +718,18 @@
     =========================================== -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@@context": "https://schema.org",
+      "@@graph": [
         {
-          "@type": "AutoDealer",
-          "name": "Showroom Geely BSD City",
+          "@@type": "AutoDealer",
+          "name": "Dealer Resmi Geely BSD City",
           "image": "https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG",
-          "@id": "https://geelybsd.id",
+          "@@id": "https://geelybsd.id",
           "url": "https://geelybsd.id",
           "telephone": "+628111234567", 
-          "description": "Showroom mobil Geely di BSD Tangerang. Lihat langsung spesifikasi, daftar harga, dan test drive unit Geely EX5, Geely EX2, dan Geely Starray EM-i.",
+          "description": "Dealer mobil listrik resmi Geely BSD Tangerang. Melayani test drive, pembelian tunai/kredit, dan servis resmi Geely EX5, EX2, dan Starray EM-i.",
           "address": {
-            "@type": "PostalAddress",
+            "@@type": "PostalAddress",
             "streetAddress": "BSD City",
             "addressLocality": "Tangerang Selatan",
             "addressRegion": "Banten",
@@ -737,12 +737,12 @@
             "addressCountry": "ID"
           },
           "geo": {
-            "@type": "GeoCoordinates",
+            "@@type": "GeoCoordinates",
             "latitude": -6.3023, 
             "longitude": 106.6521
           },
           "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
+            "@@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             "opens": "08:30",
             "closes": "17:30"
@@ -750,22 +750,22 @@
           "priceRange": "$$$"
         },
         {
-          "@type": "ItemList",
+          "@@type": "ItemList",
           "itemListElement": [
             {
-              "@type": "ListItem",
+              "@@type": "ListItem",
               "position": 1,
               "name": "Geely EX5",
               "url": "https://geelybsd.id/models/ex5"
             },
             {
-              "@type": "ListItem",
+              "@@type": "ListItem",
               "position": 2,
               "name": "Geely EX2",
               "url": "https://geelybsd.id/models/ex2"
             },
             {
-              "@type": "ListItem",
+              "@@type": "ListItem",
               "position": 3,
               "name": "Starray EM-i",
               "url": "https://geelybsd.id/models/starray-em-i"
