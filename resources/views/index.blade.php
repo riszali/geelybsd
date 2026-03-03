@@ -201,8 +201,8 @@
         }
     </style>
 
-    <!-- ==========================================
-         SECTION 1: HERO (DYNAMIC & IMMERSIVE)
+<!-- ==========================================
+      SECTION 1: HERO (DYNAMIC & IMMERSIVE)
     =========================================== -->
     <header class="relative h-[100svh] w-full flex items-center justify-center overflow-hidden bg-black bg-noise">
         
@@ -222,13 +222,13 @@
 
             <!-- SEO Opt: Ditambahkan keyword tersembunyi sr-only untuk ditangkap crawler Google -->
             <h1 class="font-geely text-5xl sm:text-6xl md:text-8xl lg:text-[130px] text-white uppercase leading-[0.9] md:leading-[0.8] tracking-tighter drop-shadow-2xl mb-8 reveal-up delay-100">
-                <span class="sr-only">Selamat datang di Dealer Resmi Geely Tangerang - </span>
+                <span class="sr-only">Temukan inovasi mobilitas masa depan dengan Geely EX2, Geely EX5, dan Geely Starray EM-i - </span>
                 DRIVE THE <br>
                 <span class="text-liquid">FUTURE</span>
             </h1>
 
             <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-lg font-light tracking-wide leading-relaxed mb-12 reveal-up delay-200">
-                Selamat datang di <strong>Geely BSD</strong>, dealer resmi kendaraan elektrik premium di Tangerang. Ekosistem mobilitas yang menggabungkan desain aerodinamis mutakhir dengan kecerdasan buatan tanpa batas.
+                Rasakan era baru mobilitas premium bersama line-up revolusioner kami. Jelajahi kelincahan urban <strong>Geely EX2</strong>, inovasi elektrik tangguh <strong>Geely EX5</strong>, dan performa hybrid mutakhir dari <strong>Geely Starray EM-i</strong>. Perpaduan sempurna antara desain aerodinamis dan teknologi masa depan tanpa batas.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 reveal-up delay-300">
