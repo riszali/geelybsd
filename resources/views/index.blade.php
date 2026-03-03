@@ -379,7 +379,7 @@
             <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20 reveal-up">
                 <div class="inline-flex items-center gap-4 mb-6">
                     <div class="w-12 h-[1px] bg-gradient-to-r from-transparent to-cyan-500"></div>
-                    <span class="text-cyan-400 text-[10px] font-bold tracking-[0.4em] uppercase">Koleksi Mobil Listrik Geely</span>
+                    <span class="text-cyan-400 text-[10px] font-bold tracking-[0.4em] uppercase">Elevate Every Journey.</span>
                     <div class="w-12 h-[1px] bg-gradient-to-l from-transparent to-cyan-500"></div>
                 </div>
                 <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-white leading-none mb-6">
