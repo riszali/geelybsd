@@ -448,11 +448,11 @@
                     <div class="lg:col-span-7 order-1 lg:order-2 reveal-right h-full px-4 md:px-0">
                         <div class="relative rounded-[24px] md:rounded-[32px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.15)] border border-gray-100 group video-feature w-full h-[45vh] md:h-[50vh] lg:h-full">
                             <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2.5s] ease-out">
-                                <source src="https://raw.githubusercontent.com/riszali/web-videos/main/Flyme%20sound%20system.mp4" type="video/mp4">
+                                <source src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/flyme-auto-logo-YNqP1Ol3nLTnN9wo.webp" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div class="absolute bottom-16 lg:bottom-12 left-6 md:left-12 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                                <span class="text-cyan-400 text-[9px] md:text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 drop-shadow-md">Flyme Sound System</span>
+                                <span class="text-cyan-400 text-[9px] md:text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 drop-shadow-md">Flyme Auto</span>
                                 <h4 class="font-geely text-2xl md:text-4xl uppercase tracking-tight text-white drop-shadow-lg leading-none">Pure Sound. Perfect Drive.</h4>
                             </div>
                         </div>
