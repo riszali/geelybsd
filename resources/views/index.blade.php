@@ -646,67 +646,6 @@
             
         </div> <!-- End of Sticky Wrapper -->
 
-        <!-- ==========================================
-             WRAPPER UNTUK EFEK STICKY OVERLAP (SECTION 6 & 7)
-        =========================================== -->
-        <div class="relative w-full bg-[#050505]">
-
-            <div class="sticky top-1/2 -translate-y-1/2 w-full aspect-video z-0 bg-black">
-                <iframe 
-                    class="absolute inset-0 w-full h-full pointer-events-none" 
-                    src="https://www.youtube.com/embed/Wf-e2Xjdm18?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=Wf-e2Xjdm18&playsinline=1" 
-                    title="Geely Starray Cinematic Background" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-
-            <!-- Spacer untuk memberikan waktu scroll selagi video menempel di latar belakang -->
-            <div class="w-full h-[50vh] md:h-[70vh] pointer-events-none"></div>
-
-            <!-- SECTION 7: EXTERIOR SHOWCASE (BENTO GRID) -->
-            <!-- Menggulir menutupi video sticky di atasnya dengan transisi bersih -->
-            <section id="exterior-gallery" class="py-16 md:py-24 lg:py-32 bg-[#050505] relative z-30 shadow-[0_-30px_60px_rgba(0,0,0,0.9)] rounded-t-[2rem] md:rounded-none border-t border-white/5">
-                <div class="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
-
-                <div class="max-w-[1600px] w-full mx-auto md:px-12 lg:px-16 relative z-10">
-                    <div class="text-center mb-8 md:mb-16 px-4">
-                        <h3 class="text-cyan-400 text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-4 reveal-up">
-                            Visionary Design
-                        </h3>
-                        <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-tighter text-white reveal-up delay-100 leading-tight drop-shadow-lg">
-                            Captivating <span class="text-gradient-cyan">Exterior</span>
-                        </h2>
-                    </div>
-
-                    <!-- Layout menggunakan gambar dengan rasio asli, tanpa efek transisi hover atau bayangan pembungkus (shadow) -->
-                    <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-4 md:grid md:grid-cols-12 md:gap-6 lg:gap-8 md:auto-rows-min pb-8 md:pb-0 px-4 md:px-0">
-                        <!-- Image 1 -->
-                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-8 md:row-span-2 reveal-up delay-100">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/02-exterior-geely-starray-em-i-geely-ambara-group-2-Yle40rlOKLC0yp5b.webp" alt="Geely Starray Exterior 1" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
-                        </div>
-                        <!-- Image 2 -->
-                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-4 reveal-up delay-200">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/03-exterior-geely-starray-em-i-geely-ambara-group-AoP4bO7nnqtgNNa9.webp" alt="Geely Starray Exterior 2" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
-                        </div>
-                        <!-- Image 3 -->
-                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-4 reveal-up delay-300">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/04-exterior-geely-starray-em-i-geely-ambara-group-AMqDzy6j7WcN8pZn.webp" alt="Geely Starray Exterior 3" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
-                        </div>
-                        <!-- Image 4 -->
-                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-6 reveal-up delay-100">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/exterior_starray_04-m7VD9nNqgziXkEl5.jpg" alt="Geely Starray Exterior 4" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
-                        </div>
-                        <!-- Image 5 -->
-                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-6 reveal-up delay-200">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/exterior_starray_05-YD0Eo27a1GFvLEpa.jpg" alt="Geely Starray Exterior 5" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div> <!-- End of Sticky Wrapper Section 6 & 7 -->
-
             <!-- ==========================================
              SECTION 11: GEELY APP REMOTE CONTROL
         =========================================== -->
