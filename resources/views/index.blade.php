@@ -499,7 +499,8 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
                     
-                    <div class="lg:col-span-5 glass-panel p-8 md:p-10 lg:p-12 rounded-[24px] md:rounded-[40px] flex flex-col justify-center group hover:border-cyan-500/30 transition-all duration-500 reveal-left">
+                    <!-- Text Section: Diubah menjadi order-2 (bawah di HP) dan lg:order-1 (kiri di Desktop) -->
+                    <div class="order-2 lg:order-1 lg:col-span-5 glass-panel p-8 md:p-10 lg:p-12 rounded-[24px] md:rounded-[40px] flex flex-col justify-center group hover:border-cyan-500/30 transition-all duration-500 reveal-left">
                         <div class="absolute top-0 left-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px] pointer-events-none transition-colors duration-700 group-hover:bg-cyan-500/20"></div>
                         
                         <div class="relative z-10">
@@ -518,7 +519,8 @@
                         </div>
                     </div>
 
-                    <div class="lg:col-span-7 flex flex-col reveal-right relative z-10">
+                    <!-- Video & Stats Section: Diubah menjadi order-1 (atas di HP) dan lg:order-2 (kanan di Desktop) -->
+                    <div class="order-1 lg:order-2 lg:col-span-7 flex flex-col reveal-right relative z-10">
                         
                         <!-- Main Image/Video Showcase -->
                         <div class="glass-panel p-2 rounded-[24px] md:rounded-[40px] group hover:border-white/30 transition-all duration-500 shadow-2xl flex flex-col star-showcase z-10 relative">
