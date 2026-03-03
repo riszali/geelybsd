@@ -437,7 +437,6 @@
     =========================================== -->
     <section class="py-24 lg:py-40 bg-white relative overflow-hidden">
         
-        <!-- Ambient BG untuk Mobile agar efek kaca/glass terlihat cantik -->
         <div class="absolute top-1/4 right-0 w-64 h-64 bg-cyan-100/60 rounded-full blur-[80px] pointer-events-none md:hidden"></div>
         <div class="absolute bottom-1/4 left-0 w-64 h-64 bg-indigo-100/60 rounded-full blur-[80px] pointer-events-none md:hidden"></div>
 
@@ -460,11 +459,8 @@
                 </div>
             </div>
 
-            <!-- Bento Grid -->
-            <!-- Memperkecil tinggi dari card di HP -->
             <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-none md:grid-rows-2 gap-3 md:gap-4 h-auto md:h-[800px] reveal-up delay-100">
                 
-                <!-- Main Focus (Large) -->
                 <div class="col-span-2 md:col-span-2 md:row-span-2 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-100 cursor-pointer h-[200px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect">
                     <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" alt="Eksterior Depan Geely EX2 EV dengan Desain Aerodinamis Tercanggih" class="w-full h-full object-cover object-center md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500 mobile-soft-gradient"></div>
@@ -480,7 +476,6 @@
                     </div>
                 </div>
 
-                <!-- Secondary Focus (Tall) -->
                 <div class="col-span-1 md:col-span-1 md:row-span-2 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-200 cursor-pointer h-[160px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect">
                     <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" alt="Gaya Hidup Berkendara EV di Perkotaan dengan Mobil Geely EX2" class="w-full h-full object-cover object-[center_60%] md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500 mobile-soft-gradient"></div>
@@ -490,7 +485,6 @@
                     </div>
                 </div>
 
-                <!-- Detail 1 (Square - Light Card) -->
                 <div class="col-span-1 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-transparent md:bg-[#f8fafc] md:border md:border-gray-200 cursor-pointer flex flex-col justify-between hover:bg-gray-100 transition-colors duration-500 h-[160px] md:h-auto mobile-bento-glass-light p-4 md:p-8 premium-card-hover">
                     <div class="z-10">
                         <span class="text-blue-500 md:text-gray-400 text-[7px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-2">03 // Utility</span>
@@ -501,7 +495,6 @@
                     </div>
                 </div>
 
-                <!-- Detail 2 (Square) -->
                 <div class="col-span-2 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-900 cursor-pointer h-[140px] md:h-auto premium-card-hover premium-card-dark glare-effect">
                     <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Desain Interior Kabin Premium Futuristik Geely EX2 Indonesia" class="w-full h-full object-cover object-[center_60%] md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-80 group-hover:opacity-100">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500 mobile-soft-gradient"></div>
@@ -521,7 +514,6 @@
     <section class="py-24 lg:py-40 bg-[#050505] bg-noise overflow-hidden relative">
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
 
-            <!-- Header -->
             <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20 reveal-up">
                 <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 mb-6">
                     <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
@@ -535,23 +527,19 @@
                 </p>
             </div>
 
-            <!-- Cinematic Tech Layout -->
             <div class="grid grid-cols-2 lg:grid-cols-12 gap-3 md:gap-6">
                 
-                <!-- Main HUD Video -->
                 <div class="col-span-2 lg:col-span-8 aspect-video md:aspect-auto md:h-[600px] group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-black reveal-scale border border-white/5 md:border-white/10 shadow-2xl premium-card-hover premium-card-dark glare-effect">
                     <video autoplay muted loop playsinline aria-label="Simulasi Platform GEA Cerdas Geely" class="w-full h-full object-cover opacity-60 mix-blend-screen">
                         <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-inside-the-gea-intelligent-electric-platform---geely-auto-720p-h264-tjCY49tcStbBVMrV.mp4" type="video/mp4">
                     </video>
                     
-                    <!-- Target Reticle Decoration -->
                     <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-32 md:h-32 text-cyan-500/20 pointer-events-none animate-[spin_20s_linear_infinite] z-10" fill="none" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="48" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 4"/>
                         <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="0.5"/>
                     </svg>
                 </div>
 
-                <!-- Side Data Cards -->
                 <div class="col-span-2 lg:col-span-4 grid grid-cols-2 lg:flex lg:flex-col gap-3 md:gap-6">
                     <!-- Card 1 -->
                     <div class="col-span-1 glass-panel mobile-bento-glass-dark rounded-[20px] md:rounded-[32px] p-4 md:p-10 flex flex-col justify-center relative overflow-hidden group reveal-right delay-100 premium-card-hover premium-card-dark">
@@ -585,6 +573,81 @@
             </div>
         </div>
     </section>
+
+            <!-- ==========================================
+             SECTION 11: GEELY APP REMOTE CONTROL
+        =========================================== -->
+        <section id="app-remote" class="py-16 md:py-24 lg:py-32 relative z-30 bg-[#050505] border-t border-white/5">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+            <div class="max-w-[1600px] w-full mx-auto px-0 sm:px-8 md:px-12 lg:px-16 relative z-10">
+                
+                <!-- Section Header -->
+                <div class="text-center mb-12 md:mb-20 max-w-4xl mx-auto px-4">
+                    <h3 class="text-cyan-400 text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-4 reveal-up">
+                        Effortless Convenience
+                    </h3>
+                    <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-tighter text-white mb-6 reveal-up delay-100 leading-tight">
+                        Geely App <span class="text-gradient-cyan">Remote Control</span>
+                    </h2>
+                    <p class="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg font-light leading-relaxed reveal-up delay-200">
+                        Geely App Remote Control puts effortless convenience in your hands. Drive with confidence knowing you’re always connected.
+                    </p>
+                </div>
+
+                <!-- Slideshow on Mobile, Bento Grid on Desktop -->
+                <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 md:grid md:grid-cols-3 lg:gap-8 pb-8 md:pb-0 px-4 md:px-0">
+                    
+                    <!-- Feature 1: Always Charged -->
+                    <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-panel rounded-[1.5rem] md:rounded-[2rem] flex flex-col reveal-up delay-100 group shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/always-carghed.jpg-sPvzxctIegkiPhzC.webp" alt="Always Charged" draggable="false" loading="lazy" class="absolute inset-0 w-full h-full object-cover transform md:group-hover:scale-105 transition-transform duration-700 select-none pointer-events-none">
+                        </div>
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-white font-geely text-xl md:text-2xl mb-3 group-hover:text-cyan-400 transition-colors">Always Charged</h4>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Schedule and monitor charging remotely to ensure your car is powered up when you need it. More convenience, more efficiency, all at your fingertips.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Never Lost -->
+                    <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-panel rounded-[1.5rem] md:rounded-[2rem] flex flex-col reveal-up delay-200 group shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/never-lost.jpg-9JUUSHg9iMEbQsEN.webp" alt="Never Lost" draggable="false" loading="lazy" class="absolute inset-0 w-full h-full object-cover transform md:group-hover:scale-105 transition-transform duration-700 select-none pointer-events-none">
+                        </div>
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-white font-geely text-xl md:text-2xl mb-3 group-hover:text-cyan-400 transition-colors">Never Lost</h4>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Precision map positioning with a one-tap “Find my Car” feature. No more lost cars, park with confidence, locate with ease.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Full Control -->
+                    <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-panel rounded-[1.5rem] md:rounded-[2rem] flex flex-col reveal-up delay-300 group shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/full-control.jpg-ycOYdP2jZuNB3u9w.webp" alt="Full Control" draggable="false" loading="lazy" class="absolute inset-0 w-full h-full object-cover transform md:group-hover:scale-105 transition-transform duration-700 select-none pointer-events-none">
+                        </div>
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-white font-geely text-xl md:text-2xl mb-3 group-hover:text-cyan-400 transition-colors">Full Control</h4>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Pre-cool or warm up your car for ultimate comfort. Remotely unlock the doors for family. Check and control windows, doors, and vehicle status anytime.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Swipe indicator for mobile -->
+                <div class="text-center mt-2 flex md:hidden justify-center items-center gap-2 text-cyan-400 text-[9px] font-bold uppercase tracking-widest animate-pulse">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    Swipe to explore
+                </div>
+
+            </div>
+        </section>
 
     <!-- ==========================================
          ADVANCED INTERSECTION OBSERVER SCRIPT
