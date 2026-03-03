@@ -466,14 +466,7 @@
                 </div>
                 @endforeach
 
-            </div>
-            
-            <div class="mt-12 md:mt-20 text-center reveal-up delay-300">
-                <a href="/discover" title="Lihat Semua Varian Mobil Geely di Tangerang" class="btn-shimmer inline-flex items-center justify-center gap-3 bg-white text-black px-10 md:px-12 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase hover:scale-105 transition-transform duration-500">
-                    View Full Lineup
-                </a>
-            </div>
-            
+            </div>            
         </div>
     </section>
 
