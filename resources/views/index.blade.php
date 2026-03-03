@@ -227,7 +227,7 @@
                 <span class="text-liquid">FUTURE</span>
             </h1>
 
-            <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-lg font-light tracking-wide leading-relaxed mb-12 reveal-up delay-200">
+            <p class="text-gray-400 max-w-6xl mx-auto text-sm md:text-xl font-light tracking-wide leading-relaxed mb-12 reveal-up delay-200">
                 Rasakan era baru mobilitas premium bersama line-up revolusioner kami. Jelajahi kelincahan urban <strong>Geely EX2</strong>, inovasi elektrik tangguh <strong>Geely EX5</strong>, dan performa hybrid mutakhir dari <strong>Geely Starray EM-i</strong>. Perpaduan sempurna antara desain aerodinamis dan teknologi masa depan tanpa batas.
             </p>
 
@@ -246,7 +246,7 @@
             </div>
         </div>
     </header>
-
+    
     <!-- ==========================================
          SECTION 2: THE ECOSYSTEM (SEKARANG DISembunyikan VIA CSS 'hidden')
     =========================================== -->
