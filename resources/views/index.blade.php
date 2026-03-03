@@ -452,7 +452,7 @@
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div class="absolute bottom-16 lg:bottom-12 left-6 md:left-12 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                                <span class="text-cyan-400 text-[9px] md:text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 drop-shadow-md">Drive the Future</span>
+                                <span class="text-cyan-400 text-[9px] md:text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 drop-shadow-md">Flyme Auto</span>
                                 <h4 class="font-geely text-2xl md:text-4xl uppercase tracking-tight text-white drop-shadow-lg leading-none">Future in Motion.</h4>
                             </div>
                         </div>
@@ -522,8 +522,8 @@
                         
                         <!-- Main Image/Video Showcase -->
                         <div class="glass-panel p-2 rounded-[24px] md:rounded-[40px] group hover:border-white/30 transition-all duration-500 shadow-2xl flex flex-col star-showcase z-10 relative">
-                            <!-- PERBAIKAN: Menambahkan 'aspect-video' dan 'min-h-[300px]' agar container memiliki tinggi -->
-                            <div class="relative w-full aspect-video min-h-[300px] md:min-h-[400px] rounded-[18px] md:rounded-[32px] overflow-hidden bg-gray-900">
+                            <!-- PERBAIKAN: Menggunakan aspect-video (16:9) untuk semua ukuran layar -->
+                            <div class="relative w-full aspect-video rounded-[18px] md:rounded-[32px] overflow-hidden bg-gray-900">
                                 
                                 <!-- PERBAIKAN: Pastikan video mengambil seluruh ruang container parentnya -->
                                 <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover object-center transform transition-transform duration-[4s] ease-out opacity-90 group-hover:opacity-100 z-0 mirror-rhd">
