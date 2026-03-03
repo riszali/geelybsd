@@ -575,6 +575,139 @@
     </section>
 
             <!-- ==========================================
+             WRAPPER UNTUK EFEK STICKY OVERLAP
+             (Section 4 Video & Section 5 Content digabung)
+        =========================================== -->
+        <div class="relative w-full pb-10 bg-[#050505]">
+            
+            <!-- SECTION 4: STICKY VIDEO BACKGROUND -->
+            <div class="sticky top-[25vh] md:top-0 w-full aspect-video md:h-[100vh] overflow-hidden z-0">
+                <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                    <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely---coming-soon-starray-em-i---geely-epping-1080p-h264-YZ9EbbbjRws55ErL.mp4" type="video/mp4">
+                </video>
+                
+                <!-- Subtle gradient overlays for smooth blending -->
+                <div class="absolute inset-x-0 top-0 h-10 md:h-32 bg-gradient-to-b from-[#050505] to-transparent pointer-events-none z-10"></div>
+                <div class="absolute inset-x-0 bottom-0 h-10 md:h-32 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none z-10"></div>
+            </div>
+
+            <!-- SECTION 5: EM-I SUPER HYBRID TECHNOLOGY -->
+            <section class="mt-[40vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#050505] relative z-30 shadow-[0_-30px_60px_rgba(0,0,0,0.9)] min-h-[100vh] rounded-t-[2rem] md:rounded-none border-t border-white/5 md:border-t-0">
+                <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+                <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+                <div class="max-w-[1600px] w-full mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-20 lg:gap-y-10 items-center lg:items-start">
+                    
+                    <div class="order-1 lg:col-start-1 lg:row-start-1 flex flex-col justify-center">
+                        <h3 class="text-cyan-400 text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-4 reveal-up">
+                            Efficiency meets intelligent
+                        </h3>
+                        <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-tighter text-white mb-6 reveal-up delay-100 leading-tight">
+                            EM-i <span class="text-gradient-cyan">super hybrid</span>
+                        </h2>
+                        <p class="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg font-light leading-relaxed mb-4 lg:mb-10 reveal-up delay-200">
+                            EM-i or E-Motive intelligence is Geely's advanced hybrid technology, combining the benefits of fuel and battery for greater efficiency, capability, and lower emissions.
+                        </p>
+                    </div>
+
+                    <div class="order-2 lg:col-start-2 lg:row-start-1 relative reveal-left delay-300">
+                        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/4 w-[80%] h-[60%] bg-cyan-600/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
+                        <div class="glass-panel p-2 md:p-3 rounded-[1.5rem] md:rounded-[2rem] relative z-10">
+                            <div class="relative w-full aspect-video rounded-[1rem] md:rounded-[1.5rem] overflow-hidden">
+                                <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover transform md:hover:scale-105 transition-transform duration-700">
+                                    <source src="https://geelyprod-assets.oss-ap-southeast-5.aliyuncs.com/products/starray-emi/section-2/EM-i-Super-Hybrid.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-3 lg:col-start-2 lg:row-start-2 glass-panel p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl reveal-up delay-400 relative z-10 group overflow-hidden">
+                        <div class="absolute -right-10 -top-10 w-32 h-32 bg-cyan-500/20 rounded-full blur-[40px] group-hover:bg-cyan-400/40 transition-colors duration-500"></div>
+                        <h4 class="text-white font-bold text-base sm:text-lg md:text-2xl mb-2 md:mb-4 relative z-10 group-hover:text-cyan-300 transition-colors drop-shadow-sm">
+                            Highest Thermal Efficiency (46.5%)
+                        </h4>
+                        <p class="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Globally leading platform thermal efficiency, surpassing industry standards.
+                        </p>
+                    </div>
+
+                    <div class="order-4 lg:col-start-1 lg:row-start-2 glass-panel p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl reveal-up delay-300 relative group overflow-hidden">
+                        <div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/20 rounded-full blur-[40px] group-hover:bg-emerald-400/40 transition-colors duration-500"></div>
+                        <h4 class="text-white font-bold text-base sm:text-lg md:text-2xl mb-2 md:mb-4 relative z-10 group-hover:text-emerald-300 transition-colors drop-shadow-sm">
+                            High Efficiency Electric Drive
+                        </h4>
+                        <p class="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Class-leading PHEV with high-efficiency drive and continuous variable voltage performance.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+            
+        </div> <!-- End of Sticky Wrapper -->
+
+        <!-- ==========================================
+             WRAPPER UNTUK EFEK STICKY OVERLAP (SECTION 6 & 7)
+        =========================================== -->
+        <div class="relative w-full bg-[#050505]">
+
+            <div class="sticky top-1/2 -translate-y-1/2 w-full aspect-video z-0 bg-black">
+                <iframe 
+                    class="absolute inset-0 w-full h-full pointer-events-none" 
+                    src="https://www.youtube.com/embed/Wf-e2Xjdm18?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=Wf-e2Xjdm18&playsinline=1" 
+                    title="Geely Starray Cinematic Background" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Spacer untuk memberikan waktu scroll selagi video menempel di latar belakang -->
+            <div class="w-full h-[50vh] md:h-[70vh] pointer-events-none"></div>
+
+            <!-- SECTION 7: EXTERIOR SHOWCASE (BENTO GRID) -->
+            <!-- Menggulir menutupi video sticky di atasnya dengan transisi bersih -->
+            <section id="exterior-gallery" class="py-16 md:py-24 lg:py-32 bg-[#050505] relative z-30 shadow-[0_-30px_60px_rgba(0,0,0,0.9)] rounded-t-[2rem] md:rounded-none border-t border-white/5">
+                <div class="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+                <div class="max-w-[1600px] w-full mx-auto md:px-12 lg:px-16 relative z-10">
+                    <div class="text-center mb-8 md:mb-16 px-4">
+                        <h3 class="text-cyan-400 text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-4 reveal-up">
+                            Visionary Design
+                        </h3>
+                        <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-tighter text-white reveal-up delay-100 leading-tight drop-shadow-lg">
+                            Captivating <span class="text-gradient-cyan">Exterior</span>
+                        </h2>
+                    </div>
+
+                    <!-- Layout menggunakan gambar dengan rasio asli, tanpa efek transisi hover atau bayangan pembungkus (shadow) -->
+                    <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-4 md:grid md:grid-cols-12 md:gap-6 lg:gap-8 md:auto-rows-min pb-8 md:pb-0 px-4 md:px-0">
+                        <!-- Image 1 -->
+                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-8 md:row-span-2 reveal-up delay-100">
+                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/02-exterior-geely-starray-em-i-geely-ambara-group-2-Yle40rlOKLC0yp5b.webp" alt="Geely Starray Exterior 1" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
+                        </div>
+                        <!-- Image 2 -->
+                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-4 reveal-up delay-200">
+                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/03-exterior-geely-starray-em-i-geely-ambara-group-AoP4bO7nnqtgNNa9.webp" alt="Geely Starray Exterior 2" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
+                        </div>
+                        <!-- Image 3 -->
+                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-4 reveal-up delay-300">
+                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/04-exterior-geely-starray-em-i-geely-ambara-group-AMqDzy6j7WcN8pZn.webp" alt="Geely Starray Exterior 3" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
+                        </div>
+                        <!-- Image 4 -->
+                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-6 reveal-up delay-100">
+                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/exterior_starray_04-m7VD9nNqgziXkEl5.jpg" alt="Geely Starray Exterior 4" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
+                        </div>
+                        <!-- Image 5 -->
+                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-6 reveal-up delay-200">
+                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/exterior_starray_05-YD0Eo27a1GFvLEpa.jpg" alt="Geely Starray Exterior 5" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> <!-- End of Sticky Wrapper Section 6 & 7 -->
+
+            <!-- ==========================================
              SECTION 11: GEELY APP REMOTE CONTROL
         =========================================== -->
         <section id="app-remote" class="py-16 md:py-24 lg:py-32 relative z-30 bg-[#050505] border-t border-white/5">
