@@ -219,14 +219,6 @@
 
         <!-- Center Aligned Epic Content -->
         <div class="relative z-20 w-full max-w-7xl mx-auto px-6 text-center mt-20">
-            
-            <div class="inline-flex items-center gap-3 mb-6 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md reveal-up">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-                </span>
-                <span class="text-gray-300 text-[9px] tracking-[0.4em] font-medium uppercase">Dealer Resmi Mobil Listrik Geely BSD</span>
-            </div>
 
             <!-- SEO Opt: Ditambahkan keyword tersembunyi sr-only untuk ditangkap crawler Google -->
             <h1 class="font-geely text-5xl sm:text-6xl md:text-8xl lg:text-[130px] text-white uppercase leading-[0.9] md:leading-[0.8] tracking-tighter drop-shadow-2xl mb-8 reveal-up delay-100">
