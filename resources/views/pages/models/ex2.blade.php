@@ -882,7 +882,7 @@ SECTION 10: DIVE INTO THE DETAILS
         <div class="order-2 lg:order-1 lg:col-span-7 flex flex-col gap-4 reveal-left w-full">
             
             <!-- Exterior Link Card -->
-            <a href="{{ url('models/ex2-exterior') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
+            <a href="{{ route('models.ex2.exterior') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg" alt="Exterior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
                 
@@ -898,7 +898,7 @@ SECTION 10: DIVE INTO THE DETAILS
             </a>
 
             <!-- Interior Link Card -->
-            <a href="{{ url('models/ex2-interior') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
+            <a href="{{ route('models.ex2.interior') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/skyline-white-YQe9py6QFEDr79dt.webp" alt="Interior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
                 
@@ -914,7 +914,7 @@ SECTION 10: DIVE INTO THE DETAILS
             </a>
 
             <!-- Specification Link Card -->
-            <a href="{{ url('models/ex2-specification') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
+            <a href="{{ route('models.ex2.specification') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-9-driving-pleasure-geely-ex2-mrThxF1DGtduy9Ih.webp" alt="Specification" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
                 
@@ -964,7 +964,7 @@ SECTION 10: DIVE INTO THE DETAILS
             <!-- Action Buttons -->
             <div class="flex flex-col gap-3 w-full">
                 <!-- Button Show Full Specs diarahkan ke Specification -->
-                <a href="{{ url('models/ex2-specification') }}" class="w-full py-4 md:py-5 rounded-full bg-gray-900 text-white font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase text-center hover:bg-cyan-600 transition-colors duration-300 shadow-md">
+                <a href="{{ route('models.ex2.specification') }}" class="w-full py-4 md:py-5 rounded-full bg-gray-900 text-white font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase text-center hover:bg-cyan-600 transition-colors duration-300 shadow-md">
                     Show Full Specs
                 </a>
                 <div class="flex flex-col sm:flex-row gap-3 w-full">
@@ -983,6 +983,9 @@ SECTION 10: DIVE INTO THE DETAILS
     </div>
 
 </div>
+
+</section>
+
 
     <!-- ==========================================
          SCRIPTS 
