@@ -1,13 +1,6 @@
-<!-- 
-    Link Google Fonts:
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
--->
-
 <style>
-    /* Nama kelas diubah agar tidak bentrok dengan CSS global halaman Anda */
     .footer-lundor-sword { font-family: 'Cinzel', serif; }
     
-    /* Gunakan nama yang sangat spesifik untuk footer ini saja */
     .geely-footer-custom-scope { font-family: 'Inter', sans-serif; }
     
     .glow-cyan-footer {
@@ -34,21 +27,15 @@
     }
 </style>
 
-<!-- ==========================================
-     PREMIUM GEELY BSD FOOTER (SCOPED STYLES)
-=========================================== -->
 <footer class="relative bg-premium-dark-footer text-white pt-24 pb-12 overflow-hidden geely-footer-custom-scope border-t border-white/5">
     
-    <!-- Elemen Dekorasi Gradasi Cahaya -->
     <div class="mesh-gradient-footer -top-64 -right-32"></div>
     <div class="mesh-gradient-footer -bottom-64 -left-32" style="background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0) 70%);"></div>
 
-    <!-- Garis Cahaya Atas -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent"></div>
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         
-        <!-- Logo Utama -->
         <div class="flex flex-col items-center mb-20">
             <a href="/" class="block group">
                 <img class="h-16 md:h-20 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-105 drop-shadow-[0_0_15px_rgba(34,211,238,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(34,211,238,0.6)]" 
@@ -58,7 +45,6 @@
             <div class="mt-6 h-px w-24 bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
         </div>
 
-        <!-- Grid Navigasi -->
         <div class="grid grid-cols-2 lg:grid-cols-12 gap-y-12 gap-x-6 mb-24">
             
             <div class="col-span-2 lg:col-span-4 flex flex-col lg:pr-12">
@@ -74,7 +60,7 @@
                     <div class="flex items-start gap-4 group">
                         <svg class="w-4 h-4 text-gray-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         <p class="text-gray-500 text-[10px] leading-relaxed uppercase tracking-widest">
-                            Astra Biz Center, BSD City, Tangerang
+                            Kav. Commercial de Park, Jl. Boulevard Utara No.lot 2 no.17, Lengkong Wetan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15331
                         </p>
                     </div>
                     <div class="flex items-center gap-4 group">
@@ -123,24 +109,20 @@
             </div>
 
         </div>
-        
-        <!-- Copyright & Legal (Centered Layout) -->
+
         <div class="border-t border-white/5 pt-12 flex flex-col items-center gap-8 relative text-center">
-            
-            <!-- Links Section (Privacy, Terms, etc.) -->
+
             <div class="flex flex-wrap justify-center items-center gap-8 text-[10px] text-gray-500 uppercase tracking-[0.2em] font-medium">
                 <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
                 <a href="#" class="hover:text-white transition-colors">Cookies</a>
             </div>
 
-            <!-- Main Credit & Copyright -->
             <div class="flex flex-col items-center gap-4">
                 <p class="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-medium">
                     &copy; 2026 Geely BSD. All Rights Reserved.
                 </p>
-                
-                <!-- KREDIT LUND'OR (CENTERED) -->
+
                 <div class="flex items-center gap-3 group">
                     <p class="text-[10px] uppercase tracking-[0.3em] text-gray-300">Created by   |</p>
                     <a href="https://lundorimagine.com" target="_blank" class="block transform transition-transform group-hover:scale-105">
