@@ -1,22 +1,16 @@
 <x-layouts.app>
-    <!-- ==========================================
-         ADVANCED SEO META TAGS & OPEN GRAPH
-         (Pastikan komponen layout <head> Anda dapat merender slot/push ini)
-    =========================================== -->
     @push('head')
         <title>Dealer Resmi Geely BSD Tangerang | Test Drive Geely EX5 & EX2</title>
         <meta name="description" content="Kunjungi Showroom Dealer Resmi Geely BSD City, Tangerang. Temukan era baru mobilitas, dapatkan promo terbaru, dan booking test drive Geely EX5 & EX2 hari ini!">
         <meta name="keywords" content="Geely BSD, Dealer Geely Tangerang, Dealer Geely BSD City, Mobil Listrik Geely, Geely EX5, Geely EX2, Harga Geely, Test Drive Geely, Showroom Geely Banten">
         <link rel="canonical" href="https://geelybsd.id/">
         
-        <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://geelybsd.id/">
         <meta property="og:title" content="Dealer Resmi Geely BSD Tangerang | Kendaraan Listrik Premium">
         <meta property="og:description" content="Kunjungi Showroom Dealer Resmi Geely BSD City. Dapatkan promo terbaru dan test drive Geely EX5 & EX2.">
         <meta property="og:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG">
 
-        <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="https://geelybsd.id/">
         <meta property="twitter:title" content="Dealer Resmi Geely BSD Tangerang | Kendaraan Listrik Premium">
@@ -24,14 +18,9 @@
         <meta property="twitter:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG">
     @endpush
 
-    <!-- ==========================================
-         ULTRA-PREMIUM GLOBAL STYLES
-    =========================================== -->
     <style>
-        /* Base Resets & Smooth Scrolling */
         html { scroll-behavior: smooth; }
         
-        /* Advanced Cinematic Noise */
         .bg-noise::before {
             content: "";
             position: absolute;
@@ -42,7 +31,6 @@
             mix-blend-mode: overlay;
         }
 
-        /* Next-Gen Spatial Glassmorphism */
         .glass-panel {
             background: rgba(25, 25, 30, 0.4);
             backdrop-filter: blur(32px);
@@ -60,7 +48,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
         }
 
-        /* Continuous Button Shimmer Effect */
         .btn-shimmer {
             position: relative;
             overflow: hidden;
@@ -80,7 +67,6 @@
             100% { transform: rotate(45deg) translateX(100%); }
         }
 
-        /* Float Animations for UI Elements */
         .animate-float-slow { animation: float 6s ease-in-out infinite; }
         .animate-float-fast { animation: float 4s ease-in-out infinite reverse; }
         @keyframes float {
@@ -89,19 +75,16 @@
             100% { transform: translateY(0px); }
         }
 
-        /* Ultra-Smooth Scroll Reveals */
         .reveal-up { opacity: 0; transform: translateY(60px) scale(0.98); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal-left { opacity: 0; transform: translateX(-60px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal-right { opacity: 0; transform: translateX(60px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
         .is-revealed { opacity: 1 !important; transform: translate(0) scale(1) !important; }
 
-        /* Delays */
         .delay-100 { transition-delay: 100ms; }
         .delay-200 { transition-delay: 200ms; }
         .delay-300 { transition-delay: 300ms; }
         .delay-400 { transition-delay: 400ms; }
 
-        /* Liquid Text Gradient */
         .text-liquid {
             background: linear-gradient(270deg, #ffffff, #818cf8, #22d3ee, #ffffff);
             background-size: 300% 300%;
@@ -115,7 +98,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Utility SEO Hidden */
         .sr-only {
             position: absolute;
             width: 1px;
@@ -128,9 +110,6 @@
             border-width: 0;
         }
 
-        /* ==========================================
-           MOBILE-ONLY BENTO GLASSMORPHISM
-        =========================================== */
         @media (max-width: 767px) {
             .mobile-bento-glass-light {
                 background: rgba(255, 255, 255, 0.45) !important;
@@ -166,9 +145,6 @@
             }
         }
 
-        /* ==========================================
-           DESKTOP PREMIUM CARDS & GLARE EFFECT
-        =========================================== */
         @media (min-width: 768px) {
             .premium-card-hover {
                 transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.5s ease;
@@ -184,7 +160,6 @@
                 border-color: rgba(255, 255, 255, 0.2);
             }
             
-            /* Sweep Reflection Glare on Hover */
             .glare-effect::after {
                 content: '';
                 position: absolute;
@@ -201,44 +176,28 @@
         }
     </style>
 
-<!-- ==========================================
-      SECTION 1: HERO (DYNAMIC & IMMERSIVE)
-    =========================================== -->
     <header class="relative h-[100svh] w-full flex items-center justify-center overflow-hidden bg-black bg-noise">
-        
-        <!-- Video Background with Deep Vignette -->
         <div class="absolute inset-0 z-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover scale-110 animate-[ken-burns_30s_ease-out_infinite_alternate]">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
             </video>
-            <!-- Heavy Vignette to make text pop -->
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]"></div>
-            <!-- Bottom Gradient for content -->
             <div class="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
         </div>
-
-        <!-- Center Aligned Epic Content -->
         <div class="relative z-20 w-full max-w-7xl mx-auto px-6 text-center mt-20">
-
-            <!-- SEO Opt: Ditambahkan keyword tersembunyi sr-only untuk ditangkap crawler Google -->
             <h1 class="font-geely text-5xl sm:text-6xl md:text-8xl lg:text-[130px] text-white uppercase leading-[0.9] md:leading-[0.8] tracking-tighter drop-shadow-2xl mb-8 reveal-up delay-100">
                 <span class="sr-only">Temukan inovasi mobilitas masa depan dengan Geely EX2, Geely EX5, dan Geely Starray EM-i - </span>
                 DRIVE THE <br>
                 <span class="text-liquid">FUTURE</span>
             </h1>
-
             <p class="text-gray-400 max-w-6xl mx-auto text-sm md:text-xl font-light tracking-wide leading-relaxed mb-12 reveal-up delay-200">
                 Rasakan era baru mobilitas premium bersama line-up revolusioner kami. Jelajahi kelincahan urban <strong>Geely EX2</strong>, inovasi elektrik tangguh <strong>Geely EX5</strong>, dan performa hybrid mutakhir dari <strong>Geely Starray EM-i</strong>. Perpaduan sempurna antara desain aerodinamis dan teknologi masa depan tanpa batas.
             </p>
-
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 reveal-up delay-300">
-                <!-- Glassmorphism Primary Button -->
                 <a href="/test-drive" title="Booking Test Drive Mobil Geely di BSD" class="btn-shimmer flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 md:px-12 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] w-full sm:w-auto">
                     <span>Book Test Drive</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
-                
-                <!-- Glassmorphism Secondary Button -->
                 <a href="#lineup" title="Eksplorasi Model Mobil Listrik Geely Terbaru" class="group flex items-center gap-4 text-white hover:text-cyan-300 transition-colors duration-300 mt-4 sm:mt-0">
                     <div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:bg-white/20 group-hover:border-cyan-400 transition-all duration-300">
                         <svg class="w-4 h-4 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
@@ -253,14 +212,9 @@
          SECTION 2: THE ECOSYSTEM (SEKARANG DISembunyikan VIA CSS 'hidden')
     =========================================== -->
     <section id="experience" class="hidden py-24 lg:py-32 bg-[#fafafa] relative border-t border-gray-100 overflow-hidden">
-        
-        <!-- Subtle Grid & Ambient Background -->
         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgNDBMMCAwTDIwIDBMNDAgMEw0MCA0MEwyMCA0MEwwIDQweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMyIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPg==')] pointer-events-none opacity-50"></div>
         <div class="absolute top-0 right-1/4 w-[600px] h-[600px] bg-blue-100/50 rounded-full blur-[120px] pointer-events-none"></div>
-
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-            
-            <!-- Header -->
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6 reveal-up">
                 <div class="max-w-3xl">
                     <div class="inline-flex items-center gap-4 mb-4 md:mb-6">
@@ -278,14 +232,9 @@
                     </p>
                 </div>
             </div>
-
-            <!-- Main Image Card -->
             <div class="relative w-full rounded-[24px] md:rounded-3xl overflow-hidden group reveal-up bg-gray-900 shadow-xl mb-3 md:mb-6 md:border md:border-white/10 premium-card-hover premium-card-dark glare-effect">
                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG" alt="Fasad Depan Showroom Dealer Resmi Geely BSD City Tangerang Banten" class="w-full h-auto block transform group-hover:scale-105 transition-transform duration-[2.5s] ease-out brightness-90 group-hover:brightness-100 object-cover object-[center_60%] md:object-center">
-                <!-- Menyembunyikan gradasi pada versi HP agar gambar lebih clear -->
                 <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500 mobile-soft-gradient"></div>
-
-                <!-- Mengubah flex menjadi hidden md:flex untuk menyembunyikan card text pada versi HP -->
                 <div class="hidden md:flex absolute bottom-3 left-3 right-3 md:bottom-0 md:left-0 md:right-0 md:inset-x-0 z-10 p-4 md:p-12 w-auto md:w-full flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mobile-bento-pill md:bg-transparent md:border-none md:rounded-none">
                     <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out mobile-always-visible">
                         <span class="text-cyan-300 text-[8px] md:text-[9px] tracking-[0.3em] uppercase font-bold mb-2 md:mb-3 block drop-shadow-md">Flagship Location</span>
@@ -298,44 +247,32 @@
                 </div>
             </div>
 
-            <!-- Bento Grid System -->
             <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 reveal-up">
-                
-                <!-- Sub Image 1 -->
                 <div class="col-span-2 md:col-span-1 group relative rounded-[20px] md:rounded-3xl overflow-hidden bg-gray-900 shadow-xl md:border md:border-white/5 premium-card-hover premium-card-dark glare-effect">
                     <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02479-QJjtY6j87MG4Clmo.JPG" alt="Fasilitas Lounge Mewah dan Ruang Tunggu Servis Mobil Geely BSD City" class="w-full h-[140px] md:h-64 lg:h-80 object-cover object-[center_70%] md:object-center block transform group-hover:scale-105 transition-transform duration-[2.5s] ease-out brightness-90 group-hover:brightness-100">
-                    <!-- Menyembunyikan gradasi pada versi HP agar gambar lebih clear -->
                     <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none mobile-soft-gradient"></div>
-                    <!-- Menyembunyikan card text pada versi HP -->
                     <div class="hidden md:block absolute bottom-2 left-2 right-2 md:bottom-0 md:left-0 md:right-0 p-3 md:p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out opacity-0 group-hover:opacity-100 pointer-events-none mobile-always-visible mobile-bento-pill md:bg-transparent md:border-none md:rounded-none">
                         <span class="text-[7px] md:text-[8px] tracking-[0.2em] font-bold uppercase mb-1 block text-cyan-300 md:text-white">Atmosphere</span>
                         <h4 class="font-geely text-base md:text-xl uppercase tracking-tight">Premium Lounge</h4>
                     </div>
                 </div>
-                
-                <!-- Sub Image 2 -->
                 <div class="col-span-1 md:col-span-1 group relative rounded-[20px] md:rounded-3xl overflow-hidden bg-gray-900 shadow-xl md:border md:border-white/5 premium-card-hover premium-card-dark glare-effect">
                     <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02475-QBhC4tRBny6VqEdA.JPG" alt="Area Display Kendaraan Listrik Geely EX5 di Showroom Premium Tangerang" class="w-full h-[140px] md:h-64 lg:h-80 object-cover object-[center_60%] md:object-center block transform group-hover:scale-105 transition-transform duration-[2.5s] ease-out brightness-90 group-hover:brightness-100">
                     <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none mobile-soft-gradient"></div>
-                    <!-- Menyembunyikan card text pada versi HP -->
                     <div class="hidden md:block absolute bottom-2 left-2 right-2 md:bottom-0 md:left-0 md:right-0 p-3 md:p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out opacity-0 group-hover:opacity-100 pointer-events-none mobile-always-visible mobile-bento-pill md:bg-transparent md:border-none md:rounded-none">
                         <span class="text-[7px] md:text-[8px] tracking-[0.2em] font-bold uppercase mb-1 block text-cyan-300 md:text-white">Experience</span>
                         <h4 class="font-geely text-base md:text-xl uppercase tracking-tight leading-tight">Showroom Floor</h4>
                     </div>
                 </div>
 
-                <!-- Sub Image 3 -->
                 <div class="col-span-1 md:col-span-1 group relative rounded-[20px] md:rounded-3xl overflow-hidden bg-gray-900 shadow-xl md:border md:border-white/5 premium-card-hover premium-card-dark glare-effect">
                     <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/image_2lvu6s2lvu6s2lvu-E26lFJQBrXZTiyRq.png" alt="Desain Interior Arsitektur Modern Showroom Geely BSD" class="w-full h-[140px] md:h-64 lg:h-80 object-cover object-[center_70%] md:object-center block transform group-hover:scale-105 transition-transform duration-[2.5s] ease-out brightness-90 group-hover:brightness-100">
                     <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none mobile-soft-gradient"></div>
-                    <!-- Menyembunyikan card text pada versi HP -->
                     <div class="hidden md:block absolute bottom-2 left-2 right-2 md:bottom-0 md:left-0 md:right-0 p-3 md:p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out opacity-0 group-hover:opacity-100 pointer-events-none mobile-always-visible mobile-bento-pill md:bg-transparent md:border-none md:rounded-none">
                         <span class="text-[7px] md:text-[8px] tracking-[0.2em] font-bold uppercase mb-1 block text-cyan-300 md:text-white">Design</span>
                         <h4 class="font-geely text-base md:text-xl uppercase tracking-tight leading-tight">Modern Space</h4>
                     </div>
                 </div>
-
-                <!-- Feature 1: Ultra-Fast Charging -->
                 <div class="col-span-1 md:col-span-2 lg:col-span-1 rounded-[20px] md:rounded-3xl bg-white md:border md:border-gray-200 p-6 md:p-8 flex flex-col justify-between group md:hover:border-blue-200 transition-all duration-500 relative overflow-hidden mobile-bento-glass-light mobile-bento-p premium-card-hover">
                     <div class="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-blue-50/50 rounded-full blur-[40px] md:blur-[50px] group-hover:bg-blue-100 transition-colors duration-700"></div>
                     <div class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-blue-50/80 md:bg-blue-50 flex items-center justify-center text-blue-600 mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shrink-0">
@@ -346,8 +283,6 @@
                         <p class="text-gray-500 text-[9px] md:text-sm font-light leading-relaxed hidden md:block">Akses prioritas ke jaringan pengisian daya berkecepatan tinggi eksklusif untuk member setia dealer Geely BSD.</p>
                     </div>
                 </div>
-
-                <!-- Feature 2: VIP Concierge -->
                 <div class="col-span-1 md:col-span-1 rounded-[20px] md:rounded-3xl bg-white md:border md:border-gray-200 p-6 md:p-8 flex flex-col justify-between group md:hover:border-indigo-200 transition-all duration-500 relative overflow-hidden mobile-bento-glass-light mobile-bento-p premium-card-hover">
                     <div class="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-indigo-50/50 rounded-full blur-[40px] md:blur-[50px] group-hover:bg-indigo-100 transition-colors duration-700"></div>
                     <div class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-indigo-50/80 md:bg-indigo-50 flex items-center justify-center text-indigo-600 mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500 shrink-0">
@@ -364,20 +299,12 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 3: THE COLLECTION (DIOPTIMALKAN UNTUK HP)
-    =========================================== -->
     <section id="lineup" class="py-24 lg:py-40 bg-[#020202] text-white relative overflow-hidden">
-        
-        <!-- Liquid Mesh Background -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0 opacity-40">
             <div class="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] bg-indigo-900/30 rounded-full blur-[150px] mix-blend-screen animate-float-slow"></div>
             <div class="absolute bottom-[-20%] right-[-10%] w-[50vw] h-[50vw] bg-cyan-900/20 rounded-full blur-[150px] mix-blend-screen animate-float-fast"></div>
         </div>
-
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-            
-            <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20 reveal-up">
                 <div class="inline-flex items-center gap-4 mb-6">
                     <div class="w-12 h-[1px] bg-gradient-to-r from-transparent to-cyan-500"></div>
@@ -391,10 +318,7 @@
                     Koleksi kendaraan EV unggulan yang dirancang tanpa kompromi. Memadukan estetika aerodinamis kelas dunia dengan arsitektur elektrik paling canggih di industri otomotif Indonesia.
                 </p>
             </div>
-
-            <!-- Full-Bleed Editorial Models Grid (Perbaikan Flexbox untuk Mobile) -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                
                 @php
                     $showcase = [
                         [
@@ -425,19 +349,13 @@
                 @endphp
 
                 @foreach($showcase as $car)
-                <!-- Di HP: Flex Column agar image dan text dipisah, di Desktop: Block dengan tinggi 600px -->
                 <div class="group relative flex flex-col md:block h-auto md:h-[600px] rounded-[20px] md:rounded-[32px] overflow-hidden reveal-up {{ $car['delay'] }} md:border md:border-white/10 premium-card-hover premium-card-dark glare-effect bg-[#0a0a0c] md:bg-transparent">
-                    
-                    <!-- Container Khusus Gambar (Terpisah dari teks di HP) -->
                     <div class="relative w-full h-[220px] sm:h-[280px] md:absolute md:inset-0 md:h-full shrink-0">
                         <img src="{{ $car['img'] }}" alt="Mobil Listrik {{ $car['name'] }} - {{ $car['type'] }} tersedia di Dealer Geely BSD" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out brightness-90 md:brightness-75 group-hover:brightness-100">
-                        <!-- Overlay gradasi tipis -->
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-90 md:opacity-90 group-hover:opacity-80 transition-opacity duration-500"></div>
                     </div>
                     
-                    <!-- Content Card (Glass Bento Card ditarik sedikit (-mt-8) agar estetik numpuk di HP) -->
                     <div class="relative z-10 -mt-8 mx-3 mb-3 md:mt-0 md:mx-0 md:mb-0 md:absolute md:inset-0 p-4 md:p-8 flex flex-col justify-end mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none shadow-2xl md:shadow-none">
-                        <!-- Konten dibungkus agar animasi hover bisa jalan di Desktop -->
                         <div class="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 ease-out">
                             <span class="text-cyan-400 text-[9px] md:text-[9px] font-bold tracking-[0.3em] uppercase mb-1.5 md:mb-2 block drop-shadow-md">
                                 {{ $car['type'] }}
@@ -446,7 +364,6 @@
                                 {{ $car['name'] }}
                             </h3>
                             
-                            <!-- Tech Specs Tags -->
                             <div class="flex flex-wrap gap-2 md:gap-3 mb-3 md:mb-6 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">
                                 @foreach($car['stats'] as $stat)
                                 <span class="px-2.5 py-1 md:px-3 md:py-1.5 rounded-full border border-white/20 bg-black/40 backdrop-blur-md text-gray-300 text-[8px] tracking-[0.2em] font-medium uppercase whitespace-nowrap">
@@ -498,19 +415,15 @@
                         <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-8 md:mb-12 max-w-md">
                             Dapatkan penawaran harga terbaik dan akses kebebasan finansial dengan program pembiayaan premium yang 100% transparan di wilayah Tangerang dan Jakarta. Gunakan kalkulator pintar bertenaga AI kami.
                         </p>
-                        
+
                         <a href="/credit-simulation" title="Kalkulator Simulasi Kredit Mobil Geely" class="btn-shimmer inline-flex items-center justify-center gap-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase transition-all duration-500 hover:scale-105 shadow-[0_0_40px_rgba(59,130,246,0.4)] w-full sm:w-auto">
                             <span>Mulai Simulasi Kredit</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         </a>
-                    </div>
-                    
-                    <!-- Image Area: Memperbaiki keterlihatan di Mobile -->
+                    </div>                    
                     <div class="h-52 md:h-64 lg:h-full relative overflow-hidden block">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Simulasi Kredit dan Harga Pembiayaan Mobil Geely Tangerang Banten" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-70 mix-blend-luminosity">
-                        <!-- Technical overlay to look smart -->
                         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20 pointer-events-none"></div>
-                        <!-- Gradient Overlay adjusted for mobile -->
                         <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a0a0c] via-transparent to-transparent"></div>
                     </div>
                     
