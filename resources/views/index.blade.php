@@ -640,8 +640,8 @@
                     
                     <div class="absolute bottom-4 left-4 right-4 md:bottom-10 md:left-10 md:right-10 flex justify-between items-end z-10">
                         <div>
-                            <span class="text-cyan-400 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase block mb-2 drop-shadow-md">01 // Exterior</span>
-                            <h3 class="font-geely text-3xl md:text-5xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Aero Stance</h3>
+                            <span class="text-cyan-400 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase block mb-2 drop-shadow-md">Exterior</span>
+                            <h3 class="font-geely text-3xl md:text-5xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Designed for the City</h3>
                         </div>
                         <div class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white transform scale-0 group-hover:scale-100 transition-transform duration-500 shadow-lg">
                             <svg class="w-5 h-5 md:w-6 md:h-6 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -655,8 +655,8 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
                     
                     <div class="absolute bottom-4 left-4 md:bottom-8 md:left-8 z-10">
-                        <span class="text-cyan-400 text-[9px] md:text-[10px] font-bold tracking-[0.3em] uppercase block mb-2 drop-shadow-md">02 // Cockpit</span>
-                        <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight leading-tight drop-shadow-lg">Digital Oasis</h3>
+                        <span class="text-cyan-400 text-[9px] md:text-[10px] font-bold tracking-[0.3em] uppercase block mb-2 drop-shadow-md">Cockpit</span>
+                        <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight leading-tight drop-shadow-lg">Built Around You</h3>
                     </div>
                 </div>
 
@@ -666,16 +666,16 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
                     <div class="absolute bottom-3 left-3 md:bottom-6 md:left-6 z-10">
-                        <span class="text-cyan-400 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 drop-shadow-md">03 // Lifestyle</span>
-                        <h3 class="font-geely text-lg md:text-2xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Agility</h3>
+                        <span class="text-cyan-400 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 drop-shadow-md">Lifestyle</span>
+                        <h3 class="font-geely text-lg md:text-2xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Effortless Mobility</h3>
                     </div>
                 </div>
 
                 <!-- 04 // Utility - Max Cargo (Square Bottom Right 2) -->
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '04 // Utility - Max Cargo', true)" class="col-span-1 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden cursor-pointer h-[180px] md:h-auto premium-card-hover md:border md:border-gray-200 shadow-xl bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] flex flex-col justify-between p-4 md:p-6 transition-colors hover:from-white hover:to-[#f1f5f9]">
                     <div class="z-10">
-                        <span class="text-blue-600 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">04 // Utility</span>
-                        <h3 class="font-geely text-lg md:text-2xl text-gray-900 uppercase tracking-tight leading-none">Max Cargo</h3>
+                        <span class="text-blue-600 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">Utility</span>
+                        <h3 class="font-geely text-lg md:text-2xl text-gray-900 uppercase tracking-tight leading-none">Space Reimagined</h3>
                     </div>
                     <div class="relative w-full h-[65%] mt-auto flex items-end justify-center">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png" alt="Kapasitas Bagasi Luas Mobil Listrik Keluarga Geely EX2" class="w-full h-full object-contain transform group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-[1.5s] ease-out mix-blend-darken origin-bottom">
