@@ -631,48 +631,54 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-none md:grid-rows-2 gap-3 md:gap-4 h-auto md:h-[800px] reveal-up delay-100">
+            <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-none md:grid-rows-2 gap-3 md:gap-5 h-auto md:h-[700px] lg:h-[800px] reveal-up delay-100">
                 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg', '01 // Exterior - Aero Stance')" class="col-span-2 md:col-span-2 md:row-span-2 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-100 cursor-pointer h-[200px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect">
-                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" alt="Eksterior Depan Geely EX2 EV dengan Desain Aerodinamis Tercanggih" class="w-full h-full object-cover object-center md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500 mobile-soft-gradient"></div>
+                <!-- 01 // Exterior - Aero Stance (Large Left) -->
+                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg', '01 // Exterior - Aero Stance')" class="col-span-2 md:col-span-2 md:row-span-2 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-900 cursor-pointer h-[280px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect shadow-xl">
+                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" alt="Eksterior Depan Geely EX2 EV dengan Desain Aerodinamis Tercanggih" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-[2s] ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
                     
-                    <div class="absolute bottom-2 left-2 right-2 md:bottom-10 md:left-10 md:right-10 flex justify-between items-center md:items-end mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none p-3 md:p-0 z-10">
+                    <div class="absolute bottom-4 left-4 right-4 md:bottom-10 md:left-10 md:right-10 flex justify-between items-end z-10">
                         <div>
-                            <span class="text-cyan-300 md:text-white/80 text-[7px] md:text-[10px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-3 drop-shadow-md">01 // Exterior</span>
-                            <h3 class="font-geely text-xl md:text-4xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Aero Stance</h3>
+                            <span class="text-cyan-400 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase block mb-2 drop-shadow-md">01 // Exterior</span>
+                            <h3 class="font-geely text-3xl md:text-5xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Aero Stance</h3>
                         </div>
-                        <div class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 mobile-always-visible">
-                            <svg class="w-3 h-3 md:w-5 md:h-5 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <div class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white transform scale-0 group-hover:scale-100 transition-transform duration-500 shadow-lg">
+                            <svg class="w-5 h-5 md:w-6 md:h-6 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </div>
                 </div>
 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp', '02 // Lifestyle - Agility')" class="col-span-1 md:col-span-1 md:row-span-2 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-200 cursor-pointer h-[160px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect">
-                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" alt="Gaya Hidup Berkendara EV di Perkotaan dengan Mobil Geely EX2" class="w-full h-full object-cover object-[center_60%] md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500 mobile-soft-gradient"></div>
-                    <div class="absolute bottom-2 left-2 right-2 md:bottom-10 md:left-8 mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none p-3 md:p-0 z-10">
-                        <span class="text-cyan-300 md:text-white/80 text-[7px] md:text-[10px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-3 drop-shadow-md">02 // Lifestyle</span>
-                        <h3 class="font-geely text-base md:text-3xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Agility</h3>
+                <!-- 02 // Cockpit - Digital Oasis (Wide Top Right) -->
+                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg', '02 // Cockpit - Digital Oasis')" class="col-span-2 md:col-span-2 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-900 cursor-pointer h-[220px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect shadow-xl">
+                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Desain Interior Kabin Premium Futuristik Geely EX2 Indonesia" class="absolute inset-0 w-full h-full object-cover object-[center_60%] transform group-hover:scale-105 transition-transform duration-[2s] ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+                    
+                    <div class="absolute bottom-4 left-4 md:bottom-8 md:left-8 z-10">
+                        <span class="text-cyan-400 text-[9px] md:text-[10px] font-bold tracking-[0.3em] uppercase block mb-2 drop-shadow-md">02 // Cockpit</span>
+                        <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight leading-tight drop-shadow-lg">Digital Oasis</h3>
                     </div>
                 </div>
 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '03 // Utility - Max Cargo', true)" class="col-span-1 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-transparent md:bg-[#f8fafc] md:border md:border-gray-200 cursor-pointer flex flex-col justify-between hover:bg-gray-100 transition-colors duration-500 h-[160px] md:h-auto mobile-bento-glass-light p-4 md:p-8 premium-card-hover">
+                <!-- 03 // Lifestyle - Agility (Square Bottom Right 1) -->
+                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp', '03 // Lifestyle - Agility')" class="col-span-1 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-900 cursor-pointer h-[180px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect shadow-xl">
+                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" alt="Gaya Hidup Berkendara EV di Perkotaan dengan Mobil Geely EX2" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-[2s] ease-out opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="absolute bottom-3 left-3 md:bottom-6 md:left-6 z-10">
+                        <span class="text-cyan-400 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 drop-shadow-md">03 // Lifestyle</span>
+                        <h3 class="font-geely text-lg md:text-2xl text-white uppercase tracking-tight leading-none drop-shadow-lg">Agility</h3>
+                    </div>
+                </div>
+
+                <!-- 04 // Utility - Max Cargo (Square Bottom Right 2) -->
+                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '04 // Utility - Max Cargo', true)" class="col-span-1 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden cursor-pointer h-[180px] md:h-auto premium-card-hover md:border md:border-gray-200 shadow-xl bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] flex flex-col justify-between p-4 md:p-6 transition-colors hover:from-white hover:to-[#f1f5f9]">
                     <div class="z-10">
-                        <span class="text-blue-500 md:text-gray-400 text-[7px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-2">03 // Utility</span>
-                        <h3 class="font-geely text-base md:text-2xl text-gray-900 uppercase tracking-tight">Max Cargo</h3>
+                        <span class="text-blue-600 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">04 // Utility</span>
+                        <h3 class="font-geely text-lg md:text-2xl text-gray-900 uppercase tracking-tight leading-none">Max Cargo</h3>
                     </div>
-                    <div class="w-full h-[60%] relative mt-auto">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png" alt="Kapasitas Bagasi Luas Mobil Listrik Keluarga Geely EX2" class="absolute inset-0 w-full h-full object-contain transform group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-[1.5s] ease-out mix-blend-darken">
-                    </div>
-                </div>
-
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg', '04 // Cockpit - Digital Oasis')" class="col-span-2 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-900 cursor-pointer h-[140px] md:h-auto premium-card-hover premium-card-dark glare-effect">
-                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Desain Interior Kabin Premium Futuristik Geely EX2 Indonesia" class="w-full h-full object-cover object-[center_60%] md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-80 group-hover:opacity-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500 mobile-soft-gradient"></div>
-                    <div class="absolute bottom-2 left-2 right-2 md:bottom-8 md:left-8 mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none p-3 md:p-0 z-10">
-                        <span class="text-cyan-300 md:text-gray-400 text-[7px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-2 drop-shadow-md">04 // Cockpit</span>
-                        <h3 class="font-geely text-base md:text-2xl text-white uppercase tracking-tight leading-tight drop-shadow-lg">Digital Oasis</h3>
+                    <div class="relative w-full h-[65%] mt-auto flex items-end justify-center">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png" alt="Kapasitas Bagasi Luas Mobil Listrik Keluarga Geely EX2" class="w-full h-full object-contain transform group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-[1.5s] ease-out mix-blend-darken origin-bottom">
                     </div>
                 </div>
 
