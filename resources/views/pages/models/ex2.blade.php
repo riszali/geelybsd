@@ -195,13 +195,13 @@
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 mb-6 reveal-up delay-200">
                     <div class="glass-panel px-6 py-4 md:px-8 md:py-5 rounded-3xl border border-white/20 backdrop-blur-md w-full max-w-[280px] sm:min-w-[240px]">
                         <span class="text-gray-400 text-[10px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-2">PRO</span>
-                        <span class="font-geely text-xl md:text-3xl text-white tracking-tight">Rp 229.900.000</span>
+                        <span class="font-geely text-xl md:text-1xl text-white tracking-tight">Rp 229.900.000</span>
                     </div>
                     
                     <div class="glass-panel px-6 py-4 md:px-8 md:py-5 rounded-3xl border border-cyan-500/40 bg-cyan-500/10 backdrop-blur-md w-full max-w-[280px] sm:min-w-[240px] relative overflow-hidden shadow-[0_0_30px_rgba(34,211,238,0.15)]">
                         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-[shimmer_3s_infinite]"></div>
                         <span class="text-cyan-300 text-[10px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-2">MAX</span>
-                        <span class="font-geely text-xl md:text-3xl text-white tracking-tight">Rp 259.900.000</span>
+                        <span class="font-geely text-xl md:text-1xl text-white tracking-tight">Rp 259.900.000</span>
                     </div>
                 </div>
 
