@@ -300,21 +300,21 @@
                     </div>
 
                     <div class="h-6">
-                        <p id="active-color-name" class="text-cyan-600 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase transition-opacity duration-300 drop-shadow-sm">Pearl White</p>
+                        <p id="active-color-name" class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase transition-all duration-300 drop-shadow-sm" style="color: #64748b;">Pearl White</p>
                     </div>
 
                     <div id="swatches-exterior" class="flex flex-wrap justify-center gap-3 md:gap-6 transition-all duration-500 opacity-100 px-4">
-                        <button class="swatch-ext active w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 ring-2 ring-transparent ring-offset-4 ring-offset-white transition-all" style="background-color: #f8f9fa;" data-src="https://riszali.sirv.com/Spins/ex2/White.spin" data-name="Pearl White" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
-                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #ffd1dc;" data-src="https://riszali.sirv.com/Spins/ex2/IceBerryPink.spin" data-name="Ice Berry Pink" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
-                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #e3dac9;" data-src="https://riszali.sirv.com/Spins/ex2/NebullaBeigi.spin" data-name="Nebulla Beige" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
-                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #9cd1e8;" data-src="https://riszali.sirv.com/Spins/ex2/SeaSaltBlue%20().spin" data-name="Sea Salt Blue" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
-                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #7b8084;" data-src="https://riszali.sirv.com/Spins/ex2/Comet%20grey%20().spin" data-name="Comet Grey" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
-                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #c0c0c0;" data-src="https://riszali.sirv.com/Spins/ex2/Starsilver.spin" data-name="Star Silver" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
+                        <button class="swatch-ext active w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 ring-2 ring-transparent ring-offset-4 ring-offset-white transition-all" style="background-color: #f8f9fa;" data-src="https://riszali.sirv.com/Spins/ex2/White.spin" data-name="Pearl White" data-text-color="#64748b" data-bg-color="#e2e8f0"></button>
+                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #ffd1dc;" data-src="https://riszali.sirv.com/Spins/ex2/IceBerryPink.spin" data-name="Ice Berry Pink" data-text-color="#db2777" data-bg-color="#fbcfe8"></button>
+                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #e3dac9;" data-src="https://riszali.sirv.com/Spins/ex2/NebullaBeigi.spin" data-name="Nebulla Beige" data-text-color="#b45309" data-bg-color="#fef08a"></button>
+                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #9cd1e8;" data-src="https://riszali.sirv.com/Spins/ex2/SeaSaltBlue%20().spin" data-name="Sea Salt Blue" data-text-color="#0284c7" data-bg-color="#bae6fd"></button>
+                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #7b8084;" data-src="https://riszali.sirv.com/Spins/ex2/Comet%20grey%20().spin" data-name="Comet Grey" data-text-color="#334155" data-bg-color="#94a3b8"></button>
+                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #c0c0c0;" data-src="https://riszali.sirv.com/Spins/ex2/Starsilver.spin" data-name="Star Silver" data-text-color="#475569" data-bg-color="#cbd5e1"></button>
                     </div>
 
                     <div id="swatches-interior" class="hidden flex-wrap justify-center gap-4 md:gap-6 transition-all duration-500 opacity-0 pointer-events-none px-4">
-                        <button class="swatch-int active w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 ring-2 ring-transparent ring-offset-4 ring-offset-white transition-all" style="background-color: #e5e5e5;" data-src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/skyline-white-YQe9py6QFEDr79dt.webp" data-name="Skyline White"></button>
-                        <button class="swatch-int w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #3b3b3b;" data-src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/horizon-gray-7NhbdLeYf8TcgE58.webp" data-name="Horizon Gray"></button>
+                        <button class="swatch-int active w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 ring-2 ring-transparent ring-offset-4 ring-offset-white transition-all" style="background-color: #e5e5e5;" data-src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/skyline-white-YQe9py6QFEDr79dt.webp" data-name="Skyline White" data-text-color="#64748b"></button>
+                        <button class="swatch-int w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #3b3b3b;" data-src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/horizon-gray-7NhbdLeYf8TcgE58.webp" data-name="Horizon Gray" data-text-color="#334155"></button>
                     </div>
                 </div>
 
@@ -324,7 +324,10 @@
                     <div class="relative w-full h-full rounded-[1.5rem] md:rounded-[2rem] overflow-hidden">
                         
                         <!-- NEW: Dynamic Background Container for 360 Exterior -->
-                        <div id="360-bg-container" class="absolute inset-0 transition-colors duration-700" style="background-color: #f8f9fa;"></div>
+                        <div id="360-bg-container" class="absolute inset-0 transition-colors duration-700" style="background-color: #e2e8f0;">
+                            <!-- Radial gradient for that studio spotlight effect -->
+                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9)_0%,transparent_100%)]"></div>
+                        </div>
                         
                         <div id="wrapper-exterior" class="absolute z-10 transition-opacity duration-500" style="top: -20%; left: -20%; width: 140%; height: 140%; opacity: 1; pointer-events: auto;">
                             <iframe id="iframe-exterior" src="https://riszali.sirv.com/Spins/ex2/White.spin" class="w-full h-full border-0" allowfullscreen></iframe>
@@ -1036,7 +1039,10 @@ SECTION 10: DIVE INTO THE DETAILS
                 swatchesExtGroup.classList.remove('hidden');
                 setTimeout(() => swatchesExtGroup.classList.remove('opacity-0', 'pointer-events-none'), 50);
                 const activeExt = document.querySelector('.swatch-ext.active');
-                if(activeExt) colorNameDisplay.textContent = activeExt.getAttribute('data-name');
+                if(activeExt) {
+                    colorNameDisplay.textContent = activeExt.getAttribute('data-name');
+                    colorNameDisplay.style.color = activeExt.getAttribute('data-text-color');
+                }
             });
 
             btnInt.addEventListener('click', () => {
@@ -1054,7 +1060,10 @@ SECTION 10: DIVE INTO THE DETAILS
                 swatchesIntGroup.classList.remove('hidden');
                 setTimeout(() => swatchesIntGroup.classList.remove('opacity-0', 'pointer-events-none'), 50);
                 const activeInt = document.querySelector('.swatch-int.active');
-                if(activeInt) colorNameDisplay.textContent = activeInt.getAttribute('data-name');
+                if(activeInt) {
+                    colorNameDisplay.textContent = activeInt.getAttribute('data-name');
+                    colorNameDisplay.style.color = activeInt.getAttribute('data-text-color') || '#64748b';
+                }
             });
 
             const swatchesExt = document.querySelectorAll('.swatch-ext');
@@ -1069,6 +1078,8 @@ SECTION 10: DIVE INTO THE DETAILS
                     colorNameDisplay.style.opacity = 0;
                     setTimeout(() => {
                         colorNameDisplay.textContent = swatch.getAttribute('data-name');
+                        colorNameDisplay.style.color = swatch.getAttribute('data-text-color');
+                        document.getElementById('360-bg-container').style.backgroundColor = swatch.getAttribute('data-bg-color');
                         colorNameDisplay.style.opacity = 1;
                     }, 150);
                     frameExt.src = swatch.getAttribute('data-src');
@@ -1087,6 +1098,7 @@ SECTION 10: DIVE INTO THE DETAILS
                     colorNameDisplay.style.opacity = 0;
                     setTimeout(() => {
                         colorNameDisplay.textContent = swatch.getAttribute('data-name');
+                        colorNameDisplay.style.color = swatch.getAttribute('data-text-color');
                         colorNameDisplay.style.opacity = 1;
                     }, 150);
                     const panoramaUrl = swatch.getAttribute('data-src');
