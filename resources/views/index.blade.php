@@ -608,7 +608,7 @@
 
             <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-none md:grid-rows-2 gap-3 md:gap-4 h-auto md:h-[800px] reveal-up delay-100">
                 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg', '01 // Exterior - Aero Stance')" class="col-span-2 md:col-span-2 md:row-span-2 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-100 cursor-pointer h-[200px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect">
+                <div class="col-span-2 md:col-span-2 md:row-span-2 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-100 cursor-pointer h-[200px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect">
                     <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" alt="Eksterior Depan Geely EX2 EV dengan Desain Aerodinamis Tercanggih" class="w-full h-full object-cover object-center md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500 mobile-soft-gradient"></div>
                     
@@ -623,7 +623,7 @@
                     </div>
                 </div>
 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp', '02 // Lifestyle - Agility')" class="col-span-1 md:col-span-1 md:row-span-2 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-200 cursor-pointer h-[160px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect">
+                <div class="col-span-1 md:col-span-1 md:row-span-2 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-200 cursor-pointer h-[160px] md:h-auto premium-card-hover md:border md:border-gray-200 glare-effect">
                     <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" alt="Gaya Hidup Berkendara EV di Perkotaan dengan Mobil Geely EX2" class="w-full h-full object-cover object-[center_60%] md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500 mobile-soft-gradient"></div>
                     <div class="absolute bottom-2 left-2 right-2 md:bottom-10 md:left-8 mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none p-3 md:p-0 z-10">
@@ -632,7 +632,7 @@
                     </div>
                 </div>
 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '03 // Utility - Max Cargo', true)" class="col-span-1 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-transparent md:bg-[#f8fafc] md:border md:border-gray-200 cursor-pointer flex flex-col justify-between hover:bg-gray-100 transition-colors duration-500 h-[160px] md:h-auto mobile-bento-glass-light p-4 md:p-8 premium-card-hover">
+                <div class="col-span-1 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-transparent md:bg-[#f8fafc] md:border md:border-gray-200 cursor-pointer flex flex-col justify-between hover:bg-gray-100 transition-colors duration-500 h-[160px] md:h-auto mobile-bento-glass-light p-4 md:p-8 premium-card-hover">
                     <div class="z-10">
                         <span class="text-blue-500 md:text-gray-400 text-[7px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1 md:mb-2">03 // Utility</span>
                         <h3 class="font-geely text-base md:text-2xl text-gray-900 uppercase tracking-tight">Max Cargo</h3>
@@ -642,7 +642,7 @@
                     </div>
                 </div>
 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg', '04 // Cockpit - Digital Oasis')" class="col-span-2 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-900 cursor-pointer h-[140px] md:h-auto premium-card-hover premium-card-dark glare-effect">
+                <div class="col-span-2 md:col-span-1 md:row-span-1 group relative rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-900 cursor-pointer h-[140px] md:h-auto premium-card-hover premium-card-dark glare-effect">
                     <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Desain Interior Kabin Premium Futuristik Geely EX2 Indonesia" class="w-full h-full object-cover object-[center_60%] md:object-center transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-80 group-hover:opacity-100">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500 mobile-soft-gradient"></div>
                     <div class="absolute bottom-2 left-2 right-2 md:bottom-8 md:left-8 mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none p-3 md:p-0 z-10">
@@ -655,33 +655,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         LIGHTBOX MODAL (HIDDEN BY DEFAULT)
-    =========================================== -->
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/95 backdrop-blur-md opacity-0 transition-opacity duration-300" onclick="closeLightbox(event)">
-        
-        <!-- Close Button -->
-        <button onclick="closeLightbox(event)" class="absolute top-6 right-6 md:top-10 md:right-10 text-white/60 hover:text-white transition-colors z-[110] bg-black/50 p-2 rounded-full border border-white/10 hover:bg-white/10 cursor-pointer">
-            <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-
-        <!-- Image Container -->
-        <div class="relative w-full max-w-7xl h-full flex flex-col items-center justify-center p-4 md:p-12 pointer-events-none">
-            <div class="relative max-h-[80vh] w-full flex justify-center items-center group pointer-events-auto">
-                <img id="lightbox-img" src="" alt="Fullscreen preview" class="max-w-full max-h-[75vh] md:max-h-[85vh] object-contain rounded-xl shadow-2xl transition-transform duration-300 transform scale-95">
-                
-                <!-- Inner Loading Spinner (Optional UX detail) -->
-                <div id="lightbox-loader" class="absolute inset-0 flex items-center justify-center -z-10">
-                    <div class="w-10 h-10 border-4 border-white/20 border-t-white rounded-full animate-spin"></div>
-                </div>
-            </div>
-            
-            <!-- Caption -->
-            <div class="mt-6 md:mt-8 pointer-events-auto text-center">
-                <p id="lightbox-caption" class="font-geely text-white text-lg md:text-2xl tracking-widest uppercase drop-shadow-lg"></p>
-            </div>
-        </div>
-    </div>
     <!-- ==========================================
          SECTION 6: TECHNOLOGY (BENTO GLASS)
     =========================================== -->
@@ -918,73 +891,6 @@
 
             const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
             revealElements.forEach(el => revealObserver.observe(el));
-        });
-
-                const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxCaption = document.getElementById('lightbox-caption');
-        const lightboxLoader = document.getElementById('lightbox-loader');
-
-        /**
-         * Opens the lightbox modal
-         * @param {string} imgSrc - URL of the image
-         * @param {string} caption - Text to display below image
-         * @param {boolean} isLightImage - If true, adds a white background to modal img (for transparent PNGs)
-         */
-        function openLightbox(imgSrc, caption, isLightImage = false) {
-            // Setup content
-            lightboxImg.src = imgSrc;
-            lightboxCaption.textContent = caption;
-            
-            // Handle transparent images like the cargo trunk PNG
-            if(isLightImage) {
-                lightboxImg.classList.add('bg-white', 'p-8');
-            } else {
-                lightboxImg.classList.remove('bg-white', 'p-8');
-            }
-
-            // Animate In
-            lightboxImg.classList.replace('scale-95', 'scale-100');
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
-            
-            // Small timeout to allow display:flex to render before changing opacity
-            requestAnimationFrame(() => {
-                lightbox.classList.remove('opacity-0');
-                lightbox.classList.add('opacity-100');
-            });
-
-            // Prevent body scroll
-            document.body.classList.add('lightbox-open');
-        }
-
-        /**
-         * Closes the lightbox modal
-         */
-        function closeLightbox(e) {
-            // If event exists and user clicked ON the image itself, don't close 
-            // (Only close if clicking the background, the X button, or pressing Esc)
-            if (e && e.target === lightboxImg) return;
-
-            // Animate Out
-            lightboxImg.classList.replace('scale-100', 'scale-95');
-            lightbox.classList.remove('opacity-100');
-            lightbox.classList.add('opacity-0');
-
-            // Wait for transition to finish before hiding
-            setTimeout(() => {
-                lightbox.classList.add('hidden');
-                lightbox.classList.remove('flex');
-                lightboxImg.src = ''; // Clear image
-                document.body.classList.remove('lightbox-open');
-            }, 300); // Matches the duration-300 tailwind class
-        }
-
-        // Close when pressing Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-                closeLightbox();
-            }
         });
     </script>
 
