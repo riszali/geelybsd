@@ -288,7 +288,7 @@
 
             <div class="max-w-[1600px] mx-auto px-4 sm:px-6 relative z-10 text-center">
                 
-                <h2 class="font-geely text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase tracking-tighter mb-6 md:mb-8 reveal-up leading-tight drop-shadow-md whitespace-nowrap bg-[linear-gradient(270deg,#0ea5e9,#4f46e5,#9333ea,#0ea5e9)] bg-[length:300%_300%] bg-clip-text text-transparent animate-[liquidText_8s_ease_infinite]">
+                <h2 class="font-geely text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase tracking-tighter mb-6 md:mb-8 reveal-up leading-tight drop-shadow-md whitespace-nowrap text-liquid">
                     THE JOYFUL AND SMART DRIVING
                 </h2>
 
