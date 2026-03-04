@@ -282,46 +282,50 @@
         <!-- ==========================================
              SECTION 3: THE JOYFUL & SMART DRIVING
         =========================================== -->
-        <section id="specs" class="py-16 md:py-24 lg:py-32 bg-[#050505] relative z-30 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[300px] md:h-[400px] bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
-            <div class="absolute bottom-1/4 right-1/4 translate-x-1/4 translate-y-1/4 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+        <section id="specs" class="py-16 md:py-24 lg:py-32 bg-white relative z-30 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[300px] md:h-[400px] bg-cyan-200/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+            <div class="absolute bottom-1/4 right-1/4 translate-x-1/4 translate-y-1/4 w-[500px] h-[500px] bg-cyan-200/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
             <div class="max-w-[1600px] mx-auto px-4 sm:px-6 relative z-10 text-center">
                 
-                <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-white mb-6 md:mb-8 reveal-up leading-tight drop-shadow-xl">
-                    THE JOYFUL AND <br> <span class="text-gradient-cyan">SMART DRIVING</span>
+                <h2 class="font-geely text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase tracking-tighter mb-6 md:mb-8 reveal-up leading-tight drop-shadow-md whitespace-nowrap bg-[linear-gradient(270deg,#0ea5e9,#4f46e5,#9333ea,#0ea5e9)] bg-[length:300%_300%] bg-clip-text text-transparent animate-[liquidText_8s_ease_infinite]">
+                    THE JOYFUL AND SMART DRIVING
                 </h2>
 
                 <!-- Controls (Tabs & Swatches) Diposisikan Di Atas Viewer -->
                 <div class="flex flex-col items-center justify-center gap-4 reveal-up delay-100 relative z-30 mb-8 md:mb-10">
-                    <div class="inline-flex glass-panel p-1.5 rounded-full border border-white/10 shadow-[0_4px_15px_rgba(0,0,0,0.5)]">
+                    <div class="inline-flex glass-panel p-1.5 rounded-full border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.1)]">
                         <button id="btn-tab-exterior" class="px-6 py-2.5 md:px-8 md:py-3 rounded-full text-white text-[9px] md:text-[11px] font-bold tracking-[0.2em] uppercase bg-white/10 shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all">Exterior</button>
-                        <button id="btn-tab-interior" class="px-6 py-2.5 md:px-8 md:py-3 rounded-full text-gray-500 hover:text-white text-[9px] md:text-[11px] font-bold tracking-[0.2em] uppercase transition-all">Interior</button>
+                        <button id="btn-tab-interior" class="px-6 py-2.5 md:px-8 md:py-3 rounded-full text-gray-400 hover:text-white text-[9px] md:text-[11px] font-bold tracking-[0.2em] uppercase transition-all">Interior</button>
                     </div>
 
                     <div class="h-6">
-                        <p id="active-color-name" class="text-cyan-400 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase transition-opacity duration-300 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">Pearl White</p>
+                        <p id="active-color-name" class="text-cyan-600 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase transition-opacity duration-300 drop-shadow-sm">Pearl White</p>
                     </div>
 
                     <div id="swatches-exterior" class="flex flex-wrap justify-center gap-3 md:gap-6 transition-all duration-500 opacity-100 px-4">
-                        <button class="swatch-ext active w-10 h-10 md:w-12 md:h-12 rounded-full border border-white ring-2 ring-transparent ring-offset-4 ring-offset-[#050505] transition-all" style="background-color: #f8f9fa;" data-src="https://riszali.sirv.com/Spins/ex2/White.spin" data-name="Pearl White"></button>
-                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 hover:border-white/60 transition-all" style="background-color: #ffd1dc;" data-src="https://riszali.sirv.com/Spins/ex2/IceBerryPink.spin" data-name="Ice Berry Pink"></button>
-                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 hover:border-white/60 transition-all" style="background-color: #e3dac9;" data-src="https://riszali.sirv.com/Spins/ex2/NebullaBeigi.spin" data-name="Nebulla Beige"></button>
-                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 hover:border-white/60 transition-all" style="background-color: #9cd1e8;" data-src="https://riszali.sirv.com/Spins/ex2/SeaSaltBlue%20().spin" data-name="Sea Salt Blue"></button>
-                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 hover:border-white/60 transition-all" style="background-color: #7b8084;" data-src="https://riszali.sirv.com/Spins/ex2/Comet%20grey%20().spin" data-name="Comet Grey"></button>
-                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 hover:border-white/60 transition-all" style="background-color: #c0c0c0;" data-src="https://riszali.sirv.com/Spins/ex2/Starsilver.spin" data-name="Star Silver"></button>
+                        <button class="swatch-ext active w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 ring-2 ring-transparent ring-offset-4 ring-offset-white transition-all" style="background-color: #f8f9fa;" data-src="https://riszali.sirv.com/Spins/ex2/White.spin" data-name="Pearl White" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
+                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #ffd1dc;" data-src="https://riszali.sirv.com/Spins/ex2/IceBerryPink.spin" data-name="Ice Berry Pink" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
+                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #e3dac9;" data-src="https://riszali.sirv.com/Spins/ex2/NebullaBeigi.spin" data-name="Nebulla Beige" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
+                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #9cd1e8;" data-src="https://riszali.sirv.com/Spins/ex2/SeaSaltBlue%20().spin" data-name="Sea Salt Blue" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
+                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #7b8084;" data-src="https://riszali.sirv.com/Spins/ex2/Comet%20grey%20().spin" data-name="Comet Grey" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
+                        <button class="swatch-ext w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #c0c0c0;" data-src="https://riszali.sirv.com/Spins/ex2/Starsilver.spin" data-name="Star Silver" onclick="document.getElementById('360-bg-container').style.backgroundColor = this.style.backgroundColor"></button>
                     </div>
 
                     <div id="swatches-interior" class="hidden flex-wrap justify-center gap-4 md:gap-6 transition-all duration-500 opacity-0 pointer-events-none px-4">
-                        <button class="swatch-int active w-10 h-10 md:w-12 md:h-12 rounded-full border border-white ring-2 ring-transparent ring-offset-4 ring-offset-[#050505] transition-all" style="background-color: #e5e5e5;" data-src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/skyline-white-YQe9py6QFEDr79dt.webp" data-name="Skyline White"></button>
-                        <button class="swatch-int w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 hover:border-white/60 transition-all" style="background-color: #3b3b3b;" data-src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/horizon-gray-7NhbdLeYf8TcgE58.webp" data-name="Horizon Gray"></button>
+                        <button class="swatch-int active w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 ring-2 ring-transparent ring-offset-4 ring-offset-white transition-all" style="background-color: #e5e5e5;" data-src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/skyline-white-YQe9py6QFEDr79dt.webp" data-name="Skyline White"></button>
+                        <button class="swatch-int w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="background-color: #3b3b3b;" data-src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/horizon-gray-7NhbdLeYf8TcgE58.webp" data-name="Horizon Gray"></button>
                     </div>
                 </div>
 
                 <!-- Viewer Display Container -->
-                <div class="glass-panel p-2 md:p-4 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden reveal-up delay-200 shadow-[0_30px_60px_rgba(0,0,0,0.8)] w-full relative z-10 mb-10 lg:mb-16 h-[50vh] min-h-[350px] md:h-[60vh] md:min-h-[450px]">
-                    <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-white/5 to-transparent pointer-events-none z-20"></div>
+                <div class="glass-panel p-2 md:p-4 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden reveal-up delay-200 shadow-[0_30px_60px_rgba(0,0,0,0.15)] w-full relative z-10 mb-10 lg:mb-16 aspect-video">
+                    <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-black/5 to-transparent pointer-events-none z-20"></div>
                     <div class="relative w-full h-full rounded-[1.5rem] md:rounded-[2rem] overflow-hidden">
+                        
+                        <!-- NEW: Dynamic Background Container for 360 Exterior -->
+                        <div id="360-bg-container" class="absolute inset-0 transition-colors duration-700" style="background-color: #f8f9fa;"></div>
+                        
                         <div id="wrapper-exterior" class="absolute z-10 transition-opacity duration-500" style="top: -20%; left: -20%; width: 140%; height: 140%; opacity: 1; pointer-events: auto;">
                             <iframe id="iframe-exterior" src="https://riszali.sirv.com/Spins/ex2/White.spin" class="w-full h-full border-0" allowfullscreen></iframe>
                         </div>
@@ -334,7 +338,7 @@
                 <!-- Box Spesifikasi (Bertumpuk / Overlapping dengan Viewer) -->
                 <div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-8 reveal-up delay-300 -mt-20 sm:-mt-24 md:-mt-32 lg:-mt-40 px-2 sm:px-6 md:px-10 lg:px-20 relative z-30 mb-8">
                     <!-- Glowing orb directly behind specs for extreme glass blur -->
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[120%] bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-cyan-500/20 blur-[60px] rounded-[100px] pointer-events-none z-0"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[120%] bg-gradient-to-r from-cyan-200/40 via-blue-200/40 to-cyan-200/40 blur-[60px] rounded-[100px] pointer-events-none z-0"></div>
 
                     <!-- Box 1 (Range) -->
                     <div class="glass-panel relative z-10 p-4 sm:p-6 md:p-8 lg:p-10 rounded-[20px] sm:rounded-[24px] md:rounded-[32px] group hover:border-cyan-400/50 transition-colors duration-500 flex flex-col justify-center items-center shadow-2xl">
@@ -1057,11 +1061,11 @@ SECTION 10: DIVE INTO THE DETAILS
             swatchesExt.forEach(swatch => {
                 swatch.addEventListener('click', () => {
                     swatchesExt.forEach(s => {
-                        s.classList.remove('active', 'border-white', 'ring-2', 'ring-transparent', 'ring-offset-4', 'ring-offset-[#050505]');
-                        s.classList.add('border-white/20');
+                        s.classList.remove('active', 'border-gray-300', 'ring-2', 'ring-transparent', 'ring-offset-4', 'ring-offset-white');
+                        s.classList.add('border-gray-300');
                     });
-                    swatch.classList.add('active', 'border-white', 'ring-2', 'ring-transparent', 'ring-offset-4', 'ring-offset-[#050505]');
-                    swatch.classList.remove('border-white/20');
+                    swatch.classList.add('active', 'border-gray-300', 'ring-2', 'ring-transparent', 'ring-offset-4', 'ring-offset-white');
+                    swatch.classList.remove('border-gray-300');
                     colorNameDisplay.style.opacity = 0;
                     setTimeout(() => {
                         colorNameDisplay.textContent = swatch.getAttribute('data-name');
@@ -1075,11 +1079,11 @@ SECTION 10: DIVE INTO THE DETAILS
             swatchesInt.forEach(swatch => {
                 swatch.addEventListener('click', () => {
                     swatchesInt.forEach(s => {
-                        s.classList.remove('active', 'border-white', 'ring-2', 'ring-transparent', 'ring-offset-4', 'ring-offset-[#050505]');
-                        s.classList.add('border-white/20');
+                        s.classList.remove('active', 'border-gray-300', 'ring-2', 'ring-transparent', 'ring-offset-4', 'ring-offset-white');
+                        s.classList.add('border-gray-300');
                     });
-                    swatch.classList.add('active', 'border-white', 'ring-2', 'ring-transparent', 'ring-offset-4', 'ring-offset-[#050505]');
-                    swatch.classList.remove('border-white/20');
+                    swatch.classList.add('active', 'border-gray-300', 'ring-2', 'ring-transparent', 'ring-offset-4', 'ring-offset-white');
+                    swatch.classList.remove('border-gray-300');
                     colorNameDisplay.style.opacity = 0;
                     setTimeout(() => {
                         colorNameDisplay.textContent = swatch.getAttribute('data-name');
