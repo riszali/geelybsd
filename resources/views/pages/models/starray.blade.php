@@ -448,10 +448,7 @@
              WRAPPER UNTUK EFEK STICKY OVERLAP (SECTION 6 & 7)
         =========================================== -->
         <div class="relative w-full bg-[#050505]">
-            
-            <!-- SECTION 6: CINEMATIC VIDEO BREAK (YOUTUBE STICKY) -->
-            <!-- Container dibuat aspect-video murni dan di-center secara vertikal (top-1/2 -translate-y-1/2)
-                 agar mempertahankan rasio asli 16:9 di semua layar dan pas tanpa memotong video -->
+
             <div class="sticky top-1/2 -translate-y-1/2 w-full aspect-video z-0 bg-black">
                 <iframe 
                     class="absolute inset-0 w-full h-full pointer-events-none" 
