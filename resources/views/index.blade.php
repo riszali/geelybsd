@@ -820,7 +820,7 @@
                         <div class="glass-panel p-2 md:p-3 rounded-[1.5rem] md:rounded-[2rem] relative z-10">
                             <div class="relative w-full aspect-video rounded-[1rem] md:rounded-[1.5rem] overflow-hidden">
                                 <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover transform md:hover:scale-105 transition-transform duration-700">
-                                    <source src="https://geelyprod-assets.oss-ap-southeast-5.aliyuncs.com/products/starray-emi/section-2/EM-i-Super-Hybrid.mp4" type="video/mp4">
+                                    <source src="{{ asset('assets/videos/benefits-of-em-i.mp4') }}" type="video/mp4">
                                 </video>
                             </div>
                         </div>
