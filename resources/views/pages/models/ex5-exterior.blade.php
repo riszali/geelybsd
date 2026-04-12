@@ -167,7 +167,7 @@
             <!-- Heavily Blurred Background with Ambient Glows -->
             <div class="absolute inset-0 z-0 bg-[#050505] bg-noise overflow-hidden">
                 <!-- Blurred version of the image to create dynamic ambient colors -->
-                <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2642-Aq2qroZX2GsMyae6.jpeg" alt="Ambient Blur Background" class="absolute inset-0 w-full h-full object-cover opacity-60 blur-[80px] transform scale-125 pointer-events-none">
+                <img src="{{ asset('assets/images/ex5/exterior/ex5-1-desktop.jpg') }}" alt="Ambient Blur Background" class="absolute inset-0 w-full h-full object-cover opacity-60 blur-[80px] transform scale-125 pointer-events-none">
                 
                 <!-- Additional Ambient Glowing Orbs -->
                 <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-600/30 rounded-full blur-[120px] pointer-events-none"></div>
@@ -202,8 +202,8 @@
                 <div class="glass-panel p-2 md:p-4 rounded-[2rem] md:rounded-[3rem] shadow-[0_40px_80px_rgba(0,0,0,0.8)] group w-full border border-white/20 hover:border-cyan-400/50 transition-colors duration-500">
                     <div class="relative w-full aspect-video md:aspect-[21/9] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden bg-[#111]">
                         <!-- Gambar Tajam di Dalam Card -->
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2637-m6LjeJ81zPhPgr5a.jpeg" alt="Geely EX5 Mobile" class="w-full h-full object-cover md:hidden transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2642-Aq2qroZX2GsMyae6.jpeg" alt="Geely EX5 Desktop" class="w-full h-full object-cover hidden md:block transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
+                        <img src="{{ asset('assets/images/ex5/exterior/ex5-1-desktop.jpg') }}" alt="Geely EX5 Mobile" class="w-full h-full object-cover md:hidden transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
+                        <img src="{{ asset('assets/images/ex5/exterior/ex5-1-desktop.jpg') }}" alt="Geely EX5 Desktop" class="w-full h-full object-cover hidden md:block transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
                         
                         <!-- Subtle gradient inside the image card for premium feel -->
                         <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/80 via-transparent to-transparent opacity-80 pointer-events-none"></div>
@@ -261,7 +261,7 @@
         <section class="relative w-full bg-[#050505] bg-noise">
             <!-- Sticky Background Image -->
             <div class="sticky top-0 w-full h-[100vh] z-0 overflow-hidden">
-                <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2627-dJo5X4l0GXTnz2B8.jpeg" alt="Aerodynamic Design" class="w-full h-full object-cover opacity-60 mix-blend-lighten">
+                <img src="{{ asset('assets/images/ex5/exterior/exterior-01.webp') }}" alt="Aerodynamic Design" class="w-full h-full object-cover opacity-60 mix-blend-lighten">
                 
                 <!-- Colorful gradients to blend smoothly -->
                 <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#050505] to-transparent z-10"></div>
@@ -324,7 +324,7 @@
                     <div class="bento-card bento-item-1 glass-panel group">
                         <div class="absolute -top-20 -left-20 w-64 h-64 bg-cyan-500/20 rounded-full blur-[60px] group-hover:bg-cyan-400/40 transition-colors duration-500 pointer-events-none"></div>
                         <div class="bento-card-inner">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2642-Aq2qroZX2GsMyae6.jpeg" alt="EX5 Headlamp Detail">
+                            <img src="{{ asset('assets/images/ex5/exterior/2400x0 (8).jpg') }}" alt="EX5 Headlamp Detail">
                             <div class="bento-overlay"></div>
                             <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 lg:p-10 z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                 <span class="text-cyan-400 text-[10px] tracking-[0.3em] font-bold uppercase mb-2 block drop-shadow-md">Illumination</span>
@@ -336,11 +336,11 @@
                     <!-- Item 2 (Kanan Atas Lebar) -->
                     <div class="bento-card bento-item-2 glass-panel group">
                         <div class="bento-card-inner">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2630-YKbEQrPbrlT67eB4.jpeg" alt="EX5 Wheel Detail">
+                            <img src="{{ asset('assets/images/ex5/exterior/exterior-03.webp') }}" alt="EX5 Panoramic Sunroof View">
                             <div class="bento-overlay"></div>
                             <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span class="text-blue-400 text-[10px] tracking-[0.3em] font-bold uppercase mb-2 block drop-shadow-md">Aerodynamics</span>
-                                <h4 class="font-geely text-xl md:text-2xl lg:text-3xl text-white tracking-tight font-bold leading-tight drop-shadow-lg">Aero Wheels</h4>
+                                <span class="text-blue-400 text-[10px] tracking-[0.3em] font-bold uppercase mb-2 block drop-shadow-md">Space</span>
+                                <h4 class="font-geely text-xl md:text-2xl lg:text-3xl text-white tracking-tight font-bold leading-tight drop-shadow-lg">Panoramic <br>View</h4>
                             </div>
                         </div>
                     </div>
@@ -348,11 +348,11 @@
                     <!-- Item 3 (Kanan Bawah Kiri) -->
                     <div class="bento-card bento-item-3 glass-panel group">
                         <div class="bento-card-inner">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/sunroof-YX4ak1DoWru68Xpb.jpg" alt="EX5 Panoramic Sunroof View">
+                            <img src="{{ asset('assets/images/ex5/exterior/exterior-04.webp') }}" alt="EX5 wheel design">
                             <div class="bento-overlay"></div>
                             <div class="absolute bottom-0 left-0 w-full p-6 z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span class="text-purple-400 text-[10px] tracking-[0.3em] font-bold uppercase mb-2 block drop-shadow-md">Space</span>
-                                <h4 class="font-geely text-lg md:text-xl lg:text-2xl text-white tracking-tight font-bold leading-tight drop-shadow-lg">Panoramic <br>View</h4>
+                                <span class="text-purple-400 text-[10px] tracking-[0.3em] font-bold uppercase mb-2 block drop-shadow-md">Aerodynamics</span>
+                                <h4 class="font-geely text-lg md:text-xl lg:text-2xl text-white tracking-tight font-bold leading-tight drop-shadow-lg">Aero Wheels</h4>
                             </div>
                         </div>
                     </div>
@@ -360,7 +360,7 @@
                     <!-- Item 4 (Kanan Bawah Kanan) -->
                     <div class="bento-card bento-item-4 glass-panel group">
                         <div class="bento-card-inner">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2618-YD0BN4r09pIWlR3v.jpeg" alt="EX5 Side Profile">
+                            <img src="{{ asset('assets/images/ex5/exterior/exterior-02.webp') }}" alt="EX5 Side Profile">
                             <div class="bento-overlay"></div>
                             <div class="absolute bottom-0 left-0 w-full p-6 z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                 <span class="text-cyan-400 text-[10px] tracking-[0.3em] font-bold uppercase mb-2 block drop-shadow-md">Silhouette</span>
@@ -402,7 +402,7 @@
                         
                         <!-- Exterior Link Card (Active/Current View) -->
                         <a href="#" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-cyan-400">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2642-Aq2qroZX2GsMyae6.jpeg" alt="Exterior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <img src="{{ asset('assets/images/ex5/exterior/exterior-01.webp') }}" alt="Exterior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <!-- Overlay Gradient for Readability -->
                             <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
                             

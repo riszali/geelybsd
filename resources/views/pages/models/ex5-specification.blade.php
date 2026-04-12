@@ -299,33 +299,65 @@
                             Cell-to-Body <span class="text-indigo-400">(CTB)</span>
                         </h3>
                         <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-8">Integrated Body & Battery Structure</p>
+                        
+                        <!-- Core Features with New SVG Icons -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
-                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-500/30 transition-colors">
-                                <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/ctb-01-m6Ljnro1K1HPyZ1W.webp" alt="Stronger" class="w-10 h-10 object-contain shrink-0 mix-blend-screen drop-shadow-md">
+                            <!-- Stronger -->
+                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-500/30 transition-colors group/item">
+                                <div class="w-10 h-10 flex items-center justify-center shrink-0">
+                                    <svg class="w-8 h-8 text-indigo-400 group-hover/item:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <!-- Bar -->
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16"></path>
+                                        <!-- Left weights -->
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 8v8"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 9.5v5"></path>
+                                        <!-- Right weights -->
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8v8"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9.5v5"></path>
+                                    </svg>
+                                </div>
                                 <div>
                                     <h4 class="text-indigo-400 text-[13px] md:text-sm font-bold mb-0.5">Stronger</h4>
                                     <p class="text-white text-[11px] md:text-xs font-medium mb-0.5">Battery Protection</p>
                                     <p class="text-gray-400 text-[9px] md:text-[10px] leading-snug">Side Collision Cell 0 Compression</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-500/30 transition-colors">
-                                <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/ctb-02-AE0alvOxZlu4el5G.webp" alt="Bigger" class="w-10 h-10 object-contain shrink-0 mix-blend-screen drop-shadow-md">
+
+                            <!-- Bigger -->
+                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-500/30 transition-colors group/item">
+                                <div class="w-10 h-10 flex items-center justify-center shrink-0">
+                                    <svg class="w-8 h-8 text-indigo-400 group-hover/item:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                                    </svg>
+                                </div>
                                 <div>
                                     <h4 class="text-indigo-400 text-[13px] md:text-sm font-bold mb-0.5">Bigger</h4>
                                     <p class="text-white text-[11px] md:text-xs font-medium mb-0.5">Cabin Space</p>
                                     <p class="text-gray-400 text-[9px] md:text-[10px] leading-snug">Lower the floor height</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-500/30 transition-colors">
-                                <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/ctb-03-A1aBErDNyWtzjDpx.webp" alt="Better" class="w-10 h-10 object-contain shrink-0 mix-blend-screen drop-shadow-md">
+
+                            <!-- Better -->
+                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-500/30 transition-colors group/item">
+                                <div class="w-10 h-10 flex items-center justify-center shrink-0">
+                                    <svg class="w-8 h-8 text-indigo-400 group-hover/item:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                                    </svg>
+                                </div>
                                 <div>
                                     <h4 class="text-indigo-400 text-[13px] md:text-sm font-bold mb-0.5">Better</h4>
                                     <p class="text-white text-[11px] md:text-xs font-medium mb-0.5">Torsional Stiffness</p>
                                     <p class="text-gray-400 text-[9px] md:text-[10px] leading-snug">31000N·m/deg</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-500/30 transition-colors">
-                                <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/ctb-04-AR0MxVnzZeFy1OJ2.webp" alt="More Stable" class="w-10 h-10 object-contain shrink-0 mix-blend-screen drop-shadow-md">
+
+                            <!-- More Stable -->
+                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-500/30 transition-colors group/item">
+                                <div class="w-10 h-10 flex items-center justify-center shrink-0">
+                                    <svg class="w-8 h-8 text-indigo-400 group-hover/item:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
+                                    </svg>
+                                </div>
                                 <div>
                                     <h4 class="text-indigo-400 text-[13px] md:text-sm font-bold mb-0.5">More Stable</h4>
                                     <p class="text-white text-[11px] md:text-xs font-medium mb-0.5">Control Experience</p>
@@ -336,7 +368,7 @@
                     </div>
                     <div class="w-full lg:w-1/2 relative min-h-[250px] sm:min-h-[350px] overflow-hidden flex items-center justify-center p-6 bg-gradient-to-b lg:bg-gradient-to-r from-transparent via-white/5 to-white/5">
                         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.1)_0%,transparent_70%)] pointer-events-none"></div>
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/ctb-Aq2q3NX9QourKNVv.webp" alt="CTB Architecture" class="relative z-10 w-full max-w-lg h-auto object-contain transform group-hover:scale-105 transition-transform duration-[2s] ease-out drop-shadow-2xl">
+                        <img src="{{ asset('assets/images/ex5/ctb.webp') }}" alt="CTB Architecture" class="relative z-10 w-full max-w-lg h-auto object-contain transform group-hover:scale-105 transition-transform duration-[2s] ease-out drop-shadow-2xl">
                     </div>
                 </div>
 
@@ -376,14 +408,14 @@
                         </ul>
                     </div>
                     <div class="w-full lg:w-1/2 relative flex justify-center">
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/ied-YyvZj2oZ41u6Vgv6.webp" alt="11-in-1 Drive Unit" class="w-full max-w-md h-auto object-contain transform group-hover:scale-105 transition-transform duration-[2s] drop-shadow-[0_0_30px_rgba(34,211,238,0.2)]">
+                        <img src="{{ asset('assets/images/ex5/ied.webp') }}" alt="11-in-1 Drive Unit" class="w-full max-w-md h-auto object-contain transform group-hover:scale-105 transition-transform duration-[2s] drop-shadow-[0_0_30px_rgba(34,211,238,0.2)]">
                     </div>
                 </div>
 
                 <!-- BENTO ITEM: Efficiency & Category Leadership -->
                 <div class="glass-panel p-0 rounded-[2rem] overflow-hidden flex flex-col md:flex-row md:col-span-2 lg:col-span-3 border-t border-white/10 group bg-[#06070a]">
                     <div class="w-full md:w-7/12 relative min-h-[300px] overflow-hidden">
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2619-m2WaDQ1WJeFeWZ3b.jpeg" alt="Electric Drive Efficiency" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4s]">
+                        <img src="{{ asset('assets/images/ex5/2400x0 (1).jpg') }}" alt="Electric Drive Efficiency" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4s]">
                         <div class="absolute inset-0 bg-gradient-to-r from-[#06070a] via-transparent to-transparent z-10"></div>
                     </div>
                     <div class="w-full md:w-5/12 p-8 md:p-12 flex flex-col justify-center relative z-20">

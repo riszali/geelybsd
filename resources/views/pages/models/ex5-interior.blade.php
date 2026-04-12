@@ -316,7 +316,7 @@
                 <!-- Flyme Sound Logo with Gold Glow -->
                 <div class="relative inline-block mb-10 md:mb-16">
                     <div class="absolute inset-0 bg-amber-500/20 blur-[40px] rounded-full scale-150"></div>
-                    <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/flyme-auto-logo-YNqP1Ol3nLTnN9wo.webp" alt="Flyme Sound" class="relative h-12 md:h-20 mx-auto drop-shadow-[0_0_20px_rgba(191,149,63,0.5)] brightness-125">
+                    <img src="{{ asset('assets/images/ex5/flyme-auto-logo-ynqp1ol3nltnn9wo-YNqMJKJLJ6TpqNo2.webp') }}" alt="Flyme Sound" class="relative h-12 md:h-20 mx-auto drop-shadow-[0_0_20px_rgba(191,149,63,0.5)] brightness-125">
                 </div>
                 
                 <h2 class="font-geely text-xl md:text-3xl text-white uppercase tracking-[0.2em] mb-12 leading-tight">
@@ -527,7 +527,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 mb-24">
                     <!-- Main Image (Span 2) -->
                     <div class="lg:col-span-2 glass-panel p-2 rounded-[24px] md:rounded-[32px] group relative overflow-hidden reveal-left h-[300px] md:h-[400px] lg:h-[500px]">
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2626-m6LjeJ8L0OsboJ2x.jpeg" alt="256-Color Ambient Light" class="w-full h-full object-cover rounded-[18px] md:rounded-[26px] transform group-hover:scale-105 transition-transform duration-[2s] ease-out">
+                        <img src="{{ asset('assets/images/ex5/spacious-and-elegant.webp') }}" alt="256-Color Ambient Light" class="w-full h-full object-cover rounded-[18px] md:rounded-[26px] transform group-hover:scale-105 transition-transform duration-[2s] ease-out">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent rounded-[24px] md:rounded-[32px] pointer-events-none"></div>
                         <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-10">
                             <h3 class="font-geely text-xl md:text-2xl lg:text-3xl text-white uppercase drop-shadow-lg">256-Color Ambient Light*</h3>
@@ -539,7 +539,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 md:gap-6 lg:col-span-1 lg:h-[500px]">
                         <!-- Panoramic Sunroof -->
                         <div class="glass-panel p-2 rounded-[24px] md:rounded-[32px] group relative overflow-hidden reveal-right h-[200px] sm:h-[300px] md:h-auto lg:h-full">
-                             <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/panoramic-sunroof-AE0a6ORD22CwMjEa.png" alt="Panoramic Sunroof" class="w-full h-full object-cover rounded-[18px] md:rounded-[26px] transform group-hover:scale-105 transition-transform duration-[2s] ease-out">
+                             <img src="{{ asset('assets/images/ex5/exterior/exterior-03.webp') }}" alt="Panoramic Sunroof" class="w-full h-full object-cover rounded-[18px] md:rounded-[26px] transform group-hover:scale-105 transition-transform duration-[2s] ease-out">
                              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent rounded-[24px] md:rounded-[32px] pointer-events-none"></div>
                              <div class="absolute bottom-6 left-6 z-10">
                                 <h3 class="font-geely text-lg md:text-xl text-white uppercase drop-shadow-lg">Panoramic Sunroof</h3>
@@ -547,7 +547,7 @@
                         </div>
                         <!-- Wireless Charging -->
                         <div class="glass-panel p-2 rounded-[24px] md:rounded-[32px] group relative overflow-hidden reveal-right delay-100 h-[200px] sm:h-[300px] md:h-auto lg:h-full">
-                             <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/wireless-charging-mePbr0l4pWiqby7J.png" alt="Wireless Charging" class="w-full h-full object-cover rounded-[18px] md:rounded-[26px] transform group-hover:scale-105 transition-transform duration-[2s] ease-out">
+                             <img src="{{ asset('assets/images/ex5/2400x0 (9).webp') }}" alt="Wireless Charging" class="w-full h-full object-cover rounded-[18px] md:rounded-[26px] transform group-hover:scale-105 transition-transform duration-[2s] ease-out">
                              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent rounded-[24px] md:rounded-[32px] pointer-events-none"></div>
                              <div class="absolute bottom-6 left-6 z-10">
                                 <h3 class="font-geely text-lg md:text-xl text-white uppercase drop-shadow-lg">Wireless Charging</h3>
@@ -565,16 +565,16 @@
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         <div class="glass-panel p-2 rounded-[20px] md:rounded-[24px] group overflow-hidden h-[250px] md:h-[300px]">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/geely-ex5-interior-6-YD0Bq7DwjKi2vQwz.jpg" class="w-full h-full object-cover rounded-[14px] md:rounded-[18px] transform group-hover:scale-110 transition-transform duration-[2s]">
+                            <img src="{{ asset('assets/images/ex5/interior/2400x0 (2).webp') }}" class="w-full h-full object-cover rounded-[14px] md:rounded-[18px] transform group-hover:scale-110 transition-transform duration-[2s]">
                         </div>
                         <div class="glass-panel p-2 rounded-[20px] md:rounded-[24px] group overflow-hidden h-[250px] md:h-[300px]">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/geely-ex5-interior-5-A1aB86Q5VDHlnyvp.jpg" class="w-full h-full object-cover rounded-[14px] md:rounded-[18px] transform group-hover:scale-110 transition-transform duration-[2s]">
+                            <img src="{{ asset('assets/images/ex5/interior/2400x0 (3).jpg') }}" class="w-full h-full object-cover rounded-[14px] md:rounded-[18px] transform group-hover:scale-110 transition-transform duration-[2s]">
                         </div>
                         <div class="glass-panel p-2 rounded-[20px] md:rounded-[24px] group overflow-hidden h-[250px] md:h-[300px]">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/geely-ex5-interior-4-ojab-m5KLZ42M9BC6Qxoy.jpg" class="w-full h-full object-cover rounded-[14px] md:rounded-[18px] transform group-hover:scale-110 transition-transform duration-[2s]">
+                            <img src="{{ asset('assets/images/ex5/interior/2400x0 (4).jpg') }}" class="w-full h-full object-cover rounded-[14px] md:rounded-[18px] transform group-hover:scale-110 transition-transform duration-[2s]">
                         </div>
                         <div class="glass-panel p-2 rounded-[20px] md:rounded-[24px] group overflow-hidden h-[250px] md:h-[300px]">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/geely-ex5-interior-7-AQED2z4xrOUp9W5W.jpg" class="w-full h-full object-cover rounded-[14px] md:rounded-[18px] transform group-hover:scale-110 transition-transform duration-[2s]">
+                            <img src="{{ asset('assets/images/ex5/interior/2400x0 (5).jpg') }}" class="w-full h-full object-cover rounded-[14px] md:rounded-[18px] transform group-hover:scale-110 transition-transform duration-[2s]">
                         </div>
                     </div>
                 </div>
@@ -588,7 +588,7 @@
         <section class="relative w-full bg-[#050505] z-30 border-t border-white/10">
             <!-- Sticky Background Image -->
             <div class="sticky top-0 w-full h-[100vh] z-0 overflow-hidden">
-                <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/model-bule-ex5-Aq2qryprqxs3n9yp.png" alt="Comfortable Layout" class="w-full h-full object-cover object-center">
+                <img src="{{ asset('assets/images/ex5/interior/2400x0 (2).webp') }}" alt="Comfortable Layout" class="w-full h-full object-cover object-center">
                 <!-- Subtle gradient to ensure text readability -->
                 <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/30 to-transparent opacity-90 pointer-events-none"></div>
             </div>
@@ -660,7 +660,7 @@
 
                 <!-- Showcase Image Container (Styling Disesuaikan untuk BG Putih) -->
                 <div class="p-2 md:p-4 rounded-[24px] md:rounded-[40px] group relative overflow-hidden reveal-up w-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/60 backdrop-blur-xl border border-gray-200">
-                    <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2646-m5KL3bPK38UExr4p.jpeg" alt="Unparalleled Cabin Comfort" class="w-full h-auto block rounded-[18px] md:rounded-[32px] transform group-hover:scale-105 transition-transform duration-[3s] ease-out">
+                    <img src="{{ asset('assets/images/ex5/interior/model-family.webp') }}" alt="Unparalleled Cabin Comfort" class="w-full h-auto block rounded-[18px] md:rounded-[32px] transform group-hover:scale-105 transition-transform duration-[3s] ease-out">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none rounded-[24px] md:rounded-[40px]"></div>
                 </div>
             </div>
@@ -833,7 +833,7 @@
                     <!-- Image Showcase Container (Right) -->
                     <div class="order-2 lg:order-2 p-2 md:p-4 rounded-[24px] md:rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/60 backdrop-blur-xl border border-gray-200 reveal-right group relative w-full overflow-hidden">
                         <div class="relative w-full h-0 pb-[65%] rounded-[18px] md:rounded-[32px] overflow-hidden bg-gray-100 shadow-inner flex items-center justify-center">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/video-card4---frame-at-0m2s-A3QOvPx3jRTJ7BkB.jpg" alt="Extra Large Power Tailgate Opening" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-[1.02] transition-transform duration-[3s] ease-out">
+                            <img src="{{ asset('assets/images/ex5/interior/img_2618.jpeg') }}" alt="Extra Large Power Tailgate Opening" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-[1.02] transition-transform duration-[3s] ease-out">
                             <!-- Overlay gradasi untuk menyatukan gambar dengan desain -->
                             <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
                         </div>
