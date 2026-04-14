@@ -726,49 +726,87 @@
         <!-- ==========================================
              SECTION 6: SAFETY & CRASH TEST
         =========================================== -->
-        <section class="relative min-h-[60vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden py-16 md:py-24 bg-[#050505] z-20">
-            <div class="absolute inset-0 z-0">
-                <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-40">
-                    <source src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/euro-ncap-crash-safety-tests-of-geely-ex5-2025---euro-ncap-720p-h264-YKb3MOZVQjsbVQ84.mp4" type="video/mp4">
-                </video>
-                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-[#050505]/60 via-transparent to-[#050505]/60"></div>
-            </div>
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden py-24 bg-[#050505] z-20">
+    <!-- Ambient Background Glow (Efek cahaya tipis di background hitam) -->
+    <div class="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-red-600/10 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+    <div class="absolute bottom-1/4 left-1/4 w-[300px] h-[300px] bg-white/5 rounded-full blur-[100px] z-0 pointer-events-none"></div>
 
-            <div class="container mx-auto px-6 relative z-10 text-center max-w-4xl reveal-up">
-                <div class="inline-flex items-center gap-3 mb-6 md:mb-6 px-5 py-2.5 rounded-full border border-red-500/40 bg-red-500/10 backdrop-blur-xl shadow-[0_0_30px_rgba(239,68,68,0.2)]">
-                    <span class="text-red-400 text-[9px] tracking-[0.4em] font-bold uppercase">Safety Performance</span>
+    <div class="container mx-auto px-6 relative z-10 max-w-7xl reveal-up">
+        <!-- GRID LAYOUT: Memisahkan Teks dan Video agar tidak saling tumpuk -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            <!-- KOLOM KIRI: KONTEN TEKS SAJA -->
+            <div class="text-left">
+                
+                <!-- GLASS BADGE -->
+                <div class="inline-flex items-center gap-3 mb-8 px-6 py-2.5 rounded-full border border-red-500/30 bg-white/5 backdrop-blur-md shadow-[0_0_20px_rgba(239,68,68,0.15)] relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/10 to-red-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                    <span class="text-red-400 text-[10px] tracking-[0.3em] font-bold uppercase relative z-10">Safety Performance</span>
                 </div>
                 
-                <h2 class="font-geely text-4xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-white mb-6 drop-shadow-2xl leading-[0.9]">
-                    EURO NCAP <br> <span class="text-red-500 drop-shadow-[0_0_20px_rgba(239,68,68,0.6)]">5-STAR</span> RATED
+                <!-- TYPOGRAPHY -->
+                <h2 class="font-geely text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 mb-6 drop-shadow-xl leading-[1.05]">
+                    EURO NCAP <br> 
+                    <span class="text-red-500 drop-shadow-[0_0_25px_rgba(239,68,68,0.5)]">5-STAR</span> RATED
                 </h2>
                 
-                <p class="text-gray-300 text-sm md:text-base leading-relaxed font-light mb-10 md:mb-12 max-w-[90vw] md:max-w-2xl mx-auto drop-shadow-md">
+                <p class="text-gray-300 text-base md:text-lg leading-relaxed font-light max-w-xl">
                     Keamanan tanpa kompromi. Geely EX5 telah melalui serangkaian uji tabrak paling ketat dari Euro NCAP untuk memastikan perlindungan maksimal bagi Anda dan keluarga dalam setiap perjalanan.
                 </p>
+            </div>
 
-                <div class="flex flex-wrap justify-center gap-3 md:gap-8">
-                    <div class="glass-panel p-4 md:p-8 rounded-[20px] md:rounded-[32px] w-[46%] sm:w-40 md:w-48 shadow-2xl flex flex-col items-center group hover:border-red-500/60 transition-colors duration-500 cursor-default">
-                        <span class="text-3xl md:text-5xl font-geely text-white mb-2 group-hover:text-red-400 transition-colors drop-shadow-md">92%</span>
-                        <div class="h-[1px] w-6 md:w-8 bg-white/20 mb-3 group-hover:bg-red-500/60 transition-colors"></div>
-                        <span class="text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest font-bold text-center group-hover:text-gray-200 transition-colors">Adult Occupant</span>
+            <!-- KOLOM KANAN: VIDEO & KARTU STATISTIK -->
+            <div class="flex flex-col gap-6">
+                <!-- VIDEO EKSKLUSIF -->
+                <div class="relative w-full aspect-video rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 group bg-black">
+                    <!-- Inner Glass Frame highlight untuk kesan premium -->
+                    <div class="absolute inset-0 border border-white/20 rounded-[32px] z-20 pointer-events-none"></div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent z-10 pointer-events-none"></div>
+                    
+                    <video autoplay muted loop playsinline class="w-full h-full object-cover relative z-0">
+                        <source src="{{ asset('assets/videos/geely-crash-test.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+                
+                <!-- SUPER GLASSMORPHISM CARDS (Dipindah ke sini, tepat di bawah video) -->
+                <div class="grid grid-cols-3 gap-3 md:gap-4">
+                    
+                    <!-- Card 1 -->
+                    <div class="relative p-4 md:p-6 rounded-[20px] flex flex-col items-start md:items-center group cursor-default transition-all duration-500 hover:-translate-y-2
+                                bg-white/5 backdrop-blur-2xl border border-white/10 
+                                shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_15px_30px_rgba(239,68,68,0.15)] hover:bg-white/10 hover:border-white/20 overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <span class="text-2xl md:text-4xl font-geely text-white mb-2 group-hover:text-red-400 transition-colors relative z-10">92%</span>
+                        <div class="h-[2px] w-6 md:w-8 bg-white/20 mb-2 md:mb-3 group-hover:bg-red-500 transition-colors relative z-10"></div>
+                        <span class="text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest font-bold group-hover:text-white transition-colors relative z-10 md:text-center">Adult<br>Occupant</span>
                     </div>
                     
-                    <div class="glass-panel p-4 md:p-8 rounded-[20px] md:rounded-[32px] w-[46%] sm:w-40 md:w-48 shadow-2xl flex flex-col items-center group hover:border-red-500/60 transition-colors duration-500 cursor-default">
-                        <span class="text-3xl md:text-5xl font-geely text-white mb-2 group-hover:text-red-400 transition-colors drop-shadow-md">88%</span>
-                        <div class="h-[1px] w-6 md:w-8 bg-white/20 mb-3 group-hover:bg-red-500/60 transition-colors"></div>
-                        <span class="text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest font-bold text-center group-hover:text-gray-200 transition-colors">Child Occupant</span>
+                    <!-- Card 2 -->
+                    <div class="relative p-4 md:p-6 rounded-[20px] flex flex-col items-start md:items-center group cursor-default transition-all duration-500 hover:-translate-y-2
+                                bg-white/5 backdrop-blur-2xl border border-white/10 
+                                shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_15px_30px_rgba(239,68,68,0.15)] hover:bg-white/10 hover:border-white/20 overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <span class="text-2xl md:text-4xl font-geely text-white mb-2 group-hover:text-red-400 transition-colors relative z-10">88%</span>
+                        <div class="h-[2px] w-6 md:w-8 bg-white/20 mb-2 md:mb-3 group-hover:bg-red-500 transition-colors relative z-10"></div>
+                        <span class="text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest font-bold group-hover:text-white transition-colors relative z-10 md:text-center">Child<br>Occupant</span>
                     </div>
 
-                    <div class="glass-panel p-4 md:p-8 rounded-[20px] md:rounded-[32px] w-[46%] sm:w-40 md:w-48 shadow-2xl flex flex-col items-center group hover:border-red-500/60 transition-colors duration-500 cursor-default">
-                        <span class="text-3xl md:text-5xl font-geely text-white mb-2 group-hover:text-red-400 transition-colors drop-shadow-md">85%</span>
-                        <div class="h-[1px] w-6 md:w-8 bg-white/20 mb-3 group-hover:bg-red-500/60 transition-colors"></div>
-                        <span class="text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest font-bold text-center group-hover:text-gray-200 transition-colors">Safety Assist</span>
+                    <!-- Card 3 -->
+                    <div class="relative p-4 md:p-6 rounded-[20px] flex flex-col items-start md:items-center group cursor-default transition-all duration-500 hover:-translate-y-2
+                                bg-white/5 backdrop-blur-2xl border border-white/10 
+                                shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_15px_30px_rgba(239,68,68,0.15)] hover:bg-white/10 hover:border-white/20 overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <span class="text-2xl md:text-4xl font-geely text-white mb-2 group-hover:text-red-400 transition-colors relative z-10">85%</span>
+                        <div class="h-[2px] w-6 md:w-8 bg-white/20 mb-2 md:mb-3 group-hover:bg-red-500 transition-colors relative z-10"></div>
+                        <span class="text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest font-bold group-hover:text-white transition-colors relative z-10 md:text-center">Safety<br>Assist</span>
                     </div>
                 </div>
+
             </div>
-        </section>
+            
+        </div>
+    </div>
+</section>
 
         <!-- ==========================================
              SECTION 7: SMART APP & CONNECTIVITY
