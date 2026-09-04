@@ -1030,7 +1030,7 @@
         {
           "@@type": "AutoDealer",
           "name": "Dealer Resmi Geely BSD City",
-          "image": "https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG",
+          "image": "{{ asset('assets/images/ex5/dama.jpeg') }}",
           "@@id": "https://geelybsd.id",
           "url": "https://geelybsd.id",
           "telephone": "+628111234567", 
