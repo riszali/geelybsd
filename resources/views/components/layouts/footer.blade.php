@@ -65,7 +65,7 @@
                     </div>
                     <div class="flex items-center gap-4 group">
                         <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        <p class="text-gray-400 text-[10px] tracking-[0.2em] font-semibold">+62 857 8725 6844</p>
+                        <p class="text-gray-400 text-[10px] tracking-[0.2em] font-semibold">+62 822-4666-6904</p>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
 
                 <div class="flex items-center gap-3 group">
                     <p class="text-[10px] uppercase tracking-[0.3em] text-gray-300">Created by   |</p>
-                    <a href="https://lundorimagine.com" target="_blank" class="block transform transition-transform group-hover:scale-105">
+                    <a href="https://compro.esensee.id" target="_blank" class="block transform transition-transform group-hover:scale-105">
                         <img class="h-5 md:h-6 w-auto opacity-100 group-hover:opacity-100 transition-all duration-500 sharp-img-footer hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]" 
                              src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/logo-pink-ma7HGZGFFvICMzRH.png" 
                              alt="Lund'or Imagine Digital">
