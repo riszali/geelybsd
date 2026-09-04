@@ -1149,4 +1149,4 @@
       ]
     }
     </script>
-</x-layouts.app>
+</x-layouts.app>x
