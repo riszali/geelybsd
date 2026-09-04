@@ -853,10 +853,15 @@
             <div class="max-w-[1400px] w-full mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-                    <!-- Image Container (Left - Alternating from Power Tailgate) -->
+                    <!-- Video Container (Left - Alternating from Power Tailgate) -->
                     <div class="order-2 lg:order-1 glass-panel p-2 md:p-4 rounded-[24px] md:rounded-[40px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] reveal-left group relative w-full overflow-hidden">
                         <div class="relative w-full h-0 pb-[65%] rounded-[18px] md:rounded-[32px] overflow-hidden bg-black shadow-inner flex items-center justify-center">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2641-YKbEQrPbBDcEpoGp.jpeg" alt="Exclusive Rear Super Storage Box" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[3s] ease-out">
+
+                            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[3s] ease-out">
+                                <source src="{{ asset('assets/videos/drawer.mp4') }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            
                             <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/40 via-transparent to-transparent pointer-events-none"></div>
                         </div>
                     </div>
@@ -892,6 +897,9 @@
         <!-- ==========================================
              SECTION 6: DIVE INTO THE DETAILS (NAVIGATION)
         =========================================== -->
+        <!-- ==========================================
+             SECTION 6: DIVE INTO THE DETAILS (NAVIGATION)
+        =========================================== -->
         <section id="details" class="py-16 md:py-24 lg:py-32 relative z-30 bg-[#050505] overflow-hidden border-t border-white/10 bg-noise">
             <!-- Subtle Colorful Ambient Background Elements -->
             <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
@@ -917,8 +925,8 @@
                     <div class="order-2 lg:order-1 lg:col-span-7 flex flex-col gap-4 reveal-left w-full">
                         
                         <!-- Exterior Link Card -->
-                        <a href="/models/ex5-exterior/detail" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-[0_20px_40px_rgba(34,211,238,0.2)] transition-all duration-500 border border-white/10 hover:border-cyan-400/50">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2642-Aq2qroZX2GsMyae6.jpeg" alt="Exterior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <a href="{{ route('models.ex5.exterior') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-[0_20px_40px_rgba(34,211,238,0.2)] transition-all duration-500 border border-white/10 hover:border-cyan-400/50">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/sunroof-yx4ak1dowru68xpb-1-YbN4az2lObuDROkG.jpg" alt="Exterior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
                             <div class="absolute inset-0 p-6 md:p-8 flex items-end justify-between">
                                 <div>
@@ -947,7 +955,7 @@
                         </a>
 
                         <!-- Specification Link Card -->
-                        <a href="/models/ex5" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-[0_20px_40px_rgba(34,211,238,0.2)] transition-all duration-500 border border-white/10 hover:border-cyan-400/50">
+                        <a href="{{ route('models.ex5.specification') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-[0_20px_40px_rgba(34,211,238,0.2)] transition-all duration-500 border border-white/10 hover:border-cyan-400/50">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ied-tF2sW5R0UW8pMCMV.webp" alt="Specification" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
                             <div class="absolute inset-0 p-6 md:p-8 flex items-end justify-between">

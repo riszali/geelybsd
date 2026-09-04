@@ -415,7 +415,7 @@
                 <!-- BENTO ITEM: Efficiency & Category Leadership -->
                 <div class="glass-panel p-0 rounded-[2rem] overflow-hidden flex flex-col md:flex-row md:col-span-2 lg:col-span-3 border-t border-white/10 group bg-[#06070a]">
                     <div class="w-full md:w-7/12 relative min-h-[300px] overflow-hidden">
-                        <img src="{{ asset('assets/images/ex5/2400x0 (1).jpg') }}" alt="Electric Drive Efficiency" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4s]">
+                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2619-m2WaDQ1WJeFeWZ3b.jpeg" alt="Electric Drive Efficiency" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4s]">
                         <div class="absolute inset-0 bg-gradient-to-r from-[#06070a] via-transparent to-transparent z-10"></div>
                     </div>
                     <div class="w-full md:w-5/12 p-8 md:p-12 flex flex-col justify-center relative z-20">
@@ -518,7 +518,7 @@
                     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-red-500/15 rounded-full blur-[80px] pointer-events-none group-hover:bg-red-500/25 transition-colors duration-700"></div>
                     <div class="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-black/50 flex-grow">
                         <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-80 group-hover:opacity-100">
-                            <source src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/euro-ncap-crash-safety-tests-of-geely-ex5-2025---euro-ncap-720p-h264-YKb3MOZVQjsbVQ84.mp4" type="video/mp4">
+                            <source src="/videos/crash-test.mp4" type="video/mp4">
                         </video>
                         <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent pointer-events-none"></div>
                         <div class="absolute bottom-6 left-6 md:bottom-8 md:left-8 z-10 pointer-events-none">

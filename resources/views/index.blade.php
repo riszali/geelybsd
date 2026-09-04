@@ -9,13 +9,13 @@
         <meta property="og:url" content="https://geelybsd.id/">
         <meta property="og:title" content="Dealer Resmi Geely BSD Tangerang | Kendaraan Listrik Premium">
         <meta property="og:description" content="Kunjungi Showroom Dealer Resmi Geely BSD City. Dapatkan promo terbaru dan test drive Geely EX5 & EX2.">
-        <meta property="og:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG">
+        <meta property="og:image" content="{{ asset('assets/images/ex5/dama.jpeg') }}">
 
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="https://geelybsd.id/">
         <meta property="twitter:title" content="Dealer Resmi Geely BSD Tangerang | Kendaraan Listrik Premium">
         <meta property="twitter:description" content="Kunjungi Showroom Dealer Resmi Geely BSD City. Dapatkan promo terbaru dan test drive Geely EX5 & EX2.">
-        <meta property="twitter:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG">
+        <meta property="twitter:image" content="{{ asset('assets/images/ex5/dama.jpeg') }}">
     @endpush
 
     <style>
