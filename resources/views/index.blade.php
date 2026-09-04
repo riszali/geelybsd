@@ -887,20 +887,20 @@
                 <div data-slider class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-4 md:gap-6 pt-4 pb-12 px-4 md:px-0 -mx-4 md:mx-0 scroll-smooth">
                     @php
                         $customers = [
-                            'images/customer/cs8.jpeg',
-                            'images/customer/cs9.jpeg',
-                            'images/customer/cs10.jpeg',
-                            'images/customer/cs11.jpeg',
-                            'images/customer/cs12.jpeg',
-                            'images/customer/cs13.jpeg',
-                            'images/customer/cs14.jpeg',
-                            'images/customer/cs3.jpeg',
-                            'images/customer/cs4.jpeg',
-                            'images/customer/cs5.jpeg',
-                            'images/customer/cs6.jpeg',
-                            'images/customer/cs7.jpeg',
-                            'images/customer/cs1.jpeg',
-                            'images/customer/cs2.jpeg',
+                            'assets/images/customer/cs1.jpeg',
+                            'assets/images/customer/cs2.jpeg',
+                            'assets/images/customer/cs3.jpeg',
+                            'assets/images/customer/cs4.jpeg',
+                            'assets/images/customer/cs5.jpeg',
+                            'assets/images/customer/cs6.jpeg',
+                            'assets/images/customer/cs7.jpeg',
+                            'assets/images/customer/cs8.jpeg',
+                            'assets/images/customer/cs9.jpeg',
+                            'assets/images/customer/cs10.jpeg',
+                            'assets/images/customer/cs11.jpeg',
+                            'assets/images/customer/cs12.jpeg',
+                            'assets/images/customer/cs13.jpeg',
+                            'assets/images/customer/cs14.jpeg',
                         ];
                     @endphp
 
@@ -1149,4 +1149,4 @@
       ]
     }
     </script>
-</x-layouts.app>x
+</x-layouts.app>
