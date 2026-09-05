@@ -41,6 +41,13 @@
                             'exterior_url' => route('models.starray.exterior'),
                             'interior_url' => route('models.starray.interior'),
                             'specs_url' => route('models.starray.specification'),
+                        ],
+                        [
+                            'name' => 'COOLRAY', 
+                            'url' => route('models.coolray'),
+                            'exterior_url' => route('models.coolray.exterior'),
+                            'interior_url' => route('models.coolray.interior'),
+                            'specs_url' => route('models.coolray.specification'),
                         ]
                     ];
                 @endphp
@@ -79,7 +86,7 @@
 
             <!-- Mobile Menu Button (Glassmorphism Style) -->
             <div class="flex items-center lg:hidden relative z-50">
-                <button id="mobile-menu-btn" class="relative w-11 h-11 flex items-center justify-center focus:outline-none text-gray-800 z-50 bg-white/40 backdrop-blur-xl border border-white/60 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:bg-white/60 transition-all duration-300">
+                <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="relative w-11 h-11 flex items-center justify-center focus:outline-none text-gray-800 z-50 bg-white/40 backdrop-blur-xl border border-white/60 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:bg-white/60 transition-all duration-300">
                     <svg id="icon-menu" class="w-5 h-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -139,48 +146,58 @@
         const menuContent = document.getElementById('mobile-menu-content');
         const menuFooter = document.getElementById('mobile-menu-footer');
 
-        btn.addEventListener('click', () => {
-            const isOpen = menu.classList.contains('opacity-100');
-            
-            if (isOpen) {
-                menu.classList.replace('opacity-100', 'opacity-0');
-                menu.classList.add('pointer-events-none');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                const isOpen = menu.classList.contains('opacity-100');
                 
-                iconMenu.classList.remove('opacity-0', 'scale-50');
-                iconMenu.classList.add('opacity-100');
-                iconClose.classList.remove('opacity-100');
-                iconClose.classList.add('opacity-0', 'scale-50');
-                
-                document.body.style.overflow = '';
-                
-                if (menuContent) {
-                    menuContent.classList.add('translate-y-10');
-                    menuContent.classList.remove('translate-y-0');
+                if (isOpen) {
+                    menu.classList.replace('opacity-100', 'opacity-0');
+                    menu.classList.add('pointer-events-none');
+                    
+                    if (iconMenu) {
+                        iconMenu.classList.remove('opacity-0', 'scale-50');
+                        iconMenu.classList.add('opacity-100');
+                    }
+                    if (iconClose) {
+                        iconClose.classList.remove('opacity-100');
+                        iconClose.classList.add('opacity-0', 'scale-50');
+                    }
+                    
+                    document.body.style.overflow = '';
+                    
+                    if (menuContent) {
+                        menuContent.classList.add('translate-y-10');
+                        menuContent.classList.remove('translate-y-0');
+                    }
+                    if (menuFooter) {
+                        menuFooter.classList.add('translate-y-10');
+                        menuFooter.classList.remove('translate-y-0');
+                    }
+                } else {
+                    menu.classList.replace('opacity-0', 'opacity-100');
+                    menu.classList.remove('pointer-events-none');
+                    
+                    if (iconMenu) {
+                        iconMenu.classList.remove('opacity-100');
+                        iconMenu.classList.add('opacity-0', 'scale-50');
+                    }
+                    if (iconClose) {
+                        iconClose.classList.remove('opacity-0', 'scale-50');
+                        iconClose.classList.add('opacity-100');
+                    }
+                    
+                    document.body.style.overflow = 'hidden';
+                    
+                    if (menuContent) {
+                        menuContent.classList.remove('translate-y-10');
+                        menuContent.classList.add('translate-y-0');
+                    }
+                    if (menuFooter) {
+                        menuFooter.classList.remove('translate-y-10');
+                        menuFooter.classList.add('translate-y-0');
+                    }
                 }
-                if (menuFooter) {
-                    menuFooter.classList.add('translate-y-10');
-                    menuFooter.classList.remove('translate-y-0');
-                }
-            } else {
-                menu.classList.replace('opacity-0', 'opacity-100');
-                menu.classList.remove('pointer-events-none');
-                
-                iconMenu.classList.remove('opacity-100');
-                iconMenu.classList.add('opacity-0', 'scale-50');
-                iconClose.classList.remove('opacity-0', 'scale-50');
-                iconClose.classList.add('opacity-100');
-                
-                document.body.style.overflow = 'hidden';
-                
-                if (menuContent) {
-                    menuContent.classList.remove('translate-y-10');
-                    menuContent.classList.add('translate-y-0');
-                }
-                if (menuFooter) {
-                    menuFooter.classList.remove('translate-y-10');
-                    menuFooter.classList.add('translate-y-0');
-                }
-            }
-        });
+            });
+        }
     });
 </script>

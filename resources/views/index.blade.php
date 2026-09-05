@@ -217,6 +217,27 @@
         body.lightbox-open {
             overflow: hidden;
         }
+
+        .lineup-card {
+            flex: 0 0 85vw;
+            width: 85vw;
+            max-width: 85vw;
+        }
+        @media (min-width: 640px) {
+            .lineup-card {
+                flex: 0 0 calc((100% - 24px) / 2);
+                width: calc((100% - 24px) / 2);
+                max-width: calc((100% - 24px) / 2);
+            }
+        }
+        @media (min-width: 1024px) {
+            .lineup-card {
+                flex: 0 0 calc((100% - 48px) / 3) !important;
+                width: calc((100% - 48px) / 3) !important;
+                max-width: calc((100% - 48px) / 3) !important;
+                height: 600px !important;
+            }
+        }
     </style>
 
     <header class="relative h-[100svh] w-full flex items-center justify-center overflow-hidden bg-black bg-noise">
@@ -234,7 +255,7 @@
                 <span class="text-liquid">FUTURE</span>
             </h1>
             <p class="text-gray-400 max-w-6xl mx-auto text-sm md:text-xl font-light tracking-wide leading-relaxed mb-12 reveal-up delay-200">
-                Rasakan era baru mobilitas premium bersama line-up revolusioner kami. Jelajahi kelincahan urban <strong>Geely EX2</strong>, inovasi elektrik tangguh <strong>Geely EX5</strong>, dan performa hybrid mutakhir dari <strong>Geely Starray EM-i</strong>. Perpaduan sempurna antara desain aerodinamis dan teknologi masa depan tanpa batas.
+                Rasakan era baru mobilitas premium bersama line-up revolusioner kami. Jelajahi kelincahan urban <strong>Geely EX2</strong>, inovasi elektrik tangguh <strong>Geely EX5</strong>, performa hybrid mutakhir dari <strong>Geely Starray EM-i</strong>, serta ketangguhan sporty <strong>Geely Coolray</strong>. Perpaduan sempurna antara desain aerodinamis dan teknologi masa depan tanpa batas.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 reveal-up delay-300">
                 <a href="/test-drive" title="Booking Test Drive Mobil Geely di BSD" class="btn-shimmer flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 md:px-12 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] w-full sm:w-auto">
@@ -358,7 +379,7 @@
                     Koleksi kendaraan EV unggulan yang dirancang tanpa kompromi. Memadukan estetika aerodinamis kelas dunia dengan arsitektur elektrik paling canggih di industri otomotif Indonesia.
                 </p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="relative w-full" id="lineup-slider-wrapper">
                 @php
                     $showcase = [
                         [
@@ -384,45 +405,86 @@
                             'img' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/02-exterior-geely-starray-em-i-geely-ambara-group-2-AVLxzgj4K6TXQRbW.webp',
                             'link' => '/models/starray-em-i',
                             'delay' => 'delay-200'
+                        ],
+                        [
+                            'name' => 'Geely Coolray',
+                            'type' => 'Dynamic Sport SUV',
+                            'stats' => ['1.5L Turbo 172 HP', '7-Speed DCT'],
+                            'img' => asset('assets/coolray/hero.webp'),
+                            'link' => '/models/coolray',
+                            'delay' => 'delay-300'
                         ]
                     ];
                 @endphp
 
-                @foreach($showcase as $car)
-                <div class="group relative flex flex-col md:block h-auto md:h-[600px] rounded-[20px] md:rounded-[32px] overflow-hidden reveal-up {{ $car['delay'] }} md:border md:border-white/10 premium-card-hover premium-card-dark glare-effect bg-[#0a0a0c] md:bg-transparent">
-                    <div class="relative w-full h-[220px] sm:h-[280px] md:absolute md:inset-0 md:h-full shrink-0">
-                        <img src="{{ $car['img'] }}" alt="Mobil Listrik {{ $car['name'] }} - {{ $car['type'] }} tersedia di Dealer Geely BSD" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out brightness-90 md:brightness-75 group-hover:brightness-100">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-90 md:opacity-90 group-hover:opacity-80 transition-opacity duration-500"></div>
-                    </div>
-                    
-                    <div class="relative z-10 -mt-8 mx-3 mb-3 md:mt-0 md:mx-0 md:mb-0 md:absolute md:inset-0 p-4 md:p-8 flex flex-col justify-end mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none shadow-2xl md:shadow-none">
-                        <div class="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                            <span class="text-cyan-400 text-[9px] md:text-[9px] font-bold tracking-[0.3em] uppercase mb-1.5 md:mb-2 block drop-shadow-md">
-                                {{ $car['type'] }}
-                            </span>
-                            <h3 class="font-geely text-2xl md:text-4xl uppercase tracking-tighter text-white mb-2 md:mb-4 drop-shadow-lg">
-                                {{ $car['name'] }}
-                            </h3>
-                            
-                            <div class="flex flex-wrap gap-2 md:gap-3 mb-3 md:mb-6 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                                @foreach($car['stats'] as $stat)
-                                <span class="px-2.5 py-1 md:px-3 md:py-1.5 rounded-full border border-white/20 bg-black/40 backdrop-blur-md text-gray-300 text-[8px] tracking-[0.2em] font-medium uppercase whitespace-nowrap">
-                                    {{ $stat }}
+                <!-- Showcase Cards Slider Track -->
+                <div id="lineup-slider" class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 pb-6 pt-2 scroll-smooth cursor-grab active:cursor-grabbing -mx-4 px-4 md:mx-0 md:px-0">
+                    @foreach($showcase as $index => $car)
+                    <div data-lineup-card="{{ $index }}" class="lineup-card flex-shrink-0 snap-start group relative flex flex-col md:block h-auto md:h-[600px] rounded-[20px] md:rounded-[32px] overflow-hidden reveal-up {{ $car['delay'] }} md:border md:border-white/10 premium-card-hover premium-card-dark glare-effect bg-[#0a0a0c] md:bg-transparent transition-all duration-500">
+                        <div class="relative w-full h-[220px] sm:h-[280px] md:absolute md:inset-0 md:h-full shrink-0">
+                            <img src="{{ $car['img'] }}" alt="Mobil Listrik {{ $car['name'] }} - {{ $car['type'] }} tersedia di Dealer Geely BSD" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out brightness-90 md:brightness-75 group-hover:brightness-100">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-90 md:opacity-90 group-hover:opacity-80 transition-opacity duration-500"></div>
+                        </div>
+                        
+                        <div class="relative z-10 -mt-8 mx-3 mb-3 md:mt-0 md:mx-0 md:mb-0 md:absolute md:inset-0 p-4 md:p-8 flex flex-col justify-end mobile-bento-glass-dark rounded-[16px] md:bg-transparent md:border-none md:rounded-none shadow-2xl md:shadow-none">
+                            <div class="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                                <span class="text-cyan-400 text-[9px] md:text-[9px] font-bold tracking-[0.3em] uppercase mb-1.5 md:mb-2 block drop-shadow-md">
+                                    {{ $car['type'] }}
                                 </span>
-                                @endforeach
-                            </div>
-                            
-                            <div class="pt-3 md:pt-6 border-t border-white/10 flex justify-between items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-200">
-                                <a href="{{ $car['link'] }}" title="Spesifikasi Detail {{ $car['name'] }}" class="text-white hover:text-cyan-400 text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase transition-colors flex items-center gap-2">
-                                    Discover Details <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
+                                <h3 class="font-geely text-2xl md:text-4xl uppercase tracking-tighter text-white mb-2 md:mb-4 drop-shadow-lg">
+                                    {{ $car['name'] }}
+                                </h3>
+                                
+                                <div class="flex flex-wrap gap-2 md:gap-3 mb-3 md:mb-6 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                    @foreach($car['stats'] as $stat)
+                                    <span class="px-2.5 py-1 md:px-3 md:py-1.5 rounded-full border border-white/20 bg-black/40 backdrop-blur-md text-gray-300 text-[8px] tracking-[0.2em] font-medium uppercase whitespace-nowrap">
+                                        {{ $stat }}
+                                    </span>
+                                    @endforeach
+                                </div>
+                                
+                                <div class="pt-3 md:pt-6 border-t border-white/10 flex justify-between items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-200">
+                                    <a href="{{ $car['link'] }}" title="Spesifikasi Detail {{ $car['name'] }}" class="text-white hover:text-cyan-400 text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase transition-colors flex items-center gap-2">
+                                        Discover Details <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+
+                    </div>
+                    @endforeach
+                </div>
+
+                <!-- Showcase Pagination Controls (Arrows + Numbered Pages + Progress Bar) -->
+                <div class="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 reveal-up">
+                    <div class="flex items-center gap-3">
+                        <span class="text-cyan-400 text-xs font-mono font-bold tracking-widest" id="lineup-page-indicator">01</span>
+                        <div class="w-24 md:w-32 h-[3px] bg-white/10 rounded-full overflow-hidden relative">
+                            <div id="lineup-progress-bar" class="h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transition-all duration-300" style="width: 50%;"></div>
+                        </div>
+                        <span class="text-gray-500 text-xs font-mono font-bold tracking-widest" id="lineup-page-total">02</span>
                     </div>
 
-                </div>
-                @endforeach
+                    <div class="flex items-center gap-2 md:gap-3">
+                        <!-- Prev Button -->
+                        <button id="lineup-prev" type="button" aria-label="Previous Page" class="w-10 h-10 md:w-12 md:h-12 rounded-full glass-panel border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-300 disabled:opacity-30 disabled:pointer-events-none cursor-pointer">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
 
+                        <!-- Numbered Page Pills -->
+                        <div id="lineup-pagination-dots" class="flex items-center gap-2 px-1"></div>
+
+                        <!-- Next Button -->
+                        <button id="lineup-next" type="button" aria-label="Next Page" class="w-10 h-10 md:w-12 md:h-12 rounded-full glass-panel border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-300 disabled:opacity-30 disabled:pointer-events-none cursor-pointer">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="text-center mt-3 flex md:hidden justify-center items-center gap-2 text-cyan-400 text-[9px] font-bold uppercase tracking-widest animate-pulse">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    Swipe to explore more models
+                </div>
             </div>            
         </div>
     </section>
@@ -892,7 +954,6 @@
                             'assets/images/customer/cs3.jpeg',
                             'assets/images/customer/cs4.jpeg',
                             'assets/images/customer/cs5.jpeg',
-                            'assets/images/customer/cs6.jpeg',
                             'assets/images/customer/cs7.jpeg',
                             'assets/images/customer/cs8.jpeg',
                             'assets/images/customer/cs9.jpeg',
@@ -1027,6 +1088,148 @@
                     });
                 }
             });
+
+            const lineupSlider = document.getElementById('lineup-slider');
+            const lineupPrev = document.getElementById('lineup-prev');
+            const lineupNext = document.getElementById('lineup-next');
+            const lineupDots = document.getElementById('lineup-pagination-dots');
+            const lineupIndicator = document.getElementById('lineup-page-indicator');
+            const lineupTotal = document.getElementById('lineup-page-total');
+            const lineupProgress = document.getElementById('lineup-progress-bar');
+
+            if (lineupSlider && lineupPrev && lineupNext) {
+                const cards = lineupSlider.querySelectorAll('[data-lineup-card]');
+                
+                function getPagesCount() {
+                    const sliderWidth = lineupSlider.clientWidth;
+                    const scrollWidth = lineupSlider.scrollWidth;
+                    const maxScroll = scrollWidth - sliderWidth;
+                    if (maxScroll <= 10) return 1;
+                    const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : sliderWidth;
+                    const visibleCards = Math.max(1, Math.round((sliderWidth + 24) / cardWidth));
+                    return Math.max(1, Math.ceil(cards.length / visibleCards));
+                }
+
+                let totalPages = getPagesCount();
+
+                function renderPagination() {
+                    totalPages = getPagesCount();
+                    if (lineupTotal) lineupTotal.textContent = String(totalPages).padStart(2, '0');
+                    if (!lineupDots) return;
+
+                    lineupDots.innerHTML = '';
+                    for (let i = 0; i < totalPages; i++) {
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.className = `lineup-page-btn w-8 h-8 md:w-9 md:h-9 rounded-full text-[11px] font-mono font-bold transition-all duration-300 flex items-center justify-center cursor-pointer ${
+                            i === 0 
+                                ? 'bg-cyan-500 text-black shadow-[0_0_15px_rgba(6,182,212,0.6)] font-extrabold' 
+                                : 'text-gray-400 hover:text-white bg-white/5 border border-white/10 hover:border-white/30'
+                        }`;
+                        btn.textContent = String(i + 1).padStart(2, '0');
+                        btn.setAttribute('aria-label', `Halaman ${i + 1}`);
+                        btn.addEventListener('click', () => goToPage(i));
+                        lineupDots.appendChild(btn);
+                    }
+                    updateControls();
+                }
+
+                function getCurrentPage() {
+                    const maxScroll = lineupSlider.scrollWidth - lineupSlider.clientWidth;
+                    if (maxScroll <= 10) return 0;
+                    const scrollLeft = lineupSlider.scrollLeft;
+                    if (scrollLeft >= maxScroll - 20) return totalPages - 1;
+                    const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : lineupSlider.clientWidth;
+                    const visibleCards = Math.max(1, Math.round((lineupSlider.clientWidth + 24) / cardWidth));
+                    const page = Math.floor((scrollLeft + 20) / (visibleCards * cardWidth));
+                    return Math.min(Math.max(0, page), totalPages - 1);
+                }
+
+                function updateControls() {
+                    const currentPage = getCurrentPage();
+                    if (lineupIndicator) lineupIndicator.textContent = String(currentPage + 1).padStart(2, '0');
+                    
+                    if (lineupProgress) {
+                        const progress = totalPages > 1 ? ((currentPage + 1) / totalPages) * 100 : 100;
+                        lineupProgress.style.width = `${progress}%`;
+                    }
+
+                    const buttons = lineupDots ? lineupDots.querySelectorAll('.lineup-page-btn') : [];
+                    buttons.forEach((btn, idx) => {
+                        if (idx === currentPage) {
+                            btn.className = 'lineup-page-btn w-8 h-8 md:w-9 md:h-9 rounded-full text-[11px] font-mono font-extrabold bg-cyan-500 text-black shadow-[0_0_15px_rgba(6,182,212,0.6)] transition-all duration-300 flex items-center justify-center cursor-pointer';
+                        } else {
+                            btn.className = 'lineup-page-btn w-8 h-8 md:w-9 md:h-9 rounded-full text-[11px] font-mono font-bold text-gray-400 hover:text-white bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 flex items-center justify-center cursor-pointer';
+                        }
+                    });
+
+                    lineupPrev.disabled = currentPage === 0;
+                    lineupNext.disabled = currentPage >= totalPages - 1;
+                }
+
+                function goToPage(pageIndex) {
+                    const maxScroll = lineupSlider.scrollWidth - lineupSlider.clientWidth;
+                    if (pageIndex >= totalPages - 1) {
+                        lineupSlider.scrollTo({ left: maxScroll, behavior: 'smooth' });
+                    } else {
+                        const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : lineupSlider.clientWidth;
+                        const visibleCards = Math.max(1, Math.round((lineupSlider.clientWidth + 24) / cardWidth));
+                        const targetScroll = Math.min(pageIndex * visibleCards * cardWidth, maxScroll);
+                        lineupSlider.scrollTo({ left: targetScroll, behavior: 'smooth' });
+                    }
+                }
+
+                lineupPrev.addEventListener('click', () => {
+                    const current = getCurrentPage();
+                    if (current > 0) goToPage(current - 1);
+                });
+
+                lineupNext.addEventListener('click', () => {
+                    const current = getCurrentPage();
+                    if (current < totalPages - 1) goToPage(current + 1);
+                });
+
+                lineupSlider.addEventListener('scroll', () => {
+                    requestAnimationFrame(updateControls);
+                });
+
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+                let isDragging = false;
+
+                lineupSlider.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    isDragging = false;
+                    startX = e.pageX - lineupSlider.offsetLeft;
+                    scrollLeft = lineupSlider.scrollLeft;
+                });
+
+                lineupSlider.addEventListener('mouseleave', () => { isDown = false; });
+                lineupSlider.addEventListener('mouseup', () => { isDown = false; });
+
+                lineupSlider.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    isDragging = true;
+                    const x = e.pageX - lineupSlider.offsetLeft;
+                    const walk = (x - startX) * 1.5;
+                    lineupSlider.scrollLeft = scrollLeft - walk;
+                });
+
+                const clickableLinks = lineupSlider.querySelectorAll('a');
+                clickableLinks.forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        if (isDragging) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                        }
+                    }, true);
+                });
+
+                window.addEventListener('resize', renderPagination);
+                renderPagination();
+            }
         });
 
         const lightbox = document.getElementById('lightbox');
@@ -1143,6 +1346,12 @@
               "position": 3,
               "name": "Starray EM-i",
               "url": "https://geelybsd.id/models/starray-em-i"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 4,
+              "name": "Geely Coolray",
+              "url": "https://geelybsd.id/models/coolray"
             }
           ]
         }

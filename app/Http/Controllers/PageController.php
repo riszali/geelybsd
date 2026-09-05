@@ -105,7 +105,6 @@ class PageController extends Controller
 
     /**
      * Halaman Detail Interior Model Geely Starray EM-i
-     * Fix: Menambahkan method yang sebelumnya menyebabkan error
      */
     public function starrayInterior(): View
     {
@@ -118,6 +117,38 @@ class PageController extends Controller
     public function starraySpecification(): View
     {
         return view('pages.models.starray-specification');
+    }
+
+    /**
+     * Halaman Detail Model Geely Coolray
+     */
+    public function coolray(?string $section = null): View
+    {
+        return view('pages.models.coolray', compact('section'));
+    }
+
+    /**
+     * Halaman Detail Eksterior Geely Coolray
+     */
+    public function coolrayExterior(): View
+    {
+        return view('pages.models.coolray-exterior');
+    }
+
+    /**
+     * Halaman Detail Interior Model Geely Coolray
+     */
+    public function coolrayInterior(): View
+    {
+        return view('pages.models.coolray-interior');
+    }
+
+    /**
+     * Halaman Spesifikasi Lengkap Model Geely Coolray
+     */
+    public function coolraySpecification(): View
+    {
+        return view('pages.models.coolray-specification');
     }
 
     /**

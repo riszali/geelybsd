@@ -24,7 +24,7 @@ Route::get('/discover', [PageController::class, 'discover'])->name('discover');
 
 
 // =============================================================
-// GRUP MODEL KENDARAAN (EX2, EX5, STARRAY)
+// GRUP MODEL KENDARAAN (EX2, EX5, STARRAY, COOLRAY)
 // =============================================================
 
 Route::prefix('models')->name('models.')->group(function () {
@@ -58,6 +58,16 @@ Route::prefix('models')->name('models.')->group(function () {
 
     Route::get('/starray-specification/detail', [PageController::class, 'starraySpecification'])->name('starray.specification');
 
+
+    // --- GEELY COOLRAY ---
+    Route::get('/coolray', [PageController::class, 'coolray'])->name('coolray');
+
+    Route::get('/coolray-exterior/detail', [PageController::class, 'coolrayExterior'])->name('coolray.exterior');
+
+    Route::get('/coolray-interior/detail', [PageController::class, 'coolrayInterior'])->name('coolray.interior');
+
+    Route::get('/coolray-specification/detail', [PageController::class, 'coolraySpecification'])->name('coolray.specification');
+
 });
 
 
@@ -77,5 +87,3 @@ Route::get('/credit-simulation', [PageController::class, 'creditSimulation'])->n
 // =============================================================
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
-
-// End of file
