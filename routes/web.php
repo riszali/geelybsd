@@ -63,6 +63,9 @@ Route::get('/test-drive', [PageController::class, 'testDrive'])->name('test-driv
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/credit-simulation', [PageController::class, 'creditSimulation'])->name('credit-simulation');
 
+// Berita & Artikel Publik (SEO Boost)
+Route::get('/news', [\App\Http\Controllers\ArticleController::class, 'index'])->name('news.index');
+Route::get('/news/{slug}', [\App\Http\Controllers\ArticleController::class, 'show'])->name('news.show');
 
 // =============================================================
 // 4. API PENERIMA LEADS & SIMULASI
@@ -103,6 +106,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Export CSV (Mendukung kedua format rute)
         Route::get('/leads/export', [AdminLeadController::class, 'exportCsv'])->name('leads.export');
         Route::get('/leads/export/csv', [AdminLeadController::class, 'exportCsv'])->name('leads.export.csv');
+
+        // Manajemen Artikel & SEO CMS
+        Route::resource('articles', \App\Http\Controllers\AdminArticleController::class);
     });
 });
 

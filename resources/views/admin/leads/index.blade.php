@@ -94,6 +94,11 @@
             </div>
 
             <div class="flex items-center gap-2 sm:gap-3">
+                <a href="{{ route('admin.articles.index') }}" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-cyan-500/30 bg-cyan-500/10 hover:bg-cyan-500 hover:text-black text-xs font-semibold uppercase tracking-wider text-cyan-300 transition-all">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                    <span>Artikel SEO</span>
+                </a>
+
                 <a href="{{ route('admin.leads.export') }}" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-xs font-semibold uppercase tracking-wider text-gray-300 hover:text-white transition-all">
                     <svg class="w-4 h-4 text-[#00b4d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                     Export CSV

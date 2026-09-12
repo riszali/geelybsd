@@ -984,8 +984,122 @@
             </div>
 
             <div class="text-center mt-2 flex justify-center items-center gap-2 text-cyan-400 text-[9px] font-bold uppercase tracking-widest animate-pulse">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                Swipe or drag to view
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            Swipe or drag to view
+        </div>
+    </div>
+</section>
+
+    <!-- ==========================================
+         SECTION 12: ARTIKEL & INSIGHTS GEELY BSD (SEO ENGINE)
+    =========================================== -->
+    <section id="news-insights" class="py-16 md:py-24 lg:py-32 relative z-30 bg-[#07080c] border-t border-white/5 overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
+
+        <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 reveal-up">
+                <div>
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 mb-4">
+                        <span class="text-cyan-400 text-[9px] md:text-[10px] font-bold tracking-[0.4em] uppercase">Berita & Informasi Geely</span>
+                    </div>
+                    <h2 class="font-geely text-3xl sm:text-4xl md:text-6xl uppercase tracking-tighter text-white leading-none">
+                        Latest <span class="text-gradient-cyan">Articles & Insights</span>
+                    </h2>
+                </div>
+                <div class="text-right">
+                    <p class="text-gray-400 text-xs sm:text-sm max-w-sm ml-auto font-light mb-3">
+                        Dapatkan ulasan terkini seputar inovasi kendaraan listrik, promo dealer BSD, dan tips teknologi otomotif masa depan.
+                    </p>
+                </div>
+            </div>
+
+            @php
+                $latestArticles = \App\Models\Article::published()->take(3)->get();
+            @endphp
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                @forelse($latestArticles as $art)
+                    <article class="glass-panel rounded-[24px] overflow-hidden group hover:border-cyan-400/50 transition-all duration-500 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-950">
+                                <img src="{{ $art->image_url }}" alt="{{ $art->title }}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[9px] font-bold uppercase tracking-wider text-cyan-300">
+                                    {{ $art->category }}
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-[10px] text-gray-400 mb-2">{{ $art->formatted_date }} &bull; {{ $art->reading_time }} mnt baca</div>
+                                <h3 class="font-geely text-xl text-white group-hover:text-cyan-300 transition-colors line-clamp-2 uppercase tracking-tight mb-2">
+                                    {{ $art->title }}
+                                </h3>
+                                <p class="text-gray-400 text-xs line-clamp-3 leading-relaxed font-light">
+                                    {{ $art->excerpt }}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-6 pt-0">
+                            <a href="{{ route('news.show', $art->slug) }}" class="inline-flex items-center gap-2 text-xs font-bold tracking-wider text-cyan-400 group-hover:text-white uppercase transition-colors">
+                                Baca Selengkapnya &rarr;
+                            </a>
+                        </div>
+                    </article>
+                @empty
+                    <!-- Fallback Cards Ketika Admin Belum Input Artikel -->
+                    <article class="glass-panel rounded-[24px] overflow-hidden group hover:border-cyan-400/50 transition-all duration-500 shadow-xl">
+                        <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-950">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-16-YyvDPj63y9fNXbar.webp" alt="Geely EX5 Indonesia" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[9px] font-bold uppercase tracking-wider text-cyan-300">
+                                Review Kendaraan
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-[10px] text-gray-400 mb-2">Update Terbaru &bull; 4 mnt baca</div>
+                            <h3 class="font-geely text-xl text-white group-hover:text-cyan-300 transition-colors uppercase tracking-tight mb-2">
+                                Mengapa Geely EX5 Menjadi SUV Listrik Paling Ditunggu di Tangerang
+                            </h3>
+                            <p class="text-gray-400 text-xs line-clamp-3 leading-relaxed font-light">
+                                Eksplorasi fitur Flyme Auto, efisiensi platform cerdas GEA, dan jangkauan tempuh hingga 495 km yang ideal untuk mobilitas Jabodetabek.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="glass-panel rounded-[24px] overflow-hidden group hover:border-cyan-400/50 transition-all duration-500 shadow-xl">
+                        <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-950">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/rdspace-6fdMIYg90CYd8lJd.webp" alt="Geely EX2 Urban EV" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[9px] font-bold uppercase tracking-wider text-cyan-300">
+                                Urban Mobility
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-[10px] text-gray-400 mb-2">Update Terbaru &bull; 3 mnt baca</div>
+                            <h3 class="font-geely text-xl text-white group-hover:text-cyan-300 transition-colors uppercase tracking-tight mb-2">
+                                Lincah di Perkotaan: Keunggulan Ultra-Fast Charging Geely EX2
+                            </h3>
+                            <p class="text-gray-400 text-xs line-clamp-3 leading-relaxed font-light">
+                                Solusi mobil listrik ringkas bagi kaum urban dengan fleksibilitas tinggi dan interior futuristik yang memanjakan pengemudi.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="glass-panel rounded-[24px] overflow-hidden group hover:border-cyan-400/50 transition-all duration-500 shadow-xl">
+                        <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-950">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG" alt="Dealer Geely BSD City" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[9px] font-bold uppercase tracking-wider text-cyan-300">
+                                Event & Promo
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-[10px] text-gray-400 mb-2">Update Terbaru &bull; 5 mnt baca</div>
+                            <h3 class="font-geely text-xl text-white group-hover:text-cyan-300 transition-colors uppercase tracking-tight mb-2">
+                                Nikmati Fasilitas VIP Concierge dan Test Drive Eksklusif di BSD City
+                            </h3>
+                            <p class="text-gray-400 text-xs line-clamp-3 leading-relaxed font-light">
+                                Kunjungi Showroom Geely BSD dan rasakan pelayanan kelas satu mulai dari simulasi pembiayaan hingga servis terpercaya.
+                            </p>
+                        </div>
+                    </article>
+                @endforelse
             </div>
         </div>
     </section>
