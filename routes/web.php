@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\AdminLeadController;
+use App\Http\Controllers\LeadController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
@@ -80,6 +83,33 @@ Route::get('/test-drive', [PageController::class, 'testDrive'])->name('test-driv
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 Route::get('/credit-simulation', [PageController::class, 'creditSimulation'])->name('credit-simulation');
+
+// API Leads Submission
+Route::post('/api/leads', [LeadController::class, 'store'])->name('leads.store');
+
+
+// =============================================================
+// ADMIN AUTENTIKASI & CRM PORTAL
+// =============================================================
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    
+    // Auth Routes (Guest Only)
+    Route::middleware('guest')->group(function () {
+        Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('login');
+        Route::post('/login', [AdminAuthController::class, 'login'])->name('login.post');
+    });
+
+    // CRM Dashboard Routes (Protected by Auth)
+    Route::middleware('auth')->group(function () {
+        Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+        
+        Route::get('/leads', [AdminLeadController::class, 'index'])->name('leads.index');
+        Route::patch('/leads/{lead}/status', [AdminLeadController::class, 'updateStatus'])->name('leads.updateStatus');
+        Route::get('/leads/export/csv', [AdminLeadController::class, 'exportCsv'])->name('leads.export');
+    });
+
+});
 
 
 // =============================================================

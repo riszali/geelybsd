@@ -74,6 +74,17 @@
             transition: all 1s ease-in-out;
             transform: scale(1.05);
         }
+
+        @keyframes shimmer {
+            100% { transform: translateX(100%); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
     </style>
 
     <div class="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -125,6 +136,7 @@
             <div class="w-full lg:w-7/12 p-8 md:p-12 bg-black/40 backdrop-blur-xl border-l border-white/5">
                 
                 <form id="testDriveForm" class="space-y-8">
+                    @csrf
                     
                     <!-- 1. Model Selector (Pills) -->
                     <div class="space-y-3">
@@ -162,12 +174,12 @@
                             
                             <!-- Input with Icon -->
                             <div class="hud-input-group">
-                                <input type="text" id="fullName" required placeholder="Nama Lengkap" class="hud-input peer">
+                                <input type="text" name="full_name" id="fullName" required placeholder="Nama Lengkap" class="hud-input peer">
                                 <svg class="hud-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                             </div>
                             
                             <div class="hud-input-group">
-                                <input type="tel" id="phoneNumber" required placeholder="No. WhatsApp" class="hud-input peer">
+                                <input type="tel" name="phone" id="phoneNumber" required placeholder="No. WhatsApp (cth: 08123456789)" class="hud-input peer">
                                 <svg class="hud-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             </div>
                         </div>
@@ -180,19 +192,19 @@
                             
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="hud-input-group">
-                                    <input type="date" id="prefDate" required class="hud-input peer !pl-4 text-white/80">
+                                    <input type="date" name="preferred_date" id="prefDate" required class="hud-input peer !pl-4 text-white/80">
                                 </div>
                                 <div class="hud-input-group">
-                                    <input type="time" id="prefTime" required class="hud-input peer !pl-4 text-white/80">
+                                    <input type="time" name="preferred_time" id="prefTime" required class="hud-input peer !pl-4 text-white/80">
                                 </div>
                             </div>
                             
                             <div class="hud-input-group">
-                                <select id="dealerLocation" required class="hud-input peer !pl-11 appearance-none cursor-pointer">
+                                <select name="dealer_location" id="dealerLocation" required class="hud-input peer !pl-11 appearance-none cursor-pointer">
                                     <option value="" disabled selected hidden>Pilih Titik Lokasi</option>
+                                    <option value="bsd">Geely BSD City</option>
                                     <option value="pik">Geely Center PIK</option>
                                     <option value="pondok-indah">Geely Pondok Indah</option>
-                                    <option value="bsd">Geely BSD City</option>
                                     <option value="home">Home Service (Jadetabek)</option>
                                 </select>
                                 <svg class="hud-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
@@ -203,10 +215,12 @@
                         </div>
                     </div>
 
+                    <!-- Error Alert Box -->
+                    <div id="errorAlert" class="hidden p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-medium"></div>
+
                     <!-- Submit Button -->
                     <div class="pt-6">
                         <button type="submit" id="submitBtn" class="w-full relative group overflow-hidden rounded-xl bg-cyan-500/10 border border-cyan-400/50 py-4 sm:py-5 px-6 transition-all duration-300 hover:bg-cyan-500 hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]">
-                            <!-- Button Hover Effect -->
                             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
                             
                             <span class="relative z-10 flex justify-center items-center gap-3 text-cyan-300 group-hover:text-black font-bold text-xs sm:text-sm tracking-[0.2em] uppercase transition-colors">
@@ -226,7 +240,7 @@
                     </div>
                     <h3 class="font-geely text-2xl sm:text-3xl text-white mb-3 tracking-wide">Akses Diberikan.</h3>
                     <p class="text-white/60 text-sm leading-relaxed max-w-sm mx-auto mb-8">
-                        Transmisi data berhasil. Spesialis Geely akan mengkonfirmasi koordinat dan waktu Anda segera via WhatsApp.
+                        Transmisi data berhasil tercatat di sistem CRM kami. Sales Consultant Geely BSD akan mengonfirmasi jadwal Anda segera via WhatsApp.
                     </p>
                     <button onclick="window.location.reload()" class="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white/80 text-[10px] tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300">
                         Kembali ke Main Menu
@@ -271,32 +285,44 @@
             const activeDesc = document.getElementById('active-car-desc');
             const form = document.getElementById('testDriveForm');
             const successMsg = document.getElementById('successMessage');
+            const errorAlert = document.getElementById('errorAlert');
+
+            // Tangkap query param 'model' jika datang dari simulasi kredit
+            const urlParams = new URLSearchParams(window.location.search);
+            const preselectedModel = urlParams.get('model');
+            if (preselectedModel && db[preselectedModel]) {
+                const targetRadio = document.querySelector(`input[name="car_model"][value="${preselectedModel}"]`);
+                if (targetRadio) {
+                    targetRadio.checked = true;
+                    updateVisuals(preselectedModel);
+                }
+            }
+
+            function updateVisuals(modelKey) {
+                const data = db[modelKey];
+                [activeTag, activeTitle, activeDesc, cardVisual, bgVisual].forEach(el => {
+                    if (el) el.style.opacity = '0';
+                });
+
+                setTimeout(() => {
+                    bgVisual.src = data.img;
+                    cardVisual.src = data.img;
+                    activeTag.textContent = data.tag;
+                    activeTitle.textContent = data.title;
+                    activeDesc.textContent = data.desc;
+
+                    activeTag.style.opacity = '1';
+                    activeTitle.style.opacity = '1';
+                    activeDesc.style.opacity = '1';
+                    cardVisual.style.opacity = '0.6';
+                    bgVisual.style.opacity = '0.4';
+                }, 300);
+            }
 
             // Handle UI changes on Car Selection
             radios.forEach(radio => {
                 radio.addEventListener('change', (e) => {
-                    const data = db[e.target.value];
-
-                    // Fade out texts
-                    [activeTag, activeTitle, activeDesc, cardVisual, bgVisual].forEach(el => {
-                        el.style.opacity = '0';
-                    });
-
-                    setTimeout(() => {
-                        // Swap data
-                        bgVisual.src = data.img;
-                        cardVisual.src = data.img;
-                        activeTag.textContent = data.tag;
-                        activeTitle.textContent = data.title;
-                        activeDesc.textContent = data.desc;
-
-                        // Fade back in
-                        activeTag.style.opacity = '1';
-                        activeTitle.style.opacity = '1';
-                        activeDesc.style.opacity = '1';
-                        cardVisual.style.opacity = '0.6';
-                        bgVisual.style.opacity = '0.4'; // Keep BG blurred
-                    }, 400); // 400ms delay matches typical CSS transition
+                    updateVisuals(e.target.value);
                 });
             });
 
@@ -305,11 +331,14 @@
             const dateInput = document.getElementById('prefDate');
             if(dateInput) dateInput.setAttribute('min', today);
 
-            // Mock Form Submission
-            form.addEventListener('submit', (e) => {
+            // Real AJAX Form Submission ke CRM Database
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault();
+                errorAlert.classList.add('hidden');
+                errorAlert.innerHTML = '';
                 
                 const btn = document.getElementById('submitBtn');
+                const originalContent = btn.innerHTML;
                 
                 // Processing State
                 btn.innerHTML = `
@@ -318,31 +347,40 @@
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Sinkronisasi...
+                        Menyimpan ke CRM...
                     </span>
                 `;
                 btn.disabled = true;
 
-                // Fake API Call Delay
-                setTimeout(() => {
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch("{{ route('leads.store-test-drive') }}", {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                        },
+                        body: formData
+                    });
+
+                    const result = await response.json();
+
+                    if (!response.ok) {
+                        throw new Error(result.message || 'Terjadi kesalahan saat memproses data.');
+                    }
+
+                    // Tampilkan Sukses
                     form.style.display = 'none';
                     successMsg.classList.remove('hidden');
                     successMsg.classList.add('flex');
-                }, 1800);
+                } catch (err) {
+                    btn.innerHTML = originalContent;
+                    btn.disabled = false;
+                    errorAlert.textContent = err.message || 'Gagal terhubung ke server CRM. Silakan coba kembali.';
+                    errorAlert.classList.remove('hidden');
+                }
             });
         });
     </script>
-    
-    <style>
-        @keyframes shimmer {
-            100% { transform: translateX(100%); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-    </style>
 </x-layouts.app>
