@@ -168,12 +168,13 @@
                     <div class="absolute top-0 right-0 w-20 h-20 bg-pink-500/10 rounded-full blur-[25px] pointer-events-none"></div>
                     <span class="text-[9px] sm:text-[10px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase text-gray-400 block mb-1">Conversion Rate</span>
                     @php
-                        $conversionRate = $analytics['total_uniques'] > 0 
-                            ? round(($stats['total'] / $analytics['total_uniques']) * 100, 1) 
+                        $totalLeadsCount = $stats['total'] ?? $metrics['total'] ?? 0;
+                        $conversionRate = ($analytics['total_uniques'] ?? 0) > 0 
+                            ? round(($totalLeadsCount / $analytics['total_uniques']) * 100, 1) 
                             : 0;
                     @endphp
                     <div class="font-geely text-2xl sm:text-4xl text-pink-400">{{ $conversionRate }}%</div>
-                    <span class="text-[10px] sm:text-[11px] text-gray-400 mt-1.5 sm:mt-2 block font-medium truncate">{{ $stats['total'] }} leads / {{ $analytics['total_uniques'] }} visitor</span>
+                    <span class="text-[10px] sm:text-[11px] text-gray-400 mt-1.5 sm:mt-2 block font-medium truncate">{{ $totalLeadsCount }} leads / {{ $analytics['total_uniques'] ?? 0 }} visitor</span>
                 </div>
             </div>
 
@@ -251,12 +252,12 @@
             <div class="flex items-center justify-between">
                 <div>
                     <h2 class="font-geely text-base sm:text-xl uppercase tracking-wider text-white">Pipeline Prospek Penjualan</h2>
-                    <p class="text-[10px] sm:text-[11px] text-gray-400">Total Prospek: <strong class="text-white">{{ $stats['total'] }}</strong> &bull; Masuk Hari Ini: <strong class="text-emerald-400">+{{ $stats['today_total'] }}</strong></p>
+                    <p class="text-[10px] sm:text-[11px] text-gray-400">Total Prospek: <strong class="text-white">{{ $stats['total'] ?? $metrics['total'] ?? 0 }}</strong> &bull; Masuk Hari Ini: <strong class="text-emerald-400">+{{ $stats['today_total'] ?? $metrics['today_total'] ?? 0 }}</strong></p>
                 </div>
                 <div class="flex items-center gap-2">
                     <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider">
                         <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.531 1.769.82 2.8.82 3.18 0 5.768-2.587 5.768-5.767.001-3.181-2.586-5.805-5.772-5.805zm6.545 5.767c0 3.609-2.936 6.545-6.545 6.545-1.127 0-2.18-.288-3.109-.792l-4.422 1.16 1.18-4.307c-.579-.974-.894-2.09-.894-3.206 0-3.61 2.936-6.545 6.545-6.545 3.609 0 7.245 2.936 7.245 7.145z"/></svg>
-                        {{ $stats['whatsapp'] }} Chat WA
+                        {{ $stats['whatsapp'] ?? $metrics['whatsapp'] ?? 0 }} Chat WA
                     </span>
                 </div>
             </div>
@@ -265,46 +266,46 @@
             <div class="flex overflow-x-auto hide-scrollbar sm:grid sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4 -mx-3.5 px-3.5 sm:mx-0 sm:px-0">
                 <a href="{{ route('admin.leads.index', array_merge(request()->except('status'))) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-[#00b4d8] hover:bg-white/5 transition-all {{ !request('status') ? 'bg-[#00b4d8]/10' : '' }}">
                     <span class="text-gray-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Semua Lead</span>
-                    <span class="text-xl sm:text-2xl font-black text-white mt-1 block">{{ $stats['total'] }}</span>
+                    <span class="text-xl sm:text-2xl font-black text-white mt-1 block">{{ $stats['total'] ?? $metrics['total'] ?? 0 }}</span>
                 </a>
                 <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'new'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-cyan-400 hover:bg-white/5 transition-all {{ request('status') === 'new' ? 'bg-cyan-500/10' : '' }}">
                     <span class="text-cyan-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Baru (New)</span>
-                    <span class="text-xl sm:text-2xl font-black text-cyan-300 mt-1 block">{{ $stats['new'] }}</span>
+                    <span class="text-xl sm:text-2xl font-black text-cyan-300 mt-1 block">{{ $stats['new'] ?? $metrics['new'] ?? 0 }}</span>
                 </a>
                 <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'contacted'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-amber-400 hover:bg-white/5 transition-all {{ request('status') === 'contacted' ? 'bg-amber-500/10' : '' }}">
                     <span class="text-amber-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Dihubungi</span>
-                    <span class="text-xl sm:text-2xl font-black text-amber-300 mt-1 block">{{ $stats['contacted'] }}</span>
+                    <span class="text-xl sm:text-2xl font-black text-amber-300 mt-1 block">{{ $stats['contacted'] ?? $metrics['contacted'] ?? 0 }}</span>
                 </a>
                 <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'scheduled'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-blue-400 hover:bg-white/5 transition-all {{ request('status') === 'scheduled' ? 'bg-blue-500/10' : '' }}">
                     <span class="text-blue-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Scheduled</span>
-                    <span class="text-xl sm:text-2xl font-black text-blue-300 mt-1 block">{{ $stats['scheduled'] }}</span>
+                    <span class="text-xl sm:text-2xl font-black text-blue-300 mt-1 block">{{ $stats['scheduled'] ?? $metrics['scheduled'] ?? 0 }}</span>
                 </a>
                 <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'deal'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-emerald-400 hover:bg-white/5 transition-all {{ request('status') === 'deal' ? 'bg-emerald-500/10' : '' }}">
                     <span class="text-emerald-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">SPK / Deal</span>
-                    <span class="text-xl sm:text-2xl font-black text-emerald-300 mt-1 block">{{ $stats['deal'] }}</span>
+                    <span class="text-xl sm:text-2xl font-black text-emerald-300 mt-1 block">{{ $stats['deal'] ?? $metrics['deal'] ?? 0 }}</span>
                 </a>
                 <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'lost'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-rose-400 hover:bg-white/5 transition-all {{ request('status') === 'lost' ? 'bg-rose-500/10' : '' }}">
                     <span class="text-rose-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Drop / Lost</span>
-                    <span class="text-xl sm:text-2xl font-black text-rose-300 mt-1 block">{{ $stats['lost'] }}</span>
+                    <span class="text-xl sm:text-2xl font-black text-rose-300 mt-1 block">{{ $stats['lost'] ?? $metrics['lost'] ?? 0 }}</span>
                 </a>
             </div>
 
             <!-- Filter Tipe Sumber Leads (Pills Toolbar) -->
             <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1">
                 <a href="{{ route('admin.leads.index', array_merge(request()->except('type', 'page'))) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap {{ !request('type') ? 'bg-white text-black' : 'hud-card-sm text-gray-400 hover:text-white' }}">
-                    Semua Channel ({{ $stats['total'] }})
+                    Semua Channel ({{ $stats['total'] ?? $metrics['total'] ?? 0 }})
                 </a>
                 <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'test_drive'])) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'test_drive' ? 'bg-cyan-400 text-black' : 'hud-card-sm text-cyan-300 hover:bg-white/5' }}">
                     <span class="w-2 h-2 rounded-full bg-cyan-400 {{ request('type') === 'test_drive' ? 'bg-black' : '' }}"></span>
-                    Test Drive ({{ $stats['test_drive'] }})
+                    Test Drive ({{ $stats['test_drive'] ?? $metrics['test_drive'] ?? 0 }})
                 </a>
                 <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'whatsapp_inquiry'])) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'whatsapp_inquiry' ? 'bg-emerald-400 text-black' : 'hud-card-sm text-emerald-300 hover:bg-white/5' }}">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 {{ request('type') === 'whatsapp_inquiry' ? 'bg-black' : '' }}"></span>
-                    Chat WhatsApp ({{ $stats['whatsapp'] }})
+                    Chat WhatsApp ({{ $stats['whatsapp'] ?? $metrics['whatsapp'] ?? 0 }})
                 </a>
                 <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'credit_simulation'])) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'credit_simulation' ? 'bg-indigo-400 text-black' : 'hud-card-sm text-indigo-300 hover:bg-white/5' }}">
                     <span class="w-2 h-2 rounded-full bg-indigo-400 {{ request('type') === 'credit_simulation' ? 'bg-black' : '' }}"></span>
-                    Simulasi Kredit ({{ $stats['credit'] }})
+                    Simulasi Kredit ({{ $stats['credit'] ?? $metrics['credit'] ?? 0 }})
                 </a>
             </div>
 
