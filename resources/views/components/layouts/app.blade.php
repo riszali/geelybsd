@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}?v={{ time() }}">
     <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}?v={{ time() }}">
@@ -71,7 +72,9 @@
 
     @include('components.layouts.footer')
 
-    <a href="https://wa.me/+6282246666904?text=Halo%20Geely%20Indonesia,%20saya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20mengenai%20line-up%20kendaraan%20Anda." 
+    <!-- Floating WhatsApp Button dengan CRM Auto-Tracker -->
+    <a id="floating-wa-btn"
+       href="https://wa.me/+6282246666904?text=Halo%20Geely%20Indonesia,%20saya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20mengenai%20line-up%20kendaraan%20Anda." 
        target="_blank" 
        rel="noopener noreferrer"
        class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-[#25D366] text-white rounded-full shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:bg-[#20bd5a] transition-colors duration-300 animate-wa-pulse group"
@@ -85,6 +88,42 @@
             Hubungi Sales Geely
         </div>
     </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const waBtn = document.getElementById('floating-wa-btn');
+            if (waBtn) {
+                waBtn.addEventListener('click', function () {
+                    try {
+                        const tokenMeta = document.querySelector('meta[name="csrf-token"]');
+                        const csrfToken = tokenMeta ? tokenMeta.getAttribute('content') : '';
+
+                        const payload = {
+                            path: window.location.pathname,
+                            referrer: document.referrer || '',
+                            url: window.location.href
+                        };
+
+                        // Mencatat lead interaksi WhatsApp ke backend tanpa menahan tab pembuka
+                        fetch("{{ route('leads.store-whatsapp') }}", {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': csrfToken,
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify(payload),
+                            keepalive: true
+                        }).catch(function (err) {
+                            console.debug('WA Lead logging notice:', err);
+                        });
+                    } catch (e) {
+                        // Abaikan error agar akses WhatsApp pengunjung tetap 100% lancar
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>

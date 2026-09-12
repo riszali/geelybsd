@@ -70,6 +70,7 @@ Route::get('/credit-simulation', [PageController::class, 'creditSimulation'])->n
 
 Route::post('/api/leads/test-drive', [LeadController::class, 'storeTestDrive'])->name('leads.store-test-drive');
 Route::post('/api/leads/credit', [LeadController::class, 'storeCreditLead'])->name('leads.store-credit');
+Route::post('/api/leads/whatsapp', [LeadController::class, 'storeWhatsappClick'])->name('leads.store-whatsapp');
 Route::post('/api/leads', [LeadController::class, 'storeTestDrive'])->name('leads.store');
 
 

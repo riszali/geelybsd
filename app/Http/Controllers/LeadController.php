@@ -92,13 +92,50 @@ class LeadController extends Controller
     }
 
     /**
+     * API Handler: Otomatis mencatat interaksi klik tombol WhatsApp ke CRM
+     */
+    public function storeWhatsappClick(Request $request): JsonResponse
+    {
+        $currentPath = (string) $request->input('path', '/');
+        $detectedModel = 'general';
+
+        // Deteksi konteks model mobil berdasarkan halaman yang sedang dibuka pengunjung
+        if (str_contains($currentPath, 'ex5')) {
+            $detectedModel = 'ex5';
+        } elseif (str_contains($currentPath, 'ex2')) {
+            $detectedModel = 'ex2';
+        } elseif (str_contains($currentPath, 'starray')) {
+            $detectedModel = 'starray';
+        } elseif (str_contains($currentPath, 'coolray')) {
+            $detectedModel = 'coolray';
+        }
+
+        $lead = Lead::create([
+            'type' => 'whatsapp_inquiry',
+            'name' => 'WA Prospek (' . now()->format('d/m H:i') . ')',
+            'phone' => 'Chat Masuk via Web',
+            'car_model' => $detectedModel,
+            'dealer_location' => 'bsd',
+            'status' => 'new',
+            'source' => 'Floating WhatsApp (' . ($currentPath ?: '/') . ')',
+            'ip_address' => $request->ip(),
+            'user_agent' => $request->userAgent(),
+        ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Interaksi WhatsApp berhasil tercatat di CRM.',
+            'lead_id' => $lead->id,
+        ], 201);
+    }
+
+    /**
      * Dashboard CRM Admin: Daftar Leads, Filter, & Statistik Kunjungan Web
      */
     public function adminIndex(Request $request): View
     {
         $query = Lead::query()->latest();
 
-        // Filter Pencarian (Nama / Nomor Telepon)
         if ($request->filled('search')) {
             $search = $request->input('search');
             $query->where(function ($q) use ($search) {
@@ -107,19 +144,16 @@ class LeadController extends Controller
             });
         }
 
-        // Filter Status Pipeline
         if ($request->filled('status')) {
             $query->where('status', $request->input('status'));
         }
 
-        // Filter Model Mobil
         if ($request->filled('model')) {
             $query->where('car_model', $request->input('model'));
         }
 
         $leads = $query->paginate(15)->withQueryString();
 
-        // Ringkasan Counter Metrik Leads
         $stats = [
             'total' => Lead::count(),
             'new' => Lead::where('status', 'new')->count(),
@@ -137,7 +171,6 @@ class LeadController extends Controller
         $totalUniqueVisitors = PageVisit::distinct('ip_address')->count('ip_address');
         $todayUniqueVisitors = PageVisit::whereDate('visit_date', $today)->distinct('ip_address')->count('ip_address');
 
-        // Statistik Perangkat (Device Breakdown)
         $deviceStats = PageVisit::select('device_type', DB::raw('count(*) as count'))
             ->groupBy('device_type')
             ->pluck('count', 'device_type')
@@ -148,7 +181,6 @@ class LeadController extends Controller
         $tabletCount = $deviceStats['tablet'] ?? 0;
         $totalDevices = max(1, $mobileCount + $desktopCount + $tabletCount);
 
-        // Halaman Terpopuler (Top 5 Landing Pages)
         $topPages = PageVisit::select('path', DB::raw('count(*) as views'))
             ->groupBy('path')
             ->orderByDesc('views')
