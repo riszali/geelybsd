@@ -79,10 +79,10 @@
                 <div class="h-5 sm:h-6 w-[1px] bg-white/15"></div>
                 <div>
                     <h1 class="font-geely text-sm sm:text-lg uppercase tracking-tight text-white flex items-center gap-1.5 sm:gap-2">
-                        Geely <span class="text-[#00b4d8]">Command</span>
+                        Geely <span class="text-[#00b4d8]">Dashboard</span>
                     </h1>
                     <p class="text-[9px] sm:text-[10px] text-gray-400 tracking-wider uppercase truncate max-w-[140px] sm:max-w-none">
-                        BSD Hub &bull; {{ Auth::user()->name ?? 'Admin' }}
+                        Dama &bull; {{ Auth::user()->name ?? 'Admin' }}
                     </p>
                 </div>
             </div>
@@ -135,32 +135,32 @@
                 <div class="hud-card p-3.5 sm:p-5 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-cyan-500/10 rounded-full blur-[25px] pointer-events-none"></div>
                     <span class="text-[9px] sm:text-[10px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase text-gray-400 block mb-1">Total Pageviews</span>
-                    <div class="font-geely text-2xl sm:text-4xl text-white">{{ number_format($analytics['total_views']) }}</div>
-                    <span class="text-[10px] sm:text-[11px] text-[#00b4d8] mt-1.5 sm:mt-2 block font-medium">+{{ number_format($analytics['today_views']) }} hari ini</span>
+                    <div class="font-geely text-2xl sm:text-4xl text-white">{{ number_format($analytics['total_views'] ?? 0) }}</div>
+                    <span class="text-[10px] sm:text-[11px] text-[#00b4d8] mt-1.5 sm:mt-2 block font-medium">+{{ number_format($analytics['today_views'] ?? 0) }} hari ini</span>
                 </div>
 
                 <div class="hud-card p-3.5 sm:p-5 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-indigo-500/10 rounded-full blur-[25px] pointer-events-none"></div>
                     <span class="text-[9px] sm:text-[10px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase text-gray-400 block mb-1">Pengunjung Unik</span>
-                    <div class="font-geely text-2xl sm:text-4xl text-white">{{ number_format($analytics['total_uniques']) }}</div>
-                    <span class="text-[10px] sm:text-[11px] text-indigo-400 mt-1.5 sm:mt-2 block font-medium">+{{ number_format($analytics['today_uniques']) }} hari ini</span>
+                    <div class="font-geely text-2xl sm:text-4xl text-white">{{ number_format($analytics['total_uniques'] ?? 0) }}</div>
+                    <span class="text-[10px] sm:text-[11px] text-indigo-400 mt-1.5 sm:mt-2 block font-medium">+{{ number_format($analytics['today_uniques'] ?? 0) }} hari ini</span>
                 </div>
 
                 <div class="hud-card p-3.5 sm:p-5 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-emerald-500/10 rounded-full blur-[25px] pointer-events-none"></div>
                     <span class="text-[9px] sm:text-[10px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase text-gray-400 block mb-1">Perangkat (Device)</span>
                     <div class="flex items-baseline gap-1.5 mt-0.5">
-                        <span class="text-xl sm:text-3xl font-geely text-emerald-400">{{ $analytics['mobile_percent'] }}%</span>
+                        <span class="text-xl sm:text-3xl font-geely text-emerald-400">{{ $analytics['mobile_percent'] ?? 0 }}%</span>
                         <span class="text-[10px] sm:text-xs text-gray-400">Mobile</span>
                     </div>
                     <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden mt-2.5 sm:mt-3 flex">
-                        <div class="bg-emerald-400 h-full" style="width: {{ $analytics['mobile_percent'] }}%"></div>
-                        <div class="bg-blue-400 h-full" style="width: {{ $analytics['desktop_percent'] }}%"></div>
-                        <div class="bg-amber-400 h-full" style="width: {{ $analytics['tablet_percent'] }}%"></div>
+                        <div class="bg-emerald-400 h-full" style="width: {{ $analytics['mobile_percent'] ?? 0 }}%"></div>
+                        <div class="bg-blue-400 h-full" style="width: {{ $analytics['desktop_percent'] ?? 0 }}%"></div>
+                        <div class="bg-amber-400 h-full" style="width: {{ $analytics['tablet_percent'] ?? 0 }}%"></div>
                     </div>
                     <div class="flex justify-between text-[8px] sm:text-[9px] text-gray-400 mt-1 uppercase tracking-wider">
-                        <span>Desktop: {{ $analytics['desktop_percent'] }}%</span>
-                        <span>Tab: {{ $analytics['tablet_percent'] }}%</span>
+                        <span>Desktop: {{ $analytics['desktop_percent'] ?? 0 }}%</span>
+                        <span>Tab: {{ $analytics['tablet_percent'] ?? 0 }}%</span>
                     </div>
                 </div>
 
@@ -193,10 +193,11 @@
                     </div>
 
                     <div class="h-44 sm:h-48 flex items-end justify-between gap-1.5 sm:gap-2 pt-2 px-1 sm:px-2 border-b border-white/10">
-                        @foreach($analytics['chart_data'] as $day)
+                        @foreach($analytics['chart_data'] ?? [] as $day)
                             @php
-                                $barHeightViews = max(6, round(($day['views'] / max(1, $analytics['max_views'])) * 100));
-                                $barHeightUniques = max(6, round(($day['uniques'] / max(1, $analytics['max_views'])) * 100));
+                                $maxV = max(1, $analytics['max_views'] ?? 1);
+                                $barHeightViews = max(6, round(($day['views'] / $maxV) * 100));
+                                $barHeightUniques = max(6, round(($day['uniques'] / $maxV) * 100));
                             @endphp
                             <div class="flex-1 flex flex-col items-center gap-1 group relative">
                                 <div class="absolute -top-12 bg-black/90 text-white text-[9px] sm:text-[10px] py-1 px-1.5 rounded border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-20 shadow-lg">
@@ -222,7 +223,7 @@
                         <p class="text-[10px] sm:text-[11px] text-gray-400 mb-3.5 sm:mb-5">Top kunjungan landing page</p>
 
                         <div class="space-y-2.5">
-                            @forelse($analytics['top_pages'] as $index => $page)
+                            @forelse($analytics['top_pages'] ?? [] as $index => $page)
                                 <div class="flex items-center justify-between text-xs p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/5">
                                     <div class="flex items-center gap-2 overflow-hidden">
                                         <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#00b4d8]/20 text-[#00b4d8] text-[9px] sm:text-[10px] font-bold flex items-center justify-center shrink-0">
