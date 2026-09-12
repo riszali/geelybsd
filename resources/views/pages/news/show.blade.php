@@ -1,8 +1,8 @@
 <x-layouts.app>
     @push('head')
-        <title>{{ $article->meta_title ?? $article->title }} | Dealer Geely BSD</title>
-        <meta name="description" content="{{ $article->meta_description ?? $article->excerpt }}">
-        <meta name="keywords" content="{{ $article->meta_keywords ?? 'Geely BSD, Dealer Geely Tangerang, Mobil Listrik Geely' }}">
+        <title>{{ $article->meta_title ?: $article->title }} | Dealer Geely BSD</title>
+        <meta name="description" content="{{ $article->meta_description ?: $article->excerpt }}">
+        <meta name="keywords" content="{{ $article->meta_keywords ?: 'Geely BSD, Dealer Geely Tangerang, Mobil Listrik Geely' }}">
         <link rel="canonical" href="{{ url()->current() }}">
         
         <!-- OpenGraph Meta Tags -->
@@ -23,8 +23,8 @@
         <!-- Structured Data Google NewsArticle -->
         <script type="application/ld+json">
         {
-            "@context": "https://schema.org",
-            "@type": "NewsArticle",
+            "@@context": "https://schema.org",
+            "@@type": "NewsArticle",
             "headline": "{{ addslashes($article->title) }}",
             "image": [
                 "{{ $article->image_url }}"
@@ -32,15 +32,15 @@
             "datePublished": "{{ $article->published_at ? $article->published_at->toIso8601String() : now()->toIso8601String() }}",
             "dateModified": "{{ $article->updated_at ? $article->updated_at->toIso8601String() : now()->toIso8601String() }}",
             "author": [{
-                "@type": "Person",
+                "@@type": "Person",
                 "name": "{{ $article->author }}",
                 "url": "https://geelybsd.id"
             }],
             "publisher": {
-                "@type": "Organization",
+                "@@type": "Organization",
                 "name": "Dealer Resmi Geely BSD Tangerang",
                 "logo": {
-                    "@type": "ImageObject",
+                    "@@type": "ImageObject",
                     "url": "{{ asset('assets/footer-logos-geely.png') }}"
                 }
             },
@@ -80,9 +80,11 @@
             </h1>
 
             <!-- Excerpt Penjelas -->
-            <p class="text-gray-300 text-base sm:text-lg leading-relaxed font-light mb-8 border-l-2 border-cyan-400 pl-4">
-                {{ $article->excerpt }}
-            </p>
+            @if($article->excerpt)
+                <p class="text-gray-300 text-base sm:text-lg leading-relaxed font-light mb-8 border-l-2 border-cyan-400 pl-4">
+                    {{ $article->excerpt }}
+                </p>
+            @endif
 
             <!-- Gambar Utama -->
             <div class="w-full aspect-[16/9] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl mb-10 bg-gray-900">
@@ -115,7 +117,7 @@
             </div>
 
             <!-- Artikel Terkait -->
-            @if(isset($relatedArticles) && $relatedArticles->count() > 0)
+            @if(isset($relatedArticles) && $relatedArticles->isNotEmpty())
                 <div class="mt-16 pt-10 border-t border-white/10">
                     <h3 class="font-geely text-xl uppercase tracking-wider text-white mb-6">Artikel Menarik Lainnya</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
