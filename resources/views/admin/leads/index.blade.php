@@ -245,47 +245,81 @@
         </section>
 
         <!-- ======================================================================
-             BAGIAN 2: PIPELINE LEADS CRM (PROSPEK & TEST DRIVE)
+             BAGIAN 2: PIPELINE LEADS CRM (TEST DRIVE, WHATSAPP, SIMULASI KREDIT)
         ====================================================================== -->
         <section class="space-y-3.5 sm:space-y-4">
             <div class="flex items-center justify-between">
-                <h2 class="font-geely text-base sm:text-xl uppercase tracking-wider text-white">Pipeline Prospek Penjualan</h2>
-                <span class="text-[10px] sm:text-[11px] text-gray-400 tracking-wider">Total: {{ $stats['total'] }}</span>
+                <div>
+                    <h2 class="font-geely text-base sm:text-xl uppercase tracking-wider text-white">Pipeline Prospek Penjualan</h2>
+                    <p class="text-[10px] sm:text-[11px] text-gray-400">Total Prospek: <strong class="text-white">{{ $stats['total'] }}</strong> &bull; Masuk Hari Ini: <strong class="text-emerald-400">+{{ $stats['today_total'] }}</strong></p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider">
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.531 1.769.82 2.8.82 3.18 0 5.768-2.587 5.768-5.767.001-3.181-2.586-5.805-5.772-5.805zm6.545 5.767c0 3.609-2.936 6.545-6.545 6.545-1.127 0-2.18-.288-3.109-.792l-4.422 1.16 1.18-4.307c-.579-.974-.894-2.09-.894-3.206 0-3.61 2.936-6.545 6.545-6.545 3.609 0 7.245 2.936 7.245 7.145z"/></svg>
+                        {{ $stats['whatsapp'] }} Chat WA
+                    </span>
+                </div>
             </div>
 
             <!-- Metrik Status Counter (Horizontal Scroll on Mobile) -->
             <div class="flex overflow-x-auto hide-scrollbar sm:grid sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4 -mx-3.5 px-3.5 sm:mx-0 sm:px-0">
-                <a href="{{ route('admin.leads.index') }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-[#00b4d8] hover:bg-white/5 transition-all {{ !request('status') ? 'bg-[#00b4d8]/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'))) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-[#00b4d8] hover:bg-white/5 transition-all {{ !request('status') ? 'bg-[#00b4d8]/10' : '' }}">
                     <span class="text-gray-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Semua Lead</span>
                     <span class="text-xl sm:text-2xl font-black text-white mt-1 block">{{ $stats['total'] }}</span>
                 </a>
-                <a href="{{ route('admin.leads.index', ['status' => 'new']) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-cyan-400 hover:bg-white/5 transition-all {{ request('status') === 'new' ? 'bg-cyan-500/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'new'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-cyan-400 hover:bg-white/5 transition-all {{ request('status') === 'new' ? 'bg-cyan-500/10' : '' }}">
                     <span class="text-cyan-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Baru (New)</span>
                     <span class="text-xl sm:text-2xl font-black text-cyan-300 mt-1 block">{{ $stats['new'] }}</span>
                 </a>
-                <a href="{{ route('admin.leads.index', ['status' => 'contacted']) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-amber-400 hover:bg-white/5 transition-all {{ request('status') === 'contacted' ? 'bg-amber-500/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'contacted'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-amber-400 hover:bg-white/5 transition-all {{ request('status') === 'contacted' ? 'bg-amber-500/10' : '' }}">
                     <span class="text-amber-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Dihubungi</span>
                     <span class="text-xl sm:text-2xl font-black text-amber-300 mt-1 block">{{ $stats['contacted'] }}</span>
                 </a>
-                <a href="{{ route('admin.leads.index', ['status' => 'test_drive_scheduled']) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-blue-400 hover:bg-white/5 transition-all {{ request('status') === 'test_drive_scheduled' ? 'bg-blue-500/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'scheduled'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-blue-400 hover:bg-white/5 transition-all {{ request('status') === 'scheduled' ? 'bg-blue-500/10' : '' }}">
                     <span class="text-blue-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Scheduled</span>
                     <span class="text-xl sm:text-2xl font-black text-blue-300 mt-1 block">{{ $stats['scheduled'] }}</span>
                 </a>
-                <a href="{{ route('admin.leads.index', ['status' => 'spk_deal']) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-emerald-400 hover:bg-white/5 transition-all {{ request('status') === 'spk_deal' ? 'bg-emerald-500/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'deal'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-emerald-400 hover:bg-white/5 transition-all {{ request('status') === 'deal' ? 'bg-emerald-500/10' : '' }}">
                     <span class="text-emerald-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">SPK / Deal</span>
                     <span class="text-xl sm:text-2xl font-black text-emerald-300 mt-1 block">{{ $stats['deal'] }}</span>
                 </a>
-                <a href="{{ route('admin.leads.index', ['status' => 'lost']) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-rose-400 hover:bg-white/5 transition-all {{ request('status') === 'lost' ? 'bg-rose-500/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'lost'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-rose-400 hover:bg-white/5 transition-all {{ request('status') === 'lost' ? 'bg-rose-500/10' : '' }}">
                     <span class="text-rose-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Drop / Lost</span>
                     <span class="text-xl sm:text-2xl font-black text-rose-300 mt-1 block">{{ $stats['lost'] }}</span>
+                </a>
+            </div>
+
+            <!-- Filter Tipe Sumber Leads (Pills Toolbar) -->
+            <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('type', 'page'))) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap {{ !request('type') ? 'bg-white text-black' : 'hud-card-sm text-gray-400 hover:text-white' }}">
+                    Semua Channel ({{ $stats['total'] }})
+                </a>
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'test_drive'])) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'test_drive' ? 'bg-cyan-400 text-black' : 'hud-card-sm text-cyan-300 hover:bg-white/5' }}">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 {{ request('type') === 'test_drive' ? 'bg-black' : '' }}"></span>
+                    Test Drive ({{ $stats['test_drive'] }})
+                </a>
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'whatsapp_inquiry'])) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'whatsapp_inquiry' ? 'bg-emerald-400 text-black' : 'hud-card-sm text-emerald-300 hover:bg-white/5' }}">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 {{ request('type') === 'whatsapp_inquiry' ? 'bg-black' : '' }}"></span>
+                    Chat WhatsApp ({{ $stats['whatsapp'] }})
+                </a>
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'credit_simulation'])) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'credit_simulation' ? 'bg-indigo-400 text-black' : 'hud-card-sm text-indigo-300 hover:bg-white/5' }}">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 {{ request('type') === 'credit_simulation' ? 'bg-black' : '' }}"></span>
+                    Simulasi Kredit ({{ $stats['credit'] }})
                 </a>
             </div>
 
             <!-- Filter & Search Bar -->
             <div class="hud-card p-3.5 sm:p-5">
                 <form method="GET" action="{{ route('admin.leads.index') }}" class="grid grid-cols-1 sm:grid-cols-12 gap-2.5 sm:gap-3 items-center">
+                    @if(request('status'))
+                    <input type="hidden" name="status" value="{{ request('status') }}">
+                    @endif
+                    @if(request('type'))
+                    <input type="hidden" name="type" value="{{ request('type') }}">
+                    @endif
+
                     <div class="sm:col-span-6">
-                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari nama atau no. WhatsApp..." class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl bg-[#0a0f16] border border-white/10 text-white placeholder-gray-500 text-xs focus:outline-none focus:border-[#00b4d8]">
+                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari nama, no. WhatsApp, atau sumber..." class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl bg-[#0a0f16] border border-white/10 text-white placeholder-gray-500 text-xs focus:outline-none focus:border-[#00b4d8]">
                     </div>
                     <div class="sm:col-span-3">
                         <select name="model" class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl bg-[#0a0f16] border border-white/10 text-white text-xs focus:outline-none focus:border-[#00b4d8] cursor-pointer">
@@ -300,7 +334,7 @@
                         <button type="submit" class="flex-1 py-2.5 rounded-xl bg-[#00b4d8] hover:bg-[#00c4e8] text-black text-xs font-bold uppercase tracking-wider transition-all">
                             Filter
                         </button>
-                        @if(request()->hasAny(['search', 'model', 'status']))
+                        @if(request()->hasAny(['search', 'model', 'status', 'type']))
                         <a href="{{ route('admin.leads.index') }}" class="px-3.5 py-2.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs border border-rose-500/30 flex items-center justify-center">
                             Reset
                         </a>
@@ -315,9 +349,31 @@
                 <div class="hud-card p-4 space-y-3 border-l-4 {{ $lead->status === 'spk_deal' ? 'border-emerald-400' : ($lead->status === 'new' ? 'border-cyan-400' : ($lead->status === 'lost' ? 'border-rose-400' : 'border-[#00b4d8]')) }}">
                     <div class="flex items-start justify-between gap-2">
                         <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                @if($lead->type === 'whatsapp_inquiry')
+                                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[9px] font-bold uppercase tracking-wider">
+                                        <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.531 1.769.82 2.8.82 3.18 0 5.768-2.587 5.768-5.767.001-3.181-2.586-5.805-5.772-5.805zm6.545 5.767c0 3.609-2.936 6.545-6.545 6.545-1.127 0-2.18-.288-3.109-.792l-4.422 1.16 1.18-4.307c-.579-.974-.894-2.09-.894-3.206 0-3.61 2.936-6.545 6.545-6.545 3.609 0 7.245 2.936 7.245 7.145z"/></svg>
+                                        WA Click
+                                    </span>
+                                @elseif($lead->type === 'credit_simulation')
+                                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 text-[9px] font-bold uppercase tracking-wider">
+                                        Kredit
+                                    </span>
+                                @else
+                                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[9px] font-bold uppercase tracking-wider">
+                                        Test Drive
+                                    </span>
+                                @endif
+                            </div>
+
                             <span class="font-bold text-white text-sm block">{{ $lead->name }}</span>
-                            <a href="tel:{{ $lead->phone }}" class="text-gray-400 text-xs mt-0.5 block hover:text-[#00b4d8]">{{ $lead->phone }}</a>
+                            @if(preg_match('/[0-9]/', $lead->phone))
+                                <a href="tel:{{ $lead->phone }}" class="text-gray-400 text-xs mt-0.5 block hover:text-[#00b4d8]">{{ $lead->phone }}</a>
+                            @else
+                                <span class="text-gray-400 text-xs mt-0.5 block italic">{{ $lead->phone }}</span>
+                            @endif
                         </div>
+                        
                         <span class="inline-block px-2.5 py-1 rounded-full border text-[9px] font-bold tracking-wider uppercase shrink-0 {{ $lead->status_badge['bg'] }}">
                             {{ $lead->status_badge['label'] }}
                         </span>
@@ -327,21 +383,35 @@
                         <div>
                             <span class="text-[9px] text-gray-400 block uppercase tracking-wider">Model Mobil</span>
                             <span class="font-bold text-cyan-300 block truncate">{{ $lead->car_model_label }}</span>
-                            <span class="text-[9px] text-gray-500">{{ $lead->type === 'test_drive' ? 'Test Drive' : 'Kredit' }}</span>
+                            <span class="text-[9px] text-gray-500 truncate block">{{ $lead->source ?? 'Website' }}</span>
                         </div>
                         <div>
-                            <span class="text-[9px] text-gray-400 block uppercase tracking-wider">Jadwal & Dealer</span>
-                            <span class="text-gray-200 block truncate">{{ $lead->preferred_date ? $lead->preferred_date->format('d M Y') : 'Fleksibel' }}</span>
-                            <span class="text-[9px] text-gray-500 truncate block">{{ $lead->dealer_location_label }}</span>
+                            <span class="text-[9px] text-gray-400 block uppercase tracking-wider">Jadwal & Info</span>
+                            @if($lead->type === 'whatsapp_inquiry')
+                                <span class="text-emerald-300 block truncate font-medium">Klik Tombol WA</span>
+                                <span class="text-[9px] text-gray-500 truncate block">{{ $lead->created_at->format('H:i') }} WIB</span>
+                            @elseif($lead->type === 'credit_simulation')
+                                <span class="text-indigo-300 block truncate font-medium">DP {{ $lead->dp_percent ?? 20 }}% &bull; {{ $lead->tenor_years ?? 5 }} Thn</span>
+                                <span class="text-[9px] text-gray-500 truncate block">Rp {{ number_format($lead->estimated_installment ?? 0) }}/bln</span>
+                            @else
+                                <span class="text-gray-200 block truncate">{{ $lead->preferred_date ? $lead->preferred_date->format('d M Y') : 'Fleksibel' }}</span>
+                                <span class="text-[9px] text-gray-500 truncate block">{{ $lead->dealer_location_label }}</span>
+                            @endif
                         </div>
                     </div>
 
                     <div class="flex items-center justify-between gap-2 pt-1">
-                        <!-- Quick WhatsApp Button -->
-                        <a href="{{ $lead->whatsapp_follow_up_url }}" target="_blank" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-400/30 text-[11px] font-bold tracking-wider transition-all">
-                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.531 1.769.82 2.8.82 3.18 0 5.768-2.587 5.768-5.767.001-3.181-2.586-5.805-5.772-5.805zm6.545 5.767c0 3.609-2.936 6.545-6.545 6.545-1.127 0-2.18-.288-3.109-.792l-4.422 1.16 1.18-4.307c-.579-.974-.894-2.09-.894-3.206 0-3.61 2.936-6.545 6.545-6.545 3.609 0 7.245 2.936 7.245 7.145z"/></svg>
-                            Follow Up WA
-                        </a>
+                        <!-- Action Button: Chat WA vs Detail WA Info -->
+                        @if(preg_match('/[0-9]{7,}/', $lead->phone))
+                            <a href="{{ $lead->whatsapp_follow_up_url }}" target="_blank" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-400/30 text-[11px] font-bold tracking-wider transition-all">
+                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.531 1.769.82 2.8.82 3.18 0 5.768-2.587 5.768-5.767.001-3.181-2.586-5.805-5.772-5.805zm6.545 5.767c0 3.609-2.936 6.545-6.545 6.545-1.127 0-2.18-.288-3.109-.792l-4.422 1.16 1.18-4.307c-.579-.974-.894-2.09-.894-3.206 0-3.61 2.936-6.545 6.545-6.545 3.609 0 7.245 2.936 7.245 7.145z"/></svg>
+                                Follow Up WA
+                            </a>
+                        @else
+                            <div class="flex-1 px-3 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-semibold text-center truncate">
+                                WA Langsung Masuk
+                            </div>
+                        @endif
 
                         <!-- Fast Status Update -->
                         <form method="POST" action="{{ route('admin.leads.update-status', $lead->id) }}" class="flex-1">
@@ -350,9 +420,9 @@
                             <select name="status" onchange="this.form.submit()" class="w-full px-2.5 py-2 rounded-xl bg-[#0a0f16] border border-white/15 text-white text-[11px] focus:outline-none focus:border-[#00b4d8] cursor-pointer text-center">
                                 <option value="new" {{ $lead->status === 'new' ? 'selected' : '' }}>New</option>
                                 <option value="contacted" {{ $lead->status === 'contacted' ? 'selected' : '' }}>Contacted</option>
-                                <option value="test_drive_scheduled" {{ $lead->status === 'test_drive_scheduled' ? 'selected' : '' }}>Scheduled</option>
-                                <option value="spk_deal" {{ $lead->status === 'spk_deal' ? 'selected' : '' }}>SPK / Deal</option>
-                                <option value="lost" {{ $lead->status === 'lost' ? 'selected' : '' }}>Lost</option>
+                                <option value="test_drive_scheduled" {{ in_array($lead->status, ['test_drive_scheduled', 'scheduled', 'qualified']) ? 'selected' : '' }}>Scheduled</option>
+                                <option value="spk_deal" {{ in_array($lead->status, ['spk_deal', 'converted', 'deal']) ? 'selected' : '' }}>SPK / Deal</option>
+                                <option value="lost" {{ in_array($lead->status, ['lost', 'cancelled']) ? 'selected' : '' }}>Lost</option>
                             </select>
                         </form>
                     </div>
@@ -375,11 +445,11 @@
                     <table class="w-full text-left border-collapse text-xs">
                         <thead>
                             <tr class="border-b border-white/10 bg-[#0a0f16] text-[10px] tracking-[0.2em] uppercase text-gray-400">
-                                <th class="py-4 px-6">Pelanggan</th>
+                                <th class="py-4 px-6">Channel & Pelanggan</th>
                                 <th class="py-4 px-6">Model Pilihan</th>
-                                <th class="py-4 px-6">Jadwal & Lokasi</th>
+                                <th class="py-4 px-6">Detail Kebutuhan</th>
                                 <th class="py-4 px-6">Status Pipeline</th>
-                                <th class="py-4 px-6">Follow Up WhatsApp</th>
+                                <th class="py-4 px-6">Tindakan Sales</th>
                                 <th class="py-4 px-6 text-right">Update Status</th>
                             </tr>
                         </thead>
@@ -387,19 +457,45 @@
                             @forelse($leads as $lead)
                             <tr class="hover:bg-white/[0.02] transition-colors">
                                 <td class="py-4 px-6">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        @if($lead->type === 'whatsapp_inquiry')
+                                            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[9px] font-bold uppercase tracking-wider">
+                                                <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.531 1.769.82 2.8.82 3.18 0 5.768-2.587 5.768-5.767.001-3.181-2.586-5.805-5.772-5.805zm6.545 5.767c0 3.609-2.936 6.545-6.545 6.545-1.127 0-2.18-.288-3.109-.792l-4.422 1.16 1.18-4.307c-.579-.974-.894-2.09-.894-3.206 0-3.61 2.936-6.545 6.545-6.545 3.609 0 7.245 2.936 7.245 7.145z"/></svg>
+                                                Chat WA Masuk
+                                            </span>
+                                        @elseif($lead->type === 'credit_simulation')
+                                            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 text-[9px] font-bold uppercase tracking-wider">
+                                                Simulasi Kredit
+                                            </span>
+                                        @else
+                                            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[9px] font-bold uppercase tracking-wider">
+                                                Test Drive
+                                            </span>
+                                        @endif
+                                    </div>
                                     <span class="font-bold text-white text-sm block">{{ $lead->name }}</span>
                                     <span class="text-gray-400 text-[11px] block mt-0.5">{{ $lead->phone }}</span>
-                                    <span class="text-[9px] text-gray-500 block mt-1 uppercase tracking-wider">{{ $lead->created_at->diffForHumans() }}</span>
+                                    <span class="text-[9px] text-gray-500 block mt-1 uppercase tracking-wider">{{ $lead->created_at->diffForHumans() }} &bull; {{ $lead->source ?? 'Web' }}</span>
                                 </td>
 
                                 <td class="py-4 px-6">
-                                    <span class="font-bold text-cyan-300 block">{{ $lead->car_model_label }}</span>
-                                    <span class="text-gray-400 text-[10px] uppercase tracking-wider block">{{ $lead->type === 'test_drive' ? 'Test Drive' : 'Kredit' }}</span>
+                                    <span class="font-bold text-cyan-300 block text-sm">{{ $lead->car_model_label }}</span>
+                                    <span class="text-gray-400 text-[10px] uppercase tracking-wider block">
+                                        {{ $lead->dealer_location_label }}
+                                    </span>
                                 </td>
 
                                 <td class="py-4 px-6">
-                                    <span class="text-white block">{{ $lead->preferred_date ? $lead->preferred_date->format('d M Y') : '-' }}</span>
-                                    <span class="text-gray-400 text-[11px] block">{{ $lead->preferred_time ?? '-' }} &bull; {{ $lead->dealer_location_label }}</span>
+                                    @if($lead->type === 'whatsapp_inquiry')
+                                        <span class="text-emerald-400 font-medium block">Interaksi Tombol WA</span>
+                                        <span class="text-gray-400 text-[11px] block">Membuka chat WhatsApp sales</span>
+                                    @elseif($lead->type === 'credit_simulation')
+                                        <span class="text-indigo-300 font-medium block">DP {{ $lead->dp_percent ?? 20 }}% ({{ $lead->tenor_years ?? 5 }} Thn)</span>
+                                        <span class="text-gray-400 text-[11px] block">Cicilan: Rp {{ number_format($lead->estimated_installment ?? 0) }}/bln</span>
+                                    @else
+                                        <span class="text-white block">{{ $lead->preferred_date ? $lead->preferred_date->format('d M Y') : '-' }}</span>
+                                        <span class="text-gray-400 text-[11px] block">Jam: {{ $lead->preferred_time ?? '-' }}</span>
+                                    @endif
                                 </td>
 
                                 <td class="py-4 px-6">
@@ -409,10 +505,14 @@
                                 </td>
 
                                 <td class="py-4 px-6">
-                                    <a href="{{ $lead->whatsapp_follow_up_url }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-400/30 text-[11px] font-bold tracking-wider transition-all">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.531 1.769.82 2.8.82 3.18 0 5.768-2.587 5.768-5.767.001-3.181-2.586-5.805-5.772-5.805zm6.545 5.767c0 3.609-2.936 6.545-6.545 6.545-1.127 0-2.18-.288-3.109-.792l-4.422 1.16 1.18-4.307c-.579-.974-.894-2.09-.894-3.206 0-3.61 2.936-6.545 6.545-6.545 3.609 0 7.245 2.936 7.245 7.145z"/></svg>
-                                        Chat WA
-                                    </a>
+                                    @if(preg_match('/[0-9]{7,}/', $lead->phone))
+                                        <a href="{{ $lead->whatsapp_follow_up_url }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-400/30 text-[11px] font-bold tracking-wider transition-all">
+                                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.531 1.769.82 2.8.82 3.18 0 5.768-2.587 5.768-5.767.001-3.181-2.586-5.805-5.772-5.805zm6.545 5.767c0 3.609-2.936 6.545-6.545 6.545-1.127 0-2.18-.288-3.109-.792l-4.422 1.16 1.18-4.307c-.579-.974-.894-2.09-.894-3.206 0-3.61 2.936-6.545 6.545-6.545 3.609 0 7.245 2.936 7.245 7.145z"/></svg>
+                                            Chat WA
+                                        </a>
+                                    @else
+                                        <span class="text-xs text-gray-500 italic">Chat Masuk Langsung</span>
+                                    @endif
                                 </td>
 
                                 <td class="py-4 px-6 text-right">
@@ -422,9 +522,9 @@
                                         <select name="status" onchange="this.form.submit()" class="px-2.5 py-1 rounded-lg bg-[#0a0f16] border border-white/15 text-white text-[11px] focus:outline-none focus:border-[#00b4d8] cursor-pointer">
                                             <option value="new" {{ $lead->status === 'new' ? 'selected' : '' }}>New</option>
                                             <option value="contacted" {{ $lead->status === 'contacted' ? 'selected' : '' }}>Contacted</option>
-                                            <option value="test_drive_scheduled" {{ $lead->status === 'test_drive_scheduled' ? 'selected' : '' }}>Scheduled</option>
-                                            <option value="spk_deal" {{ $lead->status === 'spk_deal' ? 'selected' : '' }}>SPK / Deal</option>
-                                            <option value="lost" {{ $lead->status === 'lost' ? 'selected' : '' }}>Lost</option>
+                                            <option value="test_drive_scheduled" {{ in_array($lead->status, ['test_drive_scheduled', 'scheduled', 'qualified']) ? 'selected' : '' }}>Scheduled</option>
+                                            <option value="spk_deal" {{ in_array($lead->status, ['spk_deal', 'converted', 'deal']) ? 'selected' : '' }}>SPK / Deal</option>
+                                            <option value="lost" {{ in_array($lead->status, ['lost', 'cancelled']) ? 'selected' : '' }}>Lost</option>
                                         </select>
                                     </form>
                                 </td>
