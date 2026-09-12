@@ -248,7 +248,7 @@
         <!-- ======================================================================
              BAGIAN 2: PIPELINE LEADS CRM (TEST DRIVE, WHATSAPP, SIMULASI KREDIT)
         ====================================================================== -->
-        <section class="space-y-3.5 sm:space-y-4">
+        <section id="pipeline" class="space-y-3.5 sm:space-y-4 scroll-mt-24">
             <div class="flex items-center justify-between">
                 <div>
                     <h2 class="font-geely text-base sm:text-xl uppercase tracking-wider text-white">Pipeline Prospek Penjualan</h2>
@@ -264,27 +264,27 @@
 
             <!-- Metrik Status Counter (Horizontal Scroll on Mobile) -->
             <div class="flex overflow-x-auto hide-scrollbar sm:grid sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4 -mx-3.5 px-3.5 sm:mx-0 sm:px-0">
-                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'))) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-[#00b4d8] hover:bg-white/5 transition-all {{ !request('status') ? 'bg-[#00b4d8]/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'))) }}#pipeline" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-[#00b4d8] hover:bg-white/5 transition-all {{ !request('status') ? 'bg-[#00b4d8]/10' : '' }}">
                     <span class="text-gray-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Semua Lead</span>
                     <span class="text-xl sm:text-2xl font-black text-white mt-1 block">{{ $stats['total'] ?? $metrics['total'] ?? 0 }}</span>
                 </a>
-                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'new'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-cyan-400 hover:bg-white/5 transition-all {{ request('status') === 'new' ? 'bg-cyan-500/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'new'])) }}#pipeline" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-cyan-400 hover:bg-white/5 transition-all {{ request('status') === 'new' ? 'bg-cyan-500/10' : '' }}">
                     <span class="text-cyan-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Baru (New)</span>
                     <span class="text-xl sm:text-2xl font-black text-cyan-300 mt-1 block">{{ $stats['new'] ?? $metrics['new'] ?? 0 }}</span>
                 </a>
-                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'contacted'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-amber-400 hover:bg-white/5 transition-all {{ request('status') === 'contacted' ? 'bg-amber-500/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'contacted'])) }}#pipeline" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-amber-400 hover:bg-white/5 transition-all {{ request('status') === 'contacted' ? 'bg-amber-500/10' : '' }}">
                     <span class="text-amber-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Dihubungi</span>
                     <span class="text-xl sm:text-2xl font-black text-amber-300 mt-1 block">{{ $stats['contacted'] ?? $metrics['contacted'] ?? 0 }}</span>
                 </a>
-                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'scheduled'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-blue-400 hover:bg-white/5 transition-all {{ request('status') === 'scheduled' ? 'bg-blue-500/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'scheduled'])) }}#pipeline" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-blue-400 hover:bg-white/5 transition-all {{ request('status') === 'scheduled' ? 'bg-blue-500/10' : '' }}">
                     <span class="text-blue-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Scheduled</span>
                     <span class="text-xl sm:text-2xl font-black text-blue-300 mt-1 block">{{ $stats['scheduled'] ?? $metrics['scheduled'] ?? 0 }}</span>
                 </a>
-                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'deal'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-emerald-400 hover:bg-white/5 transition-all {{ request('status') === 'deal' ? 'bg-emerald-500/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'deal'])) }}#pipeline" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-emerald-400 hover:bg-white/5 transition-all {{ request('status') === 'deal' ? 'bg-emerald-500/10' : '' }}">
                     <span class="text-emerald-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">SPK / Deal</span>
                     <span class="text-xl sm:text-2xl font-black text-emerald-300 mt-1 block">{{ $stats['deal'] ?? $metrics['deal'] ?? 0 }}</span>
                 </a>
-                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'lost'])) }}" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-rose-400 hover:bg-white/5 transition-all {{ request('status') === 'lost' ? 'bg-rose-500/10' : '' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('status'), ['status' => 'lost'])) }}#pipeline" class="hud-card-sm p-3 sm:p-4 shrink-0 min-w-[130px] sm:min-w-0 flex-1 border-l-4 border-rose-400 hover:bg-white/5 transition-all {{ request('status') === 'lost' ? 'bg-rose-500/10' : '' }}">
                     <span class="text-rose-400 text-[9px] sm:text-[10px] font-bold tracking-wider uppercase block truncate">Drop / Lost</span>
                     <span class="text-xl sm:text-2xl font-black text-rose-300 mt-1 block">{{ $stats['lost'] ?? $metrics['lost'] ?? 0 }}</span>
                 </a>
@@ -292,18 +292,18 @@
 
             <!-- Filter Tipe Sumber Leads (Pills Toolbar) -->
             <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1">
-                <a href="{{ route('admin.leads.index', array_merge(request()->except('type', 'page'))) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap {{ !request('type') ? 'bg-white text-black' : 'hud-card-sm text-gray-400 hover:text-white' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('type', 'page'))) }}#pipeline" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap {{ !request('type') ? 'bg-white text-black' : 'hud-card-sm text-gray-400 hover:text-white' }}">
                     Semua Channel ({{ $stats['total'] ?? $metrics['total'] ?? 0 }})
                 </a>
-                <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'test_drive'])) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'test_drive' ? 'bg-cyan-400 text-black' : 'hud-card-sm text-cyan-300 hover:bg-white/5' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'test_drive'])) }}#pipeline" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'test_drive' ? 'bg-cyan-400 text-black' : 'hud-card-sm text-cyan-300 hover:bg-white/5' }}">
                     <span class="w-2 h-2 rounded-full bg-cyan-400 {{ request('type') === 'test_drive' ? 'bg-black' : '' }}"></span>
                     Test Drive ({{ $stats['test_drive'] ?? $metrics['test_drive'] ?? 0 }})
                 </a>
-                <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'whatsapp_inquiry'])) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'whatsapp_inquiry' ? 'bg-emerald-400 text-black' : 'hud-card-sm text-emerald-300 hover:bg-white/5' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'whatsapp_inquiry'])) }}#pipeline" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'whatsapp_inquiry' ? 'bg-emerald-400 text-black' : 'hud-card-sm text-emerald-300 hover:bg-white/5' }}">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 {{ request('type') === 'whatsapp_inquiry' ? 'bg-black' : '' }}"></span>
                     Chat WhatsApp ({{ $stats['whatsapp'] ?? $metrics['whatsapp'] ?? 0 }})
                 </a>
-                <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'credit_simulation'])) }}" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'credit_simulation' ? 'bg-indigo-400 text-black' : 'hud-card-sm text-indigo-300 hover:bg-white/5' }}">
+                <a href="{{ route('admin.leads.index', array_merge(request()->except('page'), ['type' => 'credit_simulation'])) }}#pipeline" class="px-3.5 py-1.5 rounded-xl text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap flex items-center gap-1.5 {{ request('type') === 'credit_simulation' ? 'bg-indigo-400 text-black' : 'hud-card-sm text-indigo-300 hover:bg-white/5' }}">
                     <span class="w-2 h-2 rounded-full bg-indigo-400 {{ request('type') === 'credit_simulation' ? 'bg-black' : '' }}"></span>
                     Simulasi Kredit ({{ $stats['credit'] ?? $metrics['credit'] ?? 0 }})
                 </a>
@@ -311,7 +311,7 @@
 
             <!-- Filter & Search Bar -->
             <div class="hud-card p-3.5 sm:p-5">
-                <form method="GET" action="{{ route('admin.leads.index') }}" class="grid grid-cols-1 sm:grid-cols-12 gap-2.5 sm:gap-3 items-center">
+                <form method="GET" action="{{ route('admin.leads.index') }}#pipeline" class="grid grid-cols-1 sm:grid-cols-12 gap-2.5 sm:gap-3 items-center">
                     @if(request('status'))
                     <input type="hidden" name="status" value="{{ request('status') }}">
                     @endif
@@ -336,7 +336,7 @@
                             Filter
                         </button>
                         @if(request()->hasAny(['search', 'model', 'status', 'type']))
-                        <a href="{{ route('admin.leads.index') }}" class="px-3.5 py-2.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs border border-rose-500/30 flex items-center justify-center">
+                        <a href="{{ route('admin.leads.index') }}#pipeline" class="px-3.5 py-2.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs border border-rose-500/30 flex items-center justify-center">
                             Reset
                         </a>
                         @endif
@@ -545,12 +545,48 @@
             <!-- Pagination Footer -->
             @if($leads->hasPages())
             <div class="p-3 sm:p-4 rounded-2xl border border-white/10 bg-[#0a0f16] overflow-x-auto">
-                {{ $leads->links() }}
+                {{ $leads->fragment('pipeline')->links() }}
             </div>
             @endif
         </section>
 
     </main>
+
+    <!-- Script Pemulihan Posisi Scroll Otomatis (Anti-Jump) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Pulihkan posisi scroll jika sebelumnya tersimpan
+            const savedScrollPos = sessionStorage.getItem('crm_leads_scroll_pos');
+            if (savedScrollPos !== null) {
+                window.scrollTo({
+                    top: parseInt(savedScrollPos, 10),
+                    behavior: 'instant'
+                });
+                sessionStorage.removeItem('crm_leads_scroll_pos');
+            }
+
+            // Simpan posisi scroll sebelum halaman berpindah akibat klik filter atau submit status
+            const pipelineSection = document.getElementById('pipeline');
+            if (pipelineSection) {
+                pipelineSection.addEventListener('click', function (e) {
+                    const link = e.target.closest('a');
+                    if (link && !link.hasAttribute('target') && !link.href.startsWith('tel:') && !link.href.startsWith('https://wa.me')) {
+                        sessionStorage.setItem('crm_leads_scroll_pos', window.scrollY);
+                    }
+                });
+
+                pipelineSection.addEventListener('change', function (e) {
+                    if (e.target.tagName === 'SELECT') {
+                        sessionStorage.setItem('crm_leads_scroll_pos', window.scrollY);
+                    }
+                });
+
+                pipelineSection.addEventListener('submit', function () {
+                    sessionStorage.setItem('crm_leads_scroll_pos', window.scrollY);
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
