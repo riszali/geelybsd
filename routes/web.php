@@ -78,6 +78,9 @@ Route::post('/api/leads', [LeadController::class, 'storeTestDrive'])->name('lead
 // 5. ADMIN AUTENTIKASI & PORTAL CRM
 // =============================================================
 
+// Rute 'login' standar yang dipanggil oleh middleware auth bawaan Laravel saat sesi habis
+Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('login');
+
 Route::prefix('admin')->name('admin.')->group(function () {
     
     // Auth Routes (Guest Only)
