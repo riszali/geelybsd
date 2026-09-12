@@ -214,7 +214,8 @@
         .bento-card:hover .bento-img {
             transform: scale(1.08);
         }
-        body.lightbox-open {
+        body.lightbox-open,
+        body.cta-modal-open {
             overflow: hidden;
         }
 
@@ -237,6 +238,11 @@
                 max-width: calc((100% - 48px) / 3) !important;
                 height: 600px !important;
             }
+        }
+
+        /* CTA Modal Glow and Animation */
+        .cta-modal-pulse {
+            box-shadow: 0 0 50px -10px rgba(6, 182, 212, 0.4), 0 25px 50px -12px rgba(0, 0, 0, 0.9);
         }
     </style>
 
@@ -985,6 +991,37 @@
     </section>
 
     <!-- ==========================================
+         FIRST-TIME VISITOR PROMO/CTA MODAL
+    =========================================== -->
+    <div id="first-visit-cta-modal" class="fixed inset-0 z-[9990] hidden items-center justify-center bg-black/85 backdrop-blur-md opacity-0 transition-opacity duration-500 p-4 sm:p-6" onclick="closeFirstVisitCta(event)">
+        <div class="relative w-full max-w-lg md:max-w-xl bg-[#090a0f] border border-cyan-500/30 rounded-3xl p-3 sm:p-4 cta-modal-pulse transform scale-95 transition-all duration-500" onclick="event.stopPropagation()">
+            
+            <!-- Close Button -->
+            <button onclick="closeFirstVisitCta(null)" aria-label="Tutup Promo" class="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-10 h-10 md:w-11 md:h-11 rounded-full bg-black/90 border border-white/20 text-white flex items-center justify-center hover:text-cyan-400 hover:border-cyan-400 hover:scale-110 transition-all z-20 shadow-2xl cursor-pointer">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Decorative Ambient Glow -->
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-cyan-500/20 rounded-full blur-[50px] pointer-events-none"></div>
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-600/20 rounded-full blur-[50px] pointer-events-none"></div>
+
+            <!-- Image Container / Clickable CTA -->
+            <a href="/test-drive" title="Penawaran Eksklusif Geely BSD" class="block relative w-full overflow-hidden rounded-2xl group border border-white/10 hover:border-cyan-400/50 transition-colors duration-300">
+                <img src="{{ asset('assets/a.png') }}" alt="Promo Spesial Pengunjung Baru Geely BSD" class="w-full h-auto max-h-[75vh] object-contain mx-auto transform group-hover:scale-[1.02] transition-transform duration-500">
+                
+                <!-- Hover Overlay subtle shine -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+                    <span class="text-white text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase bg-cyan-500/80 backdrop-blur-md px-6 py-2.5 rounded-full border border-cyan-300/40 shadow-lg">
+                        Klaim Promo Sekarang &rarr;
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- ==========================================
          LIGHTBOX MODAL (HIDDEN BY DEFAULT)
     =========================================== -->
     <div id="lightbox" class="fixed inset-0 hidden items-center justify-center bg-black/95 backdrop-blur-md opacity-0 transition-opacity duration-300" style="z-index: 9999;" onclick="closeLightbox(event)">
@@ -1012,7 +1049,70 @@
          ADVANCED INTERSECTION OBSERVER & SLIDER SCRIPTS
     =========================================== -->
     <script>
+        // First-time Visitor CTA Modal Logic
+        const CTA_STORAGE_KEY = 'geely_bsd_has_seen_first_visit_cta';
+
+        function showFirstVisitCta() {
+            const modal = document.getElementById('first-visit-cta-modal');
+            if (!modal) return;
+
+            const modalDialog = modal.querySelector('div');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            requestAnimationFrame(() => {
+                modal.classList.remove('opacity-0');
+                modal.classList.add('opacity-100');
+                if (modalDialog) {
+                    modalDialog.classList.remove('scale-95');
+                    modalDialog.classList.add('scale-100');
+                }
+            });
+
+            document.body.classList.add('cta-modal-open');
+        }
+
+        function closeFirstVisitCta(e) {
+            if (e && e.target !== e.currentTarget && !e.target.closest('button')) return;
+
+            const modal = document.getElementById('first-visit-cta-modal');
+            if (!modal) return;
+
+            const modalDialog = modal.querySelector('div');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+
+            if (modalDialog) {
+                modalDialog.classList.remove('scale-100');
+                modalDialog.classList.add('scale-95');
+            }
+
+            try {
+                localStorage.setItem(CTA_STORAGE_KEY, 'true');
+            } catch (err) {
+                console.error('LocalStorage unavailable:', err);
+            }
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.classList.remove('cta-modal-open');
+            }, 500);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            // Cek apakah pengunjung pertama kali mengunjungi web
+            try {
+                const hasSeenCta = localStorage.getItem(CTA_STORAGE_KEY);
+                if (!hasSeenCta) {
+                    setTimeout(() => {
+                        showFirstVisitCta();
+                    }, 1200);
+                }
+            } catch (err) {
+                console.error('LocalStorage unavailable:', err);
+            }
+
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
@@ -1284,8 +1384,14 @@
         }
 
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-                closeLightbox();
+            if (e.key === 'Escape') {
+                if (!lightbox.classList.contains('hidden')) {
+                    closeLightbox();
+                }
+                const firstVisitModal = document.getElementById('first-visit-cta-modal');
+                if (firstVisitModal && !firstVisitModal.classList.contains('hidden')) {
+                    closeFirstVisitCta(null);
+                }
             }
         });
     </script>

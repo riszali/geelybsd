@@ -210,8 +210,9 @@
                 <!-- Feature 1: BMA Platform -->
                 <div class="glass-panel-dark rounded-[24px] md:rounded-[32px] p-8 md:p-10 flex flex-col justify-between reveal-up group hover:border-red-500/30 transition-all duration-500">
                     <div>
-                        <div class="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 mb-6 group-hover:scale-110 transition-transform">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                            <span class="font-mono text-3xl md:text-4xl font-extrabold tracking-tighter text-white/20 group-hover:text-red-500 transition-colors">01</span>
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[9px] font-mono tracking-[0.25em] text-red-400 uppercase">Architecture</span>
                         </div>
                         <h3 class="font-geely text-2xl text-white uppercase mb-3">BMA Modular Platform</h3>
                         <p class="text-gray-400 text-sm leading-relaxed font-light">
@@ -227,8 +228,9 @@
                 <!-- Feature 2: Quad Exhaust & Aerodynamic Spoiler -->
                 <div class="glass-panel-dark rounded-[24px] md:rounded-[32px] p-8 md:p-10 flex flex-col justify-between reveal-up delay-100 group hover:border-orange-500/30 transition-all duration-500">
                     <div>
-                        <div class="w-12 h-12 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                            <span class="font-mono text-3xl md:text-4xl font-extrabold tracking-tighter text-white/20 group-hover:text-orange-500 transition-colors">02</span>
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[9px] font-mono tracking-[0.25em] text-orange-400 uppercase">Aerodynamics</span>
                         </div>
                         <h3 class="font-geely text-2xl text-white uppercase mb-3">Sport Quad Exhaust</h3>
                         <p class="text-gray-400 text-sm leading-relaxed font-light">
@@ -244,8 +246,9 @@
                 <!-- Feature 3: Smart Cockpit -->
                 <div class="glass-panel-dark rounded-[24px] md:rounded-[32px] p-8 md:p-10 flex flex-col justify-between reveal-up delay-200 group hover:border-cyan-500/30 transition-all duration-500">
                     <div>
-                        <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                            <span class="font-mono text-3xl md:text-4xl font-extrabold tracking-tighter text-white/20 group-hover:text-cyan-400 transition-colors">03</span>
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[9px] font-mono tracking-[0.25em] text-cyan-400 uppercase">Intelligence</span>
                         </div>
                         <h3 class="font-geely text-2xl text-white uppercase mb-3">Dual Screen Cockpit</h3>
                         <p class="text-gray-400 text-sm leading-relaxed font-light">
