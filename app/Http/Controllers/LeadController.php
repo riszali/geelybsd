@@ -16,9 +16,8 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 class AdminLeadController extends Controller
 {
     /**
-     * Menampilkan Dashboard Utama CRM Leads dan Live Traffic Web Analytics.
-     * Mengagregasi data prospek dari seluruh channel (WhatsApp, Test Drive, Kredit)
-     * serta statistik pengunjung landing page secara real-time.
+     * Menampilkan Dashboard CRM Leads & Live Traffic Web Analytics.
+     * Semua metrik, grafik 7 hari, jam sibuk, dan persentase dihitung murni 100% real dari database.
      *
      * @param Request $request
      * @return View
@@ -27,7 +26,7 @@ class AdminLeadController extends Controller
     {
         $query = Lead::query()->latest();
 
-        // 1. Filter Pencarian Multi-Kolom (Nama, No WhatsApp, Email, Sumber, Model, Catatan)
+        // 1. Filter Pencarian Teks
         if ($request->filled('search')) {
             $search = trim($request->input('search'));
             $query->where(function ($q) use ($search) {
@@ -64,12 +63,12 @@ class AdminLeadController extends Controller
             }
         }
 
-        // 3. Filter Tipe Sumber / Channel Leads (whatsapp_inquiry, test_drive, credit_simulation)
+        // 3. Filter Tipe Sumber / Channel Leads
         if ($request->filled('type')) {
             $query->where('type', $request->input('type'));
         }
 
-        // 4. Filter Model Kendaraan (ex5, ex2, starray, coolray)
+        // 4. Filter Model Kendaraan
         if ($request->filled('model')) {
             $model = strtolower(trim($request->input('model')));
             if (Schema::hasColumn('leads', 'car_model')) {
@@ -84,7 +83,7 @@ class AdminLeadController extends Controller
             $query->where('dealer_location', $request->input('dealer'));
         }
 
-        // 6. Filter Rentang Tanggal Masuk (Date Range)
+        // 6. Filter Rentang Tanggal
         if ($request->filled('start_date')) {
             $query->whereDate('created_at', '>=', $request->input('start_date'));
         }
@@ -92,12 +91,11 @@ class AdminLeadController extends Controller
             $query->whereDate('created_at', '<=', $request->input('end_date'));
         }
 
-        // Paginasi Data Leads dengan Query String Terlampir
         $leads = $query->paginate(15)->withQueryString();
 
-        // Menghitung Metrik Pipeline Prospek
         $hasTypeColumn = Schema::hasColumn('leads', 'type');
 
+        // Menghitung Metrik Pipeline 100% Real dari Database
         $stats = [
             'total'       => Lead::count(),
             'new'         => Lead::where('status', 'new')->count(),
@@ -106,25 +104,21 @@ class AdminLeadController extends Controller
             'deal'        => Lead::whereIn('status', ['spk_deal', 'converted', 'deal'])->count(),
             'lost'        => Lead::whereIn('status', ['lost', 'cancelled'])->count(),
 
-            // Metrik Channel Sumber Leads
             'whatsapp'    => $hasTypeColumn ? Lead::where('type', 'whatsapp_inquiry')->count() : 0,
             'test_drive'  => $hasTypeColumn ? Lead::where('type', 'test_drive')->count() : 0,
             'credit'      => $hasTypeColumn ? Lead::where('type', 'credit_simulation')->count() : 0,
 
-            // Prospek Hari Ini (Today Metrics)
             'today_total' => Lead::whereDate('created_at', Carbon::today())->count(),
             'today_wa'    => $hasTypeColumn ? Lead::where('type', 'whatsapp_inquiry')->whereDate('created_at', Carbon::today())->count() : 0,
             'today_td'    => $hasTypeColumn ? Lead::where('type', 'test_drive')->whereDate('created_at', Carbon::today())->count() : 0,
             'today_cr'    => $hasTypeColumn ? Lead::where('type', 'credit_simulation')->whereDate('created_at', Carbon::today())->count() : 0,
 
-            // Prospek Bulan Ini
             'month_total' => Lead::whereMonth('created_at', Carbon::now()->month)
                                  ->whereYear('created_at', Carbon::now()->year)
                                  ->count(),
         ];
         $metrics = $stats;
 
-        // Menyiapkan Data Analitik Kunjungan Website (Page Visits)
         $today = Carbon::today()->toDateString();
         $sevenDaysAgo = Carbon::today()->subDays(6)->toDateString();
 
@@ -137,7 +131,9 @@ class AdminLeadController extends Controller
         $tabletCount = 0;
         $topPages = collect();
         $chartData = [];
-        $maxDailyViews = 1;
+        $peakHourFormatted = '-';
+        $total7DaysViews = 0;
+        $total7DaysLeads = 0;
 
         if (Schema::hasTable('page_visits')) {
             $totalPageViews = PageVisit::count();
@@ -145,24 +141,24 @@ class AdminLeadController extends Controller
             $totalUniqueVisitors = PageVisit::distinct('ip_address')->count('ip_address');
             $todayUniqueVisitors = PageVisit::whereDate('visit_date', $today)->distinct('ip_address')->count('ip_address');
 
-            // Agregasi Berdasarkan Jenis Perangkat (Mobile, Desktop, Tablet)
+            // Statistik Perangkat Real
             $deviceStats = PageVisit::select('device_type', DB::raw('count(*) as count'))
                 ->groupBy('device_type')
                 ->pluck('count', 'device_type')
                 ->toArray();
 
-            $mobileCount  = $deviceStats['mobile'] ?? 0;
-            $desktopCount = $deviceStats['desktop'] ?? 0;
-            $tabletCount  = $deviceStats['tablet'] ?? 0;
+            $mobileCount  = (int) ($deviceStats['mobile'] ?? 0);
+            $desktopCount = (int) ($deviceStats['desktop'] ?? 0);
+            $tabletCount  = (int) ($deviceStats['tablet'] ?? 0);
 
-            // Halaman Terpopuler (Top 5 Landing Pages)
+            // Halaman Terpopuler Real
             $topPages = PageVisit::select('path', DB::raw('count(*) as views'))
                 ->groupBy('path')
                 ->orderByDesc('views')
                 ->limit(5)
                 ->get();
 
-            // 7 Hari Terakhir: Agregasi Kunjungan Web
+            // Agregasi Kunjungan Harian Real (7 Hari Terakhir)
             $dailyVisitsRaw = PageVisit::select('visit_date', DB::raw('count(*) as views'), DB::raw('count(distinct ip_address) as uniques'))
                 ->whereDate('visit_date', '>=', $sevenDaysAgo)
                 ->groupBy('visit_date')
@@ -172,29 +168,27 @@ class AdminLeadController extends Controller
                     return Carbon::parse($item->visit_date)->format('Y-m-d');
                 });
 
-            // 7 Hari Terakhir: Agregasi Prospek / Leads (Test Drive & All Leads)
+            // Agregasi Prospek Harian Real (7 Hari Terakhir)
             $dailyLeadsRaw = Lead::select(DB::raw('DATE(created_at) as lead_date'), DB::raw('count(*) as total_leads'))
                 ->whereDate('created_at', '>=', $sevenDaysAgo)
                 ->groupBy('lead_date')
                 ->get()
                 ->keyBy('lead_date');
 
-            // Analisis Jam Kunjungan Paling Sibuk (Jam Puncak Kunjungan)
+            // Jam Kunjungan Puncak Real dari Database (Tanpa Fallback Jam Palsu)
             $peakHourData = PageVisit::select(DB::raw('HOUR(created_at) as hour'), DB::raw('count(*) as total'))
                 ->whereDate('visit_date', '>=', $sevenDaysAgo)
                 ->groupBy('hour')
                 ->orderByDesc('total')
                 ->first();
 
-            $peakHourFormatted = '14:00 - 15:00 WIB';
-            if ($peakHourData && isset($peakHourData->hour)) {
+            if ($peakHourData && isset($peakHourData->hour) && $peakHourData->total > 0) {
                 $startH = (int) $peakHourData->hour;
                 $endH = ($startH + 1) % 24;
                 $peakHourFormatted = sprintf('%02d:00 - %02d:00 WIB', $startH, $endH);
+            } else {
+                $peakHourFormatted = '-';
             }
-
-            $total7DaysViews = 0;
-            $total7DaysLeads = 0;
 
             for ($i = 6; $i >= 0; $i--) {
                 $currentDate = Carbon::today()->subDays($i);
@@ -208,10 +202,6 @@ class AdminLeadController extends Controller
                 $total7DaysViews += $views;
                 $total7DaysLeads += $leadsCount;
 
-                if ($views > $maxDailyViews) {
-                    $maxDailyViews = $views;
-                }
-
                 $chartData[] = [
                     'date'    => $dateString,
                     'label'   => $dayLabel,
@@ -222,10 +212,17 @@ class AdminLeadController extends Controller
             }
         }
 
-        $totalDevices = max(1, $mobileCount + $desktopCount + $tabletCount);
-        $avgVisitorsPerDay = round(($total7DaysViews ?? 0) / 7);
-        $ratioVisitorToLead = ($total7DaysViews ?? 0) > 0 
-            ? round((($total7DaysLeads ?? 0) / $total7DaysViews) * 100, 1) 
+        $totalDevices = $mobileCount + $desktopCount + $tabletCount;
+        $mobilePercent = $totalDevices > 0 ? round(($mobileCount / $totalDevices) * 100) : 0;
+        $desktopPercent = $totalDevices > 0 ? round(($desktopCount / $totalDevices) * 100) : 0;
+        $tabletPercent = $totalDevices > 0 ? round(($tabletCount / $totalDevices) * 100) : 0;
+
+        // Rata-rata pengunjung per hari murni dari total 7 hari dibagi 7
+        $avgVisitorsPerDay = $total7DaysViews > 0 ? round($total7DaysViews / 7) : 0;
+
+        // Rasio pengunjung ke leads murni dari data asli
+        $ratioVisitorToLead = $total7DaysViews > 0 
+            ? round(($total7DaysLeads / $total7DaysViews) * 100, 1) 
             : 0.0;
 
         $analytics = [
@@ -233,14 +230,13 @@ class AdminLeadController extends Controller
             'today_views'          => $todayPageViews,
             'total_uniques'        => $totalUniqueVisitors,
             'today_uniques'        => $todayUniqueVisitors,
-            'mobile_percent'       => round(($mobileCount / $totalDevices) * 100),
-            'desktop_percent'      => round(($desktopCount / $totalDevices) * 100),
-            'tablet_percent'       => round(($tabletCount / $totalDevices) * 100),
+            'mobile_percent'       => $mobilePercent,
+            'desktop_percent'      => $desktopPercent,
+            'tablet_percent'       => $tabletPercent,
             'top_pages'            => $topPages,
             'chart_data'           => $chartData,
-            'max_views'            => $maxDailyViews,
             'avg_visitors_per_day' => $avgVisitorsPerDay,
-            'peak_visiting_hour'   => $peakHourFormatted ?? '14:00 - 15:00 WIB',
+            'peak_visiting_hour'   => $peakHourFormatted,
             'ratio_visitor_to_lead'=> $ratioVisitorToLead,
         ];
 
@@ -248,7 +244,7 @@ class AdminLeadController extends Controller
     }
 
     /**
-     * Mengambil detail satu data prospek (Lead) dalam format JSON untuk modal/drawer.
+     * Mengambil detail satu data prospek (Lead) dalam format JSON.
      *
      * @param Lead $lead
      * @return JsonResponse
@@ -320,7 +316,6 @@ class AdminLeadController extends Controller
 
     /**
      * Export Seluruh Data Leads ke Format CSV Lengkap.
-     * Menggunakan streamed download untuk mencegah memori server overload.
      *
      * @return StreamedResponse
      */
@@ -331,10 +326,9 @@ class AdminLeadController extends Controller
         return response()->streamDownload(function () {
             $file = fopen('php://output', 'w');
 
-            // Menambahkan UTF-8 BOM agar terbaca sempurna saat dibuka di Microsoft Excel
+            // UTF-8 BOM untuk Microsoft Excel
             fprintf($file, chr(0xEF).chr(0xBB).chr(0xBF));
 
-            // Header Kolom CSV Lengkap
             fputcsv($file, [
                 'ID Prospek',
                 'Tipe Channel',
@@ -356,7 +350,6 @@ class AdminLeadController extends Controller
                 'Waktu Masuk',
             ]);
 
-            // Memproses Data per Chunk 200 Baris
             Lead::latest()->chunk(200, function ($leads) use ($file) {
                 foreach ($leads as $lead) {
                     $model = $lead->car_model_label ?? $lead->car_model ?? $lead->model_interest ?? '-';
