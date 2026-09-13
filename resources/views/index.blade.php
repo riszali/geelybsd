@@ -251,10 +251,16 @@
             <video autoplay muted loop playsinline class="w-full h-full object-cover scale-110 animate-[ken-burns_30s_ease-out_infinite_alternate]">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
             </video>
+            <!-- Kontras gelap khusus layar HP agar bodi mobil video tidak menyilaukan teks -->
+            <div class="absolute inset-0 bg-black/60 md:hidden z-[1]"></div>
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]"></div>
             <div class="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
         </div>
-        <div class="relative z-20 w-full max-w-7xl mx-auto px-6 text-center mt-20">
+
+        <!-- =================================================================
+             1. VERSI DESKTOP (md:block) - 100% ASLI TANPA PERUBAHAN APAPUN
+        ================================================================== -->
+        <div class="hidden md:block relative z-20 w-full max-w-7xl mx-auto px-6 text-center mt-20">
             <h1 class="font-geely text-5xl sm:text-6xl md:text-8xl lg:text-[130px] text-white uppercase leading-[0.9] md:leading-[0.8] tracking-tighter drop-shadow-2xl mb-8 reveal-up delay-100">
                 <span class="sr-only">Temukan inovasi mobilitas masa depan dengan Geely EX2, Geely EX5, dan Geely Starray EM-i - </span>
                 DRIVE THE <br>
@@ -273,6 +279,43 @@
                         <svg class="w-4 h-4 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                     </div>
                     <span class="text-[10px] font-bold tracking-[0.2em] uppercase">Explore Models</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- =================================================================
+             2. VERSI HANDPHONE (md:hidden) - REDESIGN KHUSUS MOBILE
+        ================================================================== -->
+        <div class="block md:hidden relative z-20 w-full px-5 text-center flex flex-col items-center justify-center mt-12">
+            <h1 class="font-geely text-4xl sm:text-5xl text-white uppercase leading-[0.95] tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] mb-4 reveal-up">
+                DRIVE THE <br>
+                <span class="text-liquid drop-shadow-[0_0_25px_rgba(34,211,238,0.5)]">FUTURE</span>
+            </h1>
+
+            <!-- Kartu Baca Khusus HP: Luxury Spatial Frosted Glass -->
+            <div class="w-full max-w-sm mx-auto mb-6 p-5 rounded-[24px] relative overflow-hidden bg-white/[0.07] backdrop-blur-2xl border border-white/20 border-t-white/40 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.7),inset_0_1px_0_rgba(255,255,255,0.25)] reveal-up delay-100">
+                <!-- Ambient Subtle Glow di dalam Glass -->
+                <div class="absolute -top-12 -left-12 w-32 h-32 bg-cyan-500/15 rounded-full blur-[40px] pointer-events-none"></div>
+                <div class="absolute -bottom-12 -right-12 w-32 h-32 bg-blue-500/15 rounded-full blur-[40px] pointer-events-none"></div>
+
+                <div class="relative z-10">
+                    <p class="text-gray-200 text-xs font-normal leading-relaxed text-center drop-shadow-sm">
+                        Rasakan era baru mobilitas premium bersama line-up revolusioner kami. Jelajahi kelincahan urban <strong class="text-cyan-300">Geely EX2</strong>, inovasi elektrik tangguh <strong class="text-cyan-300">Geely EX5</strong>, performa hybrid mutakhir dari <strong class="text-cyan-300">Geely Starray EM-i</strong>, serta ketangguhan sporty <strong class="text-cyan-300">Geely Coolray</strong>. Perpaduan sempurna desain aerodinamis dan teknologi masa depan tanpa batas.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tombol Aksi Khusus HP: Frosted Glass Button -->
+            <div class="w-full max-w-xs flex flex-col items-center gap-3.5 reveal-up delay-200">
+                <a href="/test-drive" title="Booking Test Drive Mobil Geely di BSD" class="btn-shimmer w-full flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500/30 via-blue-600/30 to-cyan-400/25 hover:bg-cyan-500/40 backdrop-blur-xl border border-cyan-400/60 text-cyan-200 font-bold py-3.5 px-6 rounded-full text-[11px] tracking-[0.2em] uppercase shadow-[0_0_30px_rgba(6,182,212,0.35),inset_0_1px_0_rgba(255,255,255,0.3)] active:scale-95 transition-all">
+                    <span>Book Test Drive</span>
+                    <svg class="w-4 h-4 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+                <a href="#lineup" title="Eksplorasi Model Mobil Listrik Geely Terbaru" class="flex items-center justify-center gap-2.5 text-gray-300 hover:text-white transition-colors py-1">
+                    <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                    </div>
+                    <span class="text-[9px] font-bold tracking-[0.2em] uppercase">Explore Models</span>
                 </a>
             </div>
         </div>
@@ -423,10 +466,10 @@
                     ];
                 @endphp
 
-                <!-- Showcase Cards Slider Track -->
-                <div id="lineup-slider" class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 pb-6 pt-2 scroll-smooth cursor-grab active:cursor-grabbing -mx-4 px-4 md:mx-0 md:px-0">
+                <!-- Showcase Cards Slider Track (Mobile Centered) -->
+                <div id="lineup-slider" class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 pb-6 pt-2 scroll-smooth cursor-grab active:cursor-grabbing -mx-6 px-[7.5vw] md:mx-0 md:px-0">
                     @foreach($showcase as $index => $car)
-                    <div data-lineup-card="{{ $index }}" class="lineup-card flex-shrink-0 snap-start group relative flex flex-col md:block h-auto md:h-[600px] rounded-[20px] md:rounded-[32px] overflow-hidden reveal-up {{ $car['delay'] }} md:border md:border-white/10 premium-card-hover premium-card-dark glare-effect bg-[#0a0a0c] md:bg-transparent transition-all duration-500">
+                    <div data-lineup-card="{{ $index }}" class="lineup-card flex-shrink-0 snap-center md:snap-start group relative flex flex-col md:block h-auto md:h-[600px] rounded-[20px] md:rounded-[32px] overflow-hidden reveal-up {{ $car['delay'] }} md:border md:border-white/10 premium-card-hover premium-card-dark glare-effect bg-[#0a0a0c] md:bg-transparent transition-all duration-500">
                         <div class="relative w-full h-[220px] sm:h-[280px] md:absolute md:inset-0 md:h-full shrink-0">
                             <img src="{{ $car['img'] }}" alt="Mobil Listrik {{ $car['name'] }} - {{ $car['type'] }} tersedia di Dealer Geely BSD" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out brightness-90 md:brightness-75 group-hover:brightness-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-90 md:opacity-90 group-hover:opacity-80 transition-opacity duration-500"></div>
@@ -984,11 +1027,11 @@
             </div>
 
             <div class="text-center mt-2 flex justify-center items-center gap-2 text-cyan-400 text-[9px] font-bold uppercase tracking-widest animate-pulse">
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            Swipe or drag to view
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                Swipe or drag to view
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- ==========================================
          SECTION 12: ARTIKEL & INSIGHTS GEELY BSD (SEO ENGINE)
@@ -1105,7 +1148,7 @@
     </section>
 
     <!-- ==========================================
-         FIRST-TIME VISITOR PROMO/CTA MODAL
+         FIRST-TIME VISITOR PROMO/CTA MODAL (COOKIE-BASED)
     =========================================== -->
     <div id="first-visit-cta-modal" class="fixed inset-0 z-[9990] hidden items-center justify-center bg-black/85 backdrop-blur-md opacity-0 transition-opacity duration-500 p-4 sm:p-6" onclick="closeFirstVisitCta(event)">
         <div class="relative w-full max-w-lg md:max-w-xl bg-[#090a0f] border border-cyan-500/30 rounded-3xl p-3 sm:p-4 cta-modal-pulse transform scale-95 transition-all duration-500" onclick="event.stopPropagation()">
@@ -1122,7 +1165,7 @@
             <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-600/20 rounded-full blur-[50px] pointer-events-none"></div>
 
             <!-- Image Container / Clickable CTA -->
-            <a href="/test-drive" title="Penawaran Eksklusif Geely BSD" class="block relative w-full overflow-hidden rounded-2xl group border border-white/10 hover:border-cyan-400/50 transition-colors duration-300">
+            <a href="/test-drive" onclick="setPromoCookie();" title="Penawaran Eksklusif Geely BSD" class="block relative w-full overflow-hidden rounded-2xl group border border-white/10 hover:border-cyan-400/50 transition-colors duration-300">
                 <img src="{{ asset('assets/a.png') }}" alt="Promo Spesial Pengunjung Baru Geely BSD" class="w-full h-auto max-h-[75vh] object-contain mx-auto transform group-hover:scale-[1.02] transition-transform duration-500">
                 
                 <!-- Hover Overlay subtle shine -->
@@ -1163,8 +1206,30 @@
          ADVANCED INTERSECTION OBSERVER & SLIDER SCRIPTS
     =========================================== -->
     <script>
-        // First-time Visitor CTA Modal Logic
-        const CTA_STORAGE_KEY = 'geely_bsd_has_seen_first_visit_cta';
+        // Cookie Helper Functions (30 Hari, Scope Seluruh Website /)
+        const PROMO_COOKIE_NAME = 'geely_bsd_promo_seen';
+        const PROMO_STORAGE_KEY = 'geely_bsd_has_seen_first_visit_cta';
+
+        function setPromoCookie(days = 30) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${PROMO_COOKIE_NAME}=true; expires=${date.toUTCString()}; path=/; SameSite=Lax`;
+            
+            try {
+                localStorage.setItem(PROMO_STORAGE_KEY, 'true');
+            } catch (e) {}
+        }
+
+        function getPromoCookie() {
+            const match = document.cookie.match(new RegExp('(^| )' + PROMO_COOKIE_NAME + '=([^;]+)'));
+            if (match) return match[2];
+
+            try {
+                return localStorage.getItem(PROMO_STORAGE_KEY);
+            } catch (e) {
+                return null;
+            }
+        }
 
         function showFirstVisitCta() {
             const modal = document.getElementById('first-visit-cta-modal');
@@ -1184,6 +1249,8 @@
             });
 
             document.body.classList.add('cta-modal-open');
+            // Tandai cookie segera setelah promo dimunculkan agar tidak muncul lagi saat refresh cepat
+            setPromoCookie();
         }
 
         function closeFirstVisitCta(e) {
@@ -1201,11 +1268,7 @@
                 modalDialog.classList.add('scale-95');
             }
 
-            try {
-                localStorage.setItem(CTA_STORAGE_KEY, 'true');
-            } catch (err) {
-                console.error('LocalStorage unavailable:', err);
-            }
+            setPromoCookie();
 
             setTimeout(() => {
                 modal.classList.add('hidden');
@@ -1215,16 +1278,12 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Cek apakah pengunjung pertama kali mengunjungi web
-            try {
-                const hasSeenCta = localStorage.getItem(CTA_STORAGE_KEY);
-                if (!hasSeenCta) {
-                    setTimeout(() => {
-                        showFirstVisitCta();
-                    }, 1200);
-                }
-            } catch (err) {
-                console.error('LocalStorage unavailable:', err);
+            // Cek Cookie promo: Jika sudah pernah muncul/ditutup, jangan pernah muncul lagi saat ke Home
+            const hasSeenPromo = getPromoCookie();
+            if (!hasSeenPromo) {
+                setTimeout(() => {
+                    showFirstVisitCta();
+                }, 1200);
             }
 
             const observerOptions = {
@@ -1315,6 +1374,9 @@
                 const cards = lineupSlider.querySelectorAll('[data-lineup-card]');
                 
                 function getPagesCount() {
+                    if (window.innerWidth < 768) {
+                        return cards.length;
+                    }
                     const sliderWidth = lineupSlider.clientWidth;
                     const scrollWidth = lineupSlider.scrollWidth;
                     const maxScroll = scrollWidth - sliderWidth;
@@ -1349,6 +1411,20 @@
                 }
 
                 function getCurrentPage() {
+                    if (window.innerWidth < 768) {
+                        const sliderCenter = lineupSlider.scrollLeft + lineupSlider.clientWidth / 2;
+                        let closestIdx = 0;
+                        let minDiff = Infinity;
+                        cards.forEach((card, idx) => {
+                            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+                            const diff = Math.abs(sliderCenter - cardCenter);
+                            if (diff < minDiff) {
+                                minDiff = diff;
+                                closestIdx = idx;
+                            }
+                        });
+                        return closestIdx;
+                    }
                     const maxScroll = lineupSlider.scrollWidth - lineupSlider.clientWidth;
                     if (maxScroll <= 10) return 0;
                     const scrollLeft = lineupSlider.scrollLeft;
@@ -1382,14 +1458,21 @@
                 }
 
                 function goToPage(pageIndex) {
-                    const maxScroll = lineupSlider.scrollWidth - lineupSlider.clientWidth;
-                    if (pageIndex >= totalPages - 1) {
-                        lineupSlider.scrollTo({ left: maxScroll, behavior: 'smooth' });
+                    if (!cards[pageIndex]) return;
+                    if (window.innerWidth < 768) {
+                        const targetCard = cards[pageIndex];
+                        const targetLeft = targetCard.offsetLeft - (lineupSlider.clientWidth - targetCard.offsetWidth) / 2;
+                        lineupSlider.scrollTo({ left: targetLeft, behavior: 'smooth' });
                     } else {
-                        const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : lineupSlider.clientWidth;
-                        const visibleCards = Math.max(1, Math.round((lineupSlider.clientWidth + 24) / cardWidth));
-                        const targetScroll = Math.min(pageIndex * visibleCards * cardWidth, maxScroll);
-                        lineupSlider.scrollTo({ left: targetScroll, behavior: 'smooth' });
+                        const maxScroll = lineupSlider.scrollWidth - lineupSlider.clientWidth;
+                        if (pageIndex >= totalPages - 1) {
+                            lineupSlider.scrollTo({ left: maxScroll, behavior: 'smooth' });
+                        } else {
+                            const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : lineupSlider.clientWidth;
+                            const visibleCards = Math.max(1, Math.round((lineupSlider.clientWidth + 24) / cardWidth));
+                            const targetScroll = Math.min(pageIndex * visibleCards * cardWidth, maxScroll);
+                            lineupSlider.scrollTo({ left: targetScroll, behavior: 'smooth' });
+                        }
                     }
                 }
 
